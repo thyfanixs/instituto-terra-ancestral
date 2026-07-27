@@ -30,15 +30,49 @@ export default function Apoie() {
 
       <section className="support-intro section">
         <div className="support-intro-copy reveal">
-          <p className="section-index">Faça parte</p>
-          <h2>Transforme imposto em impacto social.</h2>
+          <p className="section-index">Apoie o ITA</p>
+          <h2>Faça parte dessa transformação.</h2>
         </div>
         <p className="reveal">
-          Empresas e pessoas físicas podem apoiar projetos sociais por meio de
-          mecanismos de incentivo fiscal, quando houver projeto aprovado e
-          captação vigente. O ITA orienta o apoiador com os dados oficiais de
-          cada oportunidade.
+          Apoie o Instituto Terra Ancestral e faça parte da transformação que a
+          cultura, a educação e a economia criativa promovem em nossa
+          comunidade.
         </p>
+      </section>
+
+      <section className="pix-section">
+        <div className="pix-heading reveal">
+          <p className="kicker">Contribuição direta</p>
+          <h2>PIX CNPJ</h2>
+          <strong>60.485.003/0001-94</strong>
+        </div>
+        <div className="pix-copy reveal">
+          <p>
+            Empresas, empreendedores(as) e pessoas que acreditam no poder da
+            arte como ferramenta de inclusão, geração de oportunidades e
+            fortalecimento dos territórios podem caminhar conosco nessa missão.
+          </p>
+          <p>
+            Sua contribuição ajuda a manter e ampliar nossas ações, cursos
+            gratuitos e projetos de impacto social.
+          </p>
+          <p><strong>Contribua via PIX (CNPJ): 60.485.003/0001-94.</strong></p>
+          <div className="pix-actions">
+            <div>
+              <span>Chave PIX · CNPJ</span>
+              <strong>60.485.003/0001-94</strong>
+            </div>
+            <a className="button button-dark" href="mailto:institutoita.gerais@gmail.com">
+              Propor uma parceria
+            </a>
+          </div>
+          <p className="pix-contact">
+            Quer apresentar uma proposta de parceria? Escreva para{" "}
+            <a href="mailto:institutoita.gerais@gmail.com">
+              institutoita.gerais@gmail.com
+            </a>.
+          </p>
+        </div>
       </section>
 
       <section className="support-ways section">

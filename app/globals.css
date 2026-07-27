@@ -355,6 +355,48 @@ h1, h2, h3, .display-copy, blockquote {
 .support-intro { align-items: end; display: grid; gap: 70px; grid-template-columns: 1.3fr .7fr; }
 .support-intro h2 { margin-bottom: 0; }
 .support-intro > p { font-size: 17px; line-height: 1.75; margin: 0; }
+.pix-section {
+  background: var(--orange);
+  display: grid;
+  gap: 80px;
+  grid-template-columns: .9fr 1.1fr;
+  padding: clamp(80px, 9vw, 138px) clamp(22px, 7vw, 112px);
+}
+.pix-heading h2 {
+  font-size: clamp(70px, 9vw, 135px);
+  line-height: .8;
+  margin: 28px 0 36px;
+  text-transform: uppercase;
+}
+.pix-heading > strong {
+  border-bottom: 2px solid var(--ink);
+  display: inline-block;
+  font-size: clamp(23px, 2.6vw, 39px);
+  letter-spacing: .03em;
+  padding-bottom: 9px;
+}
+.pix-copy { border-top: 1px solid var(--ink); padding-top: 28px; }
+.pix-copy > p { font-size: 17px; line-height: 1.75; margin: 0 0 20px; }
+.pix-actions {
+  align-items: center;
+  border-bottom: 1px solid rgba(40,24,20,.35);
+  border-top: 1px solid rgba(40,24,20,.35);
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  margin: 36px 0 25px;
+  padding: 25px 0;
+}
+.pix-actions div { display: flex; flex-direction: column; gap: 7px; }
+.pix-actions div span {
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.pix-actions div strong { font-size: clamp(20px, 2.3vw, 31px); }
+.pix-contact { font-size: 13px !important; }
+.pix-contact a { border-bottom: 1px solid var(--ink); font-weight: 800; }
 .support-ways { background: var(--paper); display: grid; gap: 0; grid-template-columns: repeat(4, 1fr); padding-top: 0; }
 .support-card { border-left: 1px solid var(--line); min-height: 390px; padding: 38px; position: relative; transition: background .3s ease, color .3s ease; }
 .support-card:hover { background: var(--pink); }
@@ -473,7 +515,7 @@ h1, h2, h3, .display-copy, blockquote {
   .page-hero-copy { padding: 72px 20px; }
   .page-hero h1 { font-size: 65px; margin-top: 42px; }
   .page-hero-image { min-height: 440px; }
-  .values-heading, .actions-page-heading, .numbers-heading, .support-intro, .contact-page { grid-template-columns: 1fr; }
+  .values-heading, .actions-page-heading, .numbers-heading, .support-intro, .contact-page, .pix-section { grid-template-columns: 1fr; }
   .values-grid, .action-gallery, .support-ways { grid-template-columns: 1fr; }
   .value-card { min-height: 235px; }
   .actions-page-heading > p:last-child { grid-column: auto; }
@@ -481,6 +523,9 @@ h1, h2, h3, .display-copy, blockquote {
   .big-numbers { grid-template-columns: 1fr; }
   .big-numbers article { border-right: 0; padding-left: 0; }
   .support-intro { align-items: start; gap: 35px; }
+  .pix-section { gap: 45px; padding: 78px 20px; }
+  .pix-heading h2 { font-size: 75px; }
+  .pix-actions { align-items: flex-start; flex-direction: column; }
   .support-card { border-bottom: 1px solid var(--line); min-height: 330px; padding: 30px 20px; }
   .support-card h3 { margin-top: 75px; }
   .incentive-art { min-height: 350px; }

@@ -32,7 +32,7 @@ test("renderiza todas as páginas institucionais do ITA", async () => {
     ["/quem-somos", /Memória que/],
     ["/acoes", /Saberes em/],
     ["/impacto", /Presença que/],
-    ["/apoie", /Transforme imposto em impacto social/],
+    ["/apoie", /Faça parte dessa transformação/],
     ["/contato", /Uma conversa pode abrir muitos caminhos/],
   ];
 
@@ -59,5 +59,8 @@ test("mantém contatos, redes sociais, bazar e apoio fiscal visíveis", async ()
   assert.match(contact, /\(31\) 97243\.2240/);
   assert.match(support, /Incentivo fiscal/);
   assert.match(support, /Bazar Beneficente/);
+  assert.match(support, /60\.485\.003\/0001-94/);
+  assert.match(support, /cursos gratuitos e projetos de impacto social/);
+  assert.match(support, /Propor uma parceria/);
   assert.match(support, /não substitui orientação contábil ou tributária/);
 });
