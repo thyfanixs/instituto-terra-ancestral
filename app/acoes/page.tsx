@@ -6,15 +6,164 @@ export const metadata: Metadata = {
   description: "Conheça os cursos, vivências, eventos e ações culturais do Instituto Terra Ancestral.",
 };
 
-const actions = [
-  { title: "Agroecologia", category: "Terra e cuidado", image: "/images/official/agroecologia.jpg", text: "Cultivo, compostagem, plantas medicinais e saberes que aproximam pessoas e território." },
-  { title: "Cerâmica", category: "Arte e memória", image: "/images/official/ceramica.jpg", text: "Criação com a terra, expressão artística e transmissão de técnicas ancestrais." },
-  { title: "Culinária ancestral", category: "Saberes e sabores", image: "/images/official/culinaria-ancestral.jpg", text: "Receitas, ingredientes e modos de preparo afro-indígenas compartilhados entre gerações." },
-  { title: "Teatro negro", category: "Corpo e identidade", image: "/images/official/teatro-negro.jpg", text: "Expressão, presença e reconhecimento das narrativas negras em cena." },
-  { title: "Biojoias e macramê", category: "Economia criativa", image: "/images/official/biojoias.jpg", text: "Fazer artesanal, identidade e geração de renda conectados em cada peça." },
-  { title: "Grafite", category: "Arte urbana", image: "/images/official/grafite.jpg", text: "Juventude, território e memória transformando espaços por meio da arte." },
-  { title: "Caderno artesanal", category: "Formação", image: "/images/official/caderno-artesanal.jpg", text: "Criação manual, autonomia produtiva e circulação de conhecimentos." },
-  { title: "Feira ITA", category: "Cultura em rede", image: "/images/official/feira-ita.jpg", text: "Artesanato, apresentações, encontros e fortalecimento da economia local." },
+const courses = [
+  {
+    title: "Economia criativa",
+    category: "Arte, negócio e propósito",
+    image: "/images/official/economia-criativa.jpg",
+    text: "Formação que integra território, identidades, comercialização e valorização do trabalho criativo.",
+    meta: "3 turmas · 64 estudantes",
+  },
+  {
+    title: "Agroecologia",
+    category: "Remédios da Terra",
+    image: "/images/official/agroecologia.jpg",
+    text: "Cultivo agroecológico, plantas medicinais, compostagem e diálogo entre saberes ancestrais e científicos.",
+    meta: "2 turmas · 39 estudantes",
+  },
+  {
+    title: "Bonecas ancestrais",
+    category: "Memória e identidade",
+    image: "/images/official/bonecas-ancestrais.jpg",
+    text: "Bonecas de pano, Abayomi e figuras simbólicas como tecnologias ancestrais de cuidado e resistência.",
+    meta: "3 turmas · 32 estudantes",
+  },
+  {
+    title: "Biojoias e macramê",
+    category: "Arte indígena",
+    image: "/images/official/biojoias.jpg",
+    text: "Criação com sementes, pedras, fibras naturais e técnicas que valorizam natureza e identidade cultural.",
+    meta: "2 turmas · 31 estudantes",
+  },
+  {
+    title: "Caderno artesanal",
+    category: "Memória em papel",
+    image: "/images/official/caderno-artesanal.jpg",
+    text: "Encadernação manual, reaproveitamento de materiais e criação de lugares de expressão e registro da vida.",
+    meta: "2 turmas · 18 estudantes",
+  },
+  {
+    title: "Cerâmica",
+    category: "Terra e patrimônio",
+    image: "/images/official/ceramica.jpg",
+    text: "O barro como matéria de criação, memória e pertencimento, articulando técnicas e identidade territorial.",
+    meta: "4 turmas · 54 estudantes",
+  },
+  {
+    title: "Cerveja artesanal",
+    category: "Saberes e experimentação",
+    image: "/images/official/cerveja-artesanal.jpg",
+    text: "Produção artesanal em diálogo com ingredientes, ervas e especiarias presentes em diferentes culturas.",
+    meta: "1 turma · 6 estudantes",
+  },
+  {
+    title: "Costura criativa",
+    category: "Tradições têxteis",
+    image: "/images/official/costura-criativa.jpg",
+    text: "Modelagem, costura e reaproveitamento de tecidos para peças autorais, festas e celebrações tradicionais.",
+    meta: "3 turmas · 31 estudantes",
+  },
+  {
+    title: "Culinária ancestral",
+    category: "Saberes e sabores",
+    image: "/images/official/culinaria-ancestral.jpg",
+    text: "Receitas e modos de preparo afro-indígenas que reafirmam a cozinha como lugar de cuidado e memória.",
+    meta: "3 turmas · 27 estudantes",
+  },
+  {
+    title: "Educação patrimonial e arte",
+    category: "Patrimônio vivo",
+    image: "/images/official/ancestralidade.jpg",
+    text: "Memórias individuais e coletivas transformadas em processos artísticos por meio do fazer manual.",
+    meta: "3 turmas · 46 estudantes",
+  },
+  {
+    title: "Grafite",
+    category: "Arte urbana",
+    image: "/images/official/grafite.jpg",
+    text: "Expressão e ocupação simbólica do território a partir do congado, das tradições negras e da fé.",
+    meta: "4 turmas · 46 estudantes",
+  },
+  {
+    title: "Marcenaria criativa",
+    category: "Ofícios tradicionais",
+    image: "/images/official/marcenaria-criativa.jpg",
+    text: "Trabalho com madeira, sustentabilidade e criação de peças inspiradas nas referências do território.",
+    meta: "3 turmas · 18 estudantes",
+  },
+  {
+    title: "Teatro negro",
+    category: "Corpo e identidade",
+    image: "/images/official/teatro-negro.jpg",
+    text: "Criação coletiva, oralidade e ancestralidade para fortalecer narrativas afro-brasileiras e protagonismo.",
+    meta: "3 turmas · 61 estudantes",
+  },
+];
+
+const initiatives = [
+  {
+    title: "Armazém ITA",
+    category: "Economia solidária",
+    image: "/images/official/armazem-ita.jpg",
+    text: "Espaço de exposição e comercialização das peças produzidas nos cursos, gerando recursos para novos insumos e ações.",
+    meta: "Ciclo de aprendizagem e sustentabilidade",
+  },
+  {
+    title: "Feira ITA",
+    category: "Economia criativa",
+    image: "/images/official/feira-ita.jpg",
+    text: "Encontro de saberes, produtos artesanais, apresentações culturais e fortalecimento das redes locais.",
+    meta: "2 edições · cerca de 400 participantes",
+  },
+  {
+    title: "Ancestralidade e tradição",
+    category: "Patrimônio cultural",
+    image: "/images/official/ancestralidade.jpg",
+    text: "Salvaguarda e fortalecimento de Congados, Folias de Reis, Candombe, Festas de Terreiros e religiões de matriz africana.",
+    meta: "Memória, fé e pertencimento",
+  },
+  {
+    title: "Círculo Terapêutico",
+    category: "Saúde e bem viver",
+    image: "/images/official/circulo-terapeutico.jpg",
+    text: "Escuta, acolhimento e práticas coletivas de cuidado comunitário com acompanhamento profissional.",
+    meta: "1 turma · 15 mulheres",
+  },
+  {
+    title: "Mutirão de Saúde Visual",
+    category: "Acesso à saúde",
+    image: "/images/portfolio/page-28-01.jpeg",
+    text: "Exames especializados, atendimento médico, prescrição e encaminhamento para óculos gratuitos.",
+    meta: "4 mutirões · 284 atendimentos · 205 óculos",
+  },
+  {
+    title: "Tratamento medicinal de cannabis",
+    category: "Cuidado integral",
+    image: "/images/portfolio/page-26-02.jpeg",
+    text: "Orientação e acesso responsável ao tratamento, em parceria com a Associação Flor da Vida.",
+    meta: "25 pessoas contempladas",
+  },
+  {
+    title: "Cine Comunidade",
+    category: "Cinema e direitos humanos",
+    image: "/images/portfolio/page-31-01.jpeg",
+    text: "Sessões mensais de cinema acompanhadas de rodas de conversa, formação crítica e programação cultural.",
+    meta: "8 sessões · 241 participantes",
+  },
+  {
+    title: "Rodas de conversa",
+    category: "Educação e participação",
+    image: "/images/official/rodas-de-conversa.jpg",
+    text: "Encontros entre mestres da tradição, pesquisadores, estudantes, artistas, lideranças e moradores.",
+    meta: "8 encontros · 213 participantes",
+  },
+  {
+    title: "Eventos culturais",
+    category: "Cultura viva",
+    image: "/images/official/congadar.jpg",
+    text: "Apresentações, feiras, vivências e experiências gastronômicas que celebram a diversidade cultural.",
+    meta: "11 eventos · cerca de 643 participantes",
+  },
 ];
 
 export default function Acoes() {
@@ -33,17 +182,41 @@ export default function Acoes() {
 
       <section className="actions-page section">
         <div className="actions-page-heading reveal">
-          <p className="section-index">Experiências que transformam</p>
-          <h2>Muitos caminhos.<br />Um mesmo propósito.</h2>
-          <p>As ações do ITA reconhecem cultura, saúde, educação e economia como dimensões inseparáveis da vida comunitária.</p>
+          <p className="section-index">Formação e saberes</p>
+          <h2>13 cursos.<br />Muitos caminhos.</h2>
+          <p>Os Ciclos de Tecnologias Ancestrais conectam qualificação profissional, memória, autonomia e economia criativa.</p>
         </div>
         <div className="action-gallery">
-          {actions.map((action, index) => (
+          {courses.map((action, index) => (
             <article className={`gallery-card reveal card-${index + 1}`} key={action.title}>
               <div><img src={action.image} alt={`Registro da ação ${action.title}`} /></div>
               <p className="eyebrow">{action.category}</p>
               <h3>{action.title}</h3>
               <p>{action.text}</p>
+              <span className="action-meta">{action.meta}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="initiatives-section section">
+        <div className="initiatives-heading reveal">
+          <p className="section-index">Outras frentes de atuação</p>
+          <h2>Cultura, cuidado e comunidade.</h2>
+          <p>Além das formações, o ITA mantém ações permanentes de circulação cultural, saúde, economia solidária e participação social.</p>
+        </div>
+        <div className="initiative-grid">
+          {initiatives.map((initiative) => (
+            <article className="initiative-card reveal" key={initiative.title}>
+              <div className="initiative-image">
+                <img src={initiative.image} alt={`Registro de ${initiative.title}`} />
+              </div>
+              <div className="initiative-copy">
+                <p className="eyebrow">{initiative.category}</p>
+                <h3>{initiative.title}</h3>
+                <p>{initiative.text}</p>
+                <strong>{initiative.meta}</strong>
+              </div>
             </article>
           ))}
         </div>

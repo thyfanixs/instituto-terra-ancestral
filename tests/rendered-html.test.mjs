@@ -65,3 +65,36 @@ test("mantém contatos, redes sociais, bazar e apoio fiscal visíveis", async ()
   assert.match(support, /Propor uma parceria/);
   assert.match(support, /não substitui orientação contábil ou tributária/);
 });
+
+test("apresenta as formações e demais ações do portfólio institucional", async () => {
+  const worker = await getWorker();
+  const actions = await (await render(worker, "/acoes")).text();
+  const expectedActions = [
+    "Economia criativa",
+    "Agroecologia",
+    "Bonecas ancestrais",
+    "Biojoias e macramê",
+    "Caderno artesanal",
+    "Cerâmica",
+    "Cerveja artesanal",
+    "Costura criativa",
+    "Culinária ancestral",
+    "Educação patrimonial e arte",
+    "Grafite",
+    "Marcenaria criativa",
+    "Teatro negro",
+    "Armazém ITA",
+    "Feira ITA",
+    "Ancestralidade e tradição",
+    "Círculo Terapêutico",
+    "Mutirão de Saúde Visual",
+    "Tratamento medicinal de cannabis",
+    "Cine Comunidade",
+    "Rodas de conversa",
+    "Eventos culturais",
+  ];
+
+  for (const action of expectedActions) {
+    assert.match(actions, new RegExp(action, "i"), action);
+  }
+});
