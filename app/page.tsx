@@ -13,12 +13,12 @@ export default function Home() {
         <div className="hero-media" aria-hidden="true" />
         <div className="hero-shade" aria-hidden="true" />
         <div className="home-hero-content">
-          <p className="kicker reveal">Instituto Terra Ancestral · Pedro Leopoldo, MG</p>
-          <h1 className="reveal delay-1">Raízes que<br /><em>movem o futuro.</em></h1>
-          <p className="hero-lead reveal delay-2">
+          <p className="kicker hero-enter">Instituto Terra Ancestral · Pedro Leopoldo, MG</p>
+          <h1 className="hero-enter delay-1">Raízes que<br /><em>movem o futuro.</em></h1>
+          <p className="hero-lead hero-enter delay-2">
             Cultura, educação e cuidado para fortalecer pessoas, comunidades e territórios.
           </p>
-          <div className="hero-actions reveal delay-3">
+          <div className="hero-actions hero-enter delay-3">
             <Link className="button button-light" href="/acoes">
               Conheça nossas ações <span aria-hidden="true">↗</span>
             </Link>
