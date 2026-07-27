@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { assetPath } from "./lib/asset-path";
 
 const highlights = [
   { value: "1.200", label: "pessoas diretamente impactadas" },
@@ -48,7 +49,7 @@ export default function Home() {
 
       <section className="home-feature">
         <div className="feature-photo image-reveal">
-          <img src="/images/official/culinaria-ancestral.jpg" alt="Atividade de culinária ancestral do ITA" />
+          <img src={assetPath("/images/official/culinaria-ancestral.jpg")} alt="Atividade de culinária ancestral do ITA" />
         </div>
         <div className="feature-copy">
           <p className="kicker reveal">Cultura viva</p>
@@ -77,7 +78,7 @@ export default function Home() {
 
       <section className="social-strip">
         <div className="social-photo image-reveal">
-          <img src="/images/official/feira-ita.jpg" alt="Peças artesanais expostas na Feira ITA" />
+          <img src={assetPath("/images/official/feira-ita.jpg")} alt="Peças artesanais expostas na Feira ITA" />
         </div>
         <div className="social-copy">
           <span className="social-icon" aria-hidden="true">◎</span>

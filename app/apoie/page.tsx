@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "../components/PageHero";
+import { assetPath } from "../lib/asset-path";
 
 export const metadata: Metadata = {
   title: "Apoie",
@@ -85,7 +86,7 @@ export default function Apoie() {
 
       <section className="bazar-section">
         <div className="bazar-image image-reveal">
-          <img src="/images/official/armazem-ita.jpg" alt="Espaço do Armazém ITA" />
+          <img src={assetPath("/images/official/armazem-ita.jpg")} alt="Espaço do Armazém ITA" />
         </div>
         <div className="bazar-copy">
           <p className="kicker reveal">Bazar ITA</p>

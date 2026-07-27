@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "../components/PageHero";
+import { assetPath } from "../lib/asset-path";
 
 export const metadata: Metadata = {
   title: "Ações",
@@ -221,7 +222,7 @@ export default function Acoes() {
         <div className="action-gallery">
           {courses.map((action, index) => (
             <article className={`gallery-card reveal card-${index + 1}`} key={action.title}>
-              <div><img src={action.image} alt={`Registro da ação ${action.title}`} /></div>
+              <div><img src={assetPath(action.image)} alt={`Registro da ação ${action.title}`} /></div>
               <p className="eyebrow">{action.category}</p>
               <h3>{action.title}</h3>
               <p>{action.text}</p>
@@ -241,7 +242,7 @@ export default function Acoes() {
           {initiatives.map((initiative) => (
             <article className="initiative-card reveal" key={initiative.title}>
               <div className="initiative-image">
-                <img src={initiative.image} alt={`Registro de ${initiative.title}`} />
+                <img src={assetPath(initiative.image)} alt={`Registro de ${initiative.title}`} />
               </div>
               <div className="initiative-copy">
                 <p className="eyebrow">{initiative.category}</p>
@@ -257,7 +258,7 @@ export default function Acoes() {
       <section className="circle-spotlight">
         <div className="circle-spotlight-image image-reveal">
           <img
-            src="/images/gallery/circulo-terapeutico/01.jpg"
+            src={assetPath("/images/gallery/circulo-terapeutico/01.jpg")}
             alt="Participantes do Círculo Terapêutico em uma dinâmica coletiva"
             loading="lazy"
           />
@@ -316,7 +317,7 @@ export default function Acoes() {
                 {galleryPhotos(group.folder, group.count, group.title).map((photo) => (
                   <figure key={photo.src}>
                     <img
-                      src={photo.src}
+                      src={assetPath(photo.src)}
                       alt={photo.alt}
                       loading="lazy"
                       decoding="async"
@@ -331,7 +332,7 @@ export default function Acoes() {
 
       <section className="culture-banner">
         <div className="culture-banner-photo image-reveal">
-          <img src="/images/official/congadar.jpg" alt="Evento cultural com participação do Congadar" />
+          <img src={assetPath("/images/official/congadar.jpg")} alt="Evento cultural com participação do Congadar" />
         </div>
         <div className="culture-banner-copy reveal">
           <p className="kicker">Cultura viva</p>

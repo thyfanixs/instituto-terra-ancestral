@@ -143,7 +143,7 @@ h1, h2, h3, .display-copy, blockquote {
 }
 .hero-media {
   animation: heroDrift 15s ease-in-out infinite alternate;
-  background: url("/images/official/teatro-negro.jpg") center 43% / cover;
+  background: var(--home-hero-image) center 43% / cover;
   inset: -3%;
   position: absolute;
 }

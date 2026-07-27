@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { assetPath } from "../lib/asset-path";
 
 const navigation = [
   { href: "/", label: "Início" },
@@ -17,7 +18,7 @@ export default function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="brand" href="/" aria-label="Instituto Terra Ancestral — início">
-        <img src="/images/official/logo-ita.png" alt="" />
+        <img src={assetPath("/images/official/logo-ita.png")} alt="" />
         <span><strong>Instituto</strong>Terra Ancestral</span>
       </Link>
       <nav className="desktop-nav" aria-label="Navegação principal">

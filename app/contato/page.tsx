@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "../components/PageHero";
+import { assetPath } from "../lib/asset-path";
 
 export const metadata: Metadata = {
   title: "Contato",
@@ -49,7 +50,7 @@ export default function Contato() {
 
       <section className="visit-section">
         <div className="visit-image image-reveal">
-          <img src="/images/official/sede.jpg" alt="Entrada do Instituto Terra Ancestral" />
+          <img src={assetPath("/images/official/sede.jpg")} alt="Entrada do Instituto Terra Ancestral" />
         </div>
         <div className="visit-copy reveal">
           <p className="kicker">Nossa sede</p>

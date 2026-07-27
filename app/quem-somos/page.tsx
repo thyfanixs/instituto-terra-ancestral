@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "../components/PageHero";
+import { assetPath } from "../lib/asset-path";
 
 export const metadata: Metadata = {
   title: "Quem somos",
@@ -45,7 +46,7 @@ export default function QuemSomos() {
 
       <section className="mission-block">
         <div className="mission-photo image-reveal">
-          <img src="/images/official/rodas-de-conversa.jpg" alt="Roda de conversa promovida pelo Instituto" />
+          <img src={assetPath("/images/official/rodas-de-conversa.jpg")} alt="Roda de conversa promovida pelo Instituto" />
         </div>
         <div className="mission-text">
           <p className="kicker reveal">Nossa missão</p>

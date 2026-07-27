@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { assetPath } from "../lib/asset-path";
 
 export default function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-brand">
-        <img src="/images/official/logo-ita.png" alt="" />
+        <img src={assetPath("/images/official/logo-ita.png")} alt="" />
         <div><strong>Instituto Terra Ancestral</strong><span>Cultura · educação · cuidado</span></div>
       </div>
       <address>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "../components/PageHero";
+import { assetPath } from "../lib/asset-path";
 
 export const metadata: Metadata = {
   title: "Impacto",
@@ -46,7 +47,7 @@ export default function Impacto() {
           </div>
         </div>
         <div className="territory-image image-reveal">
-          <img src="/images/official/parceria-jequitiba.jpg" alt="Encontro realizado em parceria institucional" />
+          <img src={assetPath("/images/official/parceria-jequitiba.jpg")} alt="Encontro realizado em parceria institucional" />
         </div>
       </section>
 
