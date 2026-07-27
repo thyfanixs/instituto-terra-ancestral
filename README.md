@@ -37,14 +37,11 @@ npm test
 
 ## Estrutura principal
 
-- `app/page.tsx`: conteúdo e estrutura da página inicial;
-- `app/globals.css`: identidade visual e responsividade;
-- `app/layout.tsx`: metadados e configurações gerais;
-- `public/images/portfolio`: imagens extraídas do portfólio fornecido pelo ITA.
-
-## Próximas evoluções
-
-- substituir e ampliar a galeria com as fotos oficiais;
-- incluir agenda, notícias e páginas detalhadas dos projetos;
-- definir os canais oficiais de redes sociais e apoio;
-- revisar os textos finais com a equipe do Instituto.
+- `app/page.tsx`: página inicial;
+- `app/quem-somos`: apresentação institucional;
+- `app/acoes`: cursos e demais ações do portfólio;
+- `app/impacto`: indicadores e territórios;
+- `app/apoie`: PIX, parcerias, incentivo fiscal e Bazar ITA;
+- `app/contato`: contatos e redes sociais;
+- `app/globals.css`: identidade visual, animações e responsividade;
+- `public/images/official`: marca e fotografias oficiais utilizadas no site.
