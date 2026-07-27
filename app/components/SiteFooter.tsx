@@ -13,6 +13,7 @@ export default function SiteFooter() {
         (31) 97243.2240
       </address>
       <div className="footer-links">
+        <a href="https://www.institutoterraancestral.com.br">www.institutoterraancestral.com.br</a>
         <a href="mailto:institutoita.gerais@gmail.com">institutoita.gerais@gmail.com</a>
         <a href="https://www.instagram.com/ita.gerais/" target="_blank" rel="noreferrer">Instagram ↗</a>
         <a href="https://www.youtube.com/@itainstitutoterraancestral" target="_blank" rel="noreferrer">YouTube ↗</a>

@@ -32,6 +32,9 @@ export default function Contato() {
           <a className="contact-card reveal" href="tel:+5531972432240">
             <span>Telefone / WhatsApp</span><strong>(31) 97243.2240</strong><b aria-hidden="true">↗</b>
           </a>
+          <a className="contact-card reveal" href="https://www.institutoterraancestral.com.br">
+            <span>Site</span><strong>www.institutoterraancestral.com.br</strong><b aria-hidden="true">↗</b>
+          </a>
           <a className="contact-card social-card reveal" href="https://www.instagram.com/ita.gerais/" target="_blank" rel="noreferrer">
             <span>Instagram</span><strong>@ita.gerais</strong><b aria-hidden="true">↗</b>
           </a>

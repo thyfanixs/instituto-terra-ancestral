@@ -254,6 +254,44 @@ export default function Acoes() {
         </div>
       </section>
 
+      <section className="circle-spotlight">
+        <div className="circle-spotlight-image image-reveal">
+          <img
+            src="/images/gallery/circulo-terapeutico/01.jpg"
+            alt="Participantes do Círculo Terapêutico em uma dinâmica coletiva"
+            loading="lazy"
+          />
+        </div>
+        <div className="circle-spotlight-copy reveal">
+          <p className="kicker">Saúde mental e bem viver</p>
+          <h2>Círculo Terapêutico.</h2>
+          <p>
+            Com acolhimento profissional da Psicologia, a ação promove práticas
+            coletivas de escuta e cuidado comunitário. Rodas de conversa,
+            exercícios de respiração, autoconhecimento, expressão corporal e
+            reflexão coletiva fortalecem vínculos, pertencimento e redes de
+            cuidado no território.
+          </p>
+          <div className="circle-stat">
+            <strong>1 turma</strong>
+            <span>15 mulheres em Pedro Leopoldo</span>
+          </div>
+          <div className="facilitator-profile">
+            <p className="eyebrow">Mediação</p>
+            <h3>Angela Valentim</h3>
+            <p>
+              Mulher negra, psicóloga, terapeuta cognitivo-comportamental e
+              especialista em Habilidades Sociais. É conselheira do Conselho
+              Regional de Psicologia de Minas Gerais e do Conselho Estadual de
+              Direitos Humanos, presidenta da Comissão de Relações
+              Étnico-Raciais do CRP-MG, atua na Assistência Social, no SUS, na
+              Educação e na clínica, e é especializanda em Terapia do Esquema
+              de Jeffrey Young.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="complete-gallery section" aria-labelledby="galeria-completa">
         <div className="complete-gallery-heading reveal">
           <div>

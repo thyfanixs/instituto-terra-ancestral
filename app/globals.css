@@ -379,6 +379,66 @@ h1, h2, h3, .display-copy, blockquote {
 .culture-banner-copy h2 { color: var(--orange); font-size: clamp(55px, 6vw, 92px); line-height: .9; margin: 25px 0 35px; text-transform: uppercase; }
 .culture-banner-copy > p:last-child { font-size: 17px; line-height: 1.7; }
 
+.circle-spotlight {
+  background: var(--wine);
+  color: var(--paper);
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  min-height: 840px;
+}
+.circle-spotlight-image img { height: 100%; object-fit: cover; width: 100%; }
+.circle-spotlight-copy {
+  align-self: center;
+  padding: 80px clamp(30px, 6vw, 100px);
+}
+.circle-spotlight-copy h2 {
+  color: var(--orange);
+  font-size: clamp(58px, 6vw, 94px);
+  line-height: .88;
+  margin: 25px 0 34px;
+  text-transform: uppercase;
+}
+.circle-spotlight-copy > p:not(.kicker) {
+  font-size: 16px;
+  line-height: 1.72;
+}
+.circle-stat {
+  align-items: baseline;
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  border-top: 1px solid rgba(255,255,255,.3);
+  display: flex;
+  gap: 24px;
+  margin: 34px 0;
+  padding: 22px 0;
+}
+.circle-stat strong {
+  color: var(--pink);
+  font-size: clamp(30px, 3vw, 46px);
+  text-transform: uppercase;
+}
+.circle-stat span {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.facilitator-profile {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 28px 30px 30px;
+}
+.facilitator-profile h3 {
+  font-size: clamp(34px, 4vw, 55px);
+  line-height: .95;
+  margin: 16px 0 20px;
+  text-transform: uppercase;
+}
+.facilitator-profile > p:last-child {
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+}
+
 .complete-gallery { background: var(--paper); }
 .complete-gallery-heading {
   align-items: end;
@@ -622,9 +682,9 @@ h1, h2, h3, .display-copy, blockquote {
   .display-copy { font-size: 37px; }
   .home-intro-row, .two-columns { grid-template-columns: 1fr; }
   .circle-link { height: 130px; margin-top: 15px; width: 130px; }
-  .home-feature, .social-strip, .mission-block, .culture-banner, .territory-section, .visit-section, .incentive-panel, .bazar-section { grid-template-columns: 1fr; }
-  .feature-photo, .social-photo, .mission-photo, .culture-banner-photo, .territory-image, .visit-image, .bazar-image { min-height: 390px; }
-  .feature-copy, .social-copy, .mission-text, .culture-banner-copy, .territory-copy, .visit-copy, .incentive-content, .bazar-copy { padding: 70px 20px; }
+  .home-feature, .social-strip, .mission-block, .culture-banner, .circle-spotlight, .territory-section, .visit-section, .incentive-panel, .bazar-section { grid-template-columns: 1fr; }
+  .feature-photo, .social-photo, .mission-photo, .culture-banner-photo, .circle-spotlight-image, .territory-image, .visit-image, .bazar-image { min-height: 390px; }
+  .feature-copy, .social-copy, .mission-text, .culture-banner-copy, .circle-spotlight-copy, .territory-copy, .visit-copy, .incentive-content, .bazar-copy { padding: 70px 20px; }
   .feature-copy h2, .impact-title h2, .social-copy h2, .actions-page-heading h2, .numbers-heading h2, .territory-copy h2, .contact-lead h2, .visit-copy h2, .support-intro h2 { font-size: 53px; }
   .impact-list { grid-template-columns: 1fr; }
   .impact-list article, .impact-list article:not(:first-child) { border-bottom: 1px solid var(--ink); border-right: 0; padding: 25px 0; }

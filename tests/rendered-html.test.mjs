@@ -56,6 +56,7 @@ test("mantém contatos, redes sociais, bazar e apoio fiscal visíveis", async ()
   assert.match(contact, /@ita\.gerais/);
   assert.match(contact, /youtube\.com\/@itainstitutoterraancestral/);
   assert.match(contact, /facebook\.com\/@itagerais/);
+  assert.match(contact, /www\.institutoterraancestral\.com\.br/);
   assert.match(contact, /\(31\) 97243\.2240/);
   assert.match(support, /Incentivo fiscal/);
   assert.match(support, /Bazar Beneficente Reconvexo/);
@@ -98,6 +99,9 @@ test("apresenta as formações e demais ações do portfólio institucional", as
     assert.match(actions, new RegExp(action, "i"), action);
   }
 
+  assert.match(actions, /Angela Valentim/);
+  assert.match(actions, /Terapia do Esquema de Jeffrey Young/);
+  assert.match(actions, /Comissão de Relações Étnico-Raciais do CRP-MG/);
   assert.match(actions, /Galeria completa/i);
   const galleryPhotos = new Set(
     [...actions.matchAll(/\/images\/gallery\/[^"&]+\.jpg/g)].map(
