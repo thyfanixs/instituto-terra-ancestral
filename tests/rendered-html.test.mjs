@@ -58,7 +58,8 @@ test("mantém contatos, redes sociais, bazar e apoio fiscal visíveis", async ()
   assert.match(contact, /facebook\.com\/@itagerais/);
   assert.match(contact, /\(31\) 97243\.2240/);
   assert.match(support, /Incentivo fiscal/);
-  assert.match(support, /Bazar Beneficente/);
+  assert.match(support, /Bazar Beneficente Reconvexo/);
+  assert.match(support, /Todo o valor arrecadado é integralmente destinado/);
   assert.match(support, /60\.485\.003\/0001-94/);
   assert.match(support, /cursos gratuitos e projetos de impacto social/);
   assert.match(support, /Propor uma parceria/);

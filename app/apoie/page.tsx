@@ -11,7 +11,7 @@ const supportWays = [
   { number: "01", title: "Incentivo fiscal", text: "Destine parte do imposto devido a projetos aprovados do Instituto, conforme o mecanismo, os limites e o período de captação aplicáveis." },
   { number: "02", title: "Parceria institucional", text: "Some recursos, conhecimento, estrutura ou oportunidades a uma ação construída com o território." },
   { number: "03", title: "Apoio direto", text: "Contribua para cursos, eventos, cuidado comunitário e manutenção das atividades do Instituto." },
-  { number: "04", title: "Bazar Beneficente", text: "Apoie o Bazar Beneficente do ITA. Para doar, participar ou conhecer as próximas oportunidades, fale com o Instituto." },
+  { number: "04", title: "Bazar ITA", text: "O Bazar Beneficente Reconvexo fortalece e ajuda a garantir a continuidade das ações do Instituto." },
 ];
 
 export default function Apoie() {
@@ -88,12 +88,20 @@ export default function Apoie() {
           <img src="/images/official/armazem-ita.jpg" alt="Espaço do Armazém ITA" />
         </div>
         <div className="bazar-copy">
-          <p className="kicker reveal">Bazar Beneficente</p>
-          <h2 className="reveal">Comprar, doar e apoiar.</h2>
+          <p className="kicker reveal">Bazar ITA</p>
+          <h2 className="reveal">Bazar Beneficente Reconvexo.</h2>
           <p className="reveal">
-            O Bazar Beneficente é mais uma forma de fortalecer o Instituto Terra
-            Ancestral. Entre em contato para saber como contribuir e acompanhar
-            as próximas oportunidades.
+            O Bazar Beneficente Reconvexo nasceu da iniciativa, produção e
+            organização de estudantes do Instituto Terra Ancestral (ITA),
+            movidos pelo desejo de fortalecer e garantir a continuidade das
+            ações do Instituto.
+          </p>
+          <p className="reveal">
+            Cada peça adquirida representa um gesto de apoio à cultura, à
+            educação e à transformação social que o ITA promove em seu
+            território. Todo o valor arrecadado é integralmente destinado à
+            manutenção e ao fortalecimento das ações, projetos e atividades
+            desenvolvidos pelo Instituto Terra Ancestral.
           </p>
           <a className="button button-dark reveal" href="tel:+5531972432240">
             Falar com o ITA
