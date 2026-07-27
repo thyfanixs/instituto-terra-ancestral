@@ -181,19 +181,6 @@ h1, h2, h3, .display-copy, blockquote {
 }
 .hero-scroll span { align-items: center; display: flex; gap: 35px; }
 .hero-scroll span:not(:last-child)::after { background: var(--orange); border-radius: 50%; content: ""; height: 5px; width: 5px; }
-.orbit { position: absolute; }
-.orbit i {
-  border: 10px solid var(--pink);
-  border-left-color: transparent;
-  border-radius: 50%;
-  display: block;
-  position: absolute;
-}
-.orbit-hero { height: 470px; right: -150px; top: 130px; width: 580px; z-index: 2; }
-.orbit-hero i { animation: orbitSpin 18s linear infinite; height: 410px; width: 550px; }
-.orbit-hero i:nth-child(2) { animation-direction: reverse; height: 330px; left: 45px; top: 40px; width: 460px; }
-.orbit-hero i:nth-child(3) { animation-duration: 13s; height: 250px; left: 90px; top: 80px; width: 370px; }
-
 .home-intro { display: grid; gap: 60px; grid-template-columns: .7fr 3.3fr; }
 .display-copy { font-size: clamp(38px, 5.4vw, 82px); letter-spacing: -.025em; line-height: 1.03; margin: 0; text-transform: uppercase; }
 .display-copy strong { color: var(--red); font-weight: 400; }
@@ -464,7 +451,6 @@ h1, h2, h3, .display-copy, blockquote {
 .footer-bottom a { color: var(--orange); font-weight: 900; text-transform: uppercase; }
 
 @keyframes heroDrift { from { transform: scale(1.03) translate3d(0,0,0); } to { transform: scale(1.1) translate3d(-1%,1%,0); } }
-@keyframes orbitSpin { to { transform: rotate(360deg); } }
 
 @media (max-width: 1100px) {
   .site-header { grid-template-columns: 1fr auto auto; }
@@ -500,7 +486,6 @@ h1, h2, h3, .display-copy, blockquote {
   .hero-lead { font-size: 17px; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 18px; }
   .hero-scroll { display: none; }
-  .orbit-hero { right: -430px; top: 95px; }
   .home-intro, .manifesto { gap: 40px; grid-template-columns: 1fr; }
   .display-copy { font-size: 37px; }
   .home-intro-row, .two-columns { grid-template-columns: 1fr; }

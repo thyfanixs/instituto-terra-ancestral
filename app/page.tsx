@@ -12,7 +12,6 @@ export default function Home() {
       <section className="home-hero">
         <div className="hero-media" aria-hidden="true" />
         <div className="hero-shade" aria-hidden="true" />
-        <div className="orbit orbit-hero" aria-hidden="true"><i /><i /><i /></div>
         <div className="home-hero-content">
           <p className="kicker reveal">Instituto Terra Ancestral · Pedro Leopoldo, MG</p>
           <h1 className="reveal delay-1">Raízes que<br /><em>movem o futuro.</em></h1>
