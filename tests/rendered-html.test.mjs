@@ -97,4 +97,16 @@ test("apresenta as formações e demais ações do portfólio institucional", as
   for (const action of expectedActions) {
     assert.match(actions, new RegExp(action, "i"), action);
   }
+
+  assert.match(actions, /Galeria completa/i);
+  const galleryPhotos = new Set(
+    [...actions.matchAll(/\/images\/gallery\/[^"&]+\.jpg/g)].map(
+      ([photo]) => photo,
+    ),
+  );
+  assert.equal(
+    galleryPhotos.size,
+    62,
+    "a página deve apresentar os 62 registros da galeria oficial",
+  );
 });

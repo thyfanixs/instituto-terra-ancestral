@@ -166,6 +166,38 @@ const initiatives = [
   },
 ];
 
+const galleryGroups = [
+  { title: "Ancestralidade e tradição", folder: "ancestralidade", count: 9 },
+  { title: "Armazém ITA", folder: "armazem", count: 1 },
+  { title: "Círculo Terapêutico", folder: "circulo-terapeutico", count: 2 },
+  { title: "Agroecologia", folder: "agroecologia", count: 4 },
+  { title: "Biojoias indígenas e macramê", folder: "biojoias-macrame", count: 1 },
+  { title: "Bonecas ancestrais", folder: "bonecas-ancestrais", count: 4 },
+  { title: "Caderno artesanal", folder: "caderno-artesanal", count: 1 },
+  { title: "Cerâmica", folder: "ceramica", count: 8 },
+  { title: "Cerveja artesanal", folder: "cerveja-artesanal", count: 1 },
+  { title: "Costura criativa", folder: "costura-criativa", count: 1 },
+  { title: "Culinária ancestral", folder: "culinaria-ancestral", count: 1 },
+  { title: "Economia criativa", folder: "economia-criativa", count: 2 },
+  { title: "Grafite", folder: "grafite", count: 1 },
+  { title: "Marcenaria criativa", folder: "marcenaria-criativa", count: 1 },
+  { title: "Teatro negro", folder: "teatro-negro", count: 2 },
+  { title: "Eventos culturais e Feira ITA", folder: "eventos-culturais", count: 3 },
+  { title: "Espaço ITA", folder: "espaco-ita", count: 2 },
+  { title: "Parcerias institucionais", folder: "parcerias", count: 17 },
+  { title: "Rodas de conversa", folder: "rodas-de-conversa", count: 1 },
+];
+
+function galleryPhotos(folder: string, count: number, title: string) {
+  return Array.from({ length: count }, (_, index) => {
+    const number = String(index + 1).padStart(2, "0");
+    return {
+      src: `/images/gallery/${folder}/${number}.jpg`,
+      alt: `${title} — registro ${index + 1}`,
+    };
+  });
+}
+
 export default function Acoes() {
   return (
     <main>
@@ -218,6 +250,43 @@ export default function Acoes() {
                 <strong>{initiative.meta}</strong>
               </div>
             </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="complete-gallery section" aria-labelledby="galeria-completa">
+        <div className="complete-gallery-heading reveal">
+          <div>
+            <p className="section-index">Memória em imagens</p>
+            <h2 id="galeria-completa">Galeria completa.</h2>
+          </div>
+          <p>
+            62 registros das formações, encontros, celebrações, parcerias e
+            ações que fazem o Instituto Terra Ancestral acontecer.
+          </p>
+        </div>
+
+        <div className="gallery-groups">
+          {galleryGroups.map((group, groupIndex) => (
+            <section className="gallery-group reveal" key={group.folder}>
+              <header>
+                <span>{String(groupIndex + 1).padStart(2, "0")}</span>
+                <h3>{group.title}</h3>
+                <p>{group.count} {group.count === 1 ? "registro" : "registros"}</p>
+              </header>
+              <div className={`photo-mosaic photo-count-${group.count}`}>
+                {galleryPhotos(group.folder, group.count, group.title).map((photo) => (
+                  <figure key={photo.src}>
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                ))}
+              </div>
+            </section>
           ))}
         </div>
       </section>
