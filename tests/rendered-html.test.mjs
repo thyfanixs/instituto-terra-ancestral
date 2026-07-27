@@ -1,13 +1,16 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-async function render() {
+async function getWorker() {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
+  return worker;
+}
 
+async function render(worker, pathname = "/") {
   return worker.fetch(
-    new Request("http://localhost/", {
+    new Request(`http://localhost${pathname}`, {
       headers: { accept: "text/html" },
     }),
     {
@@ -22,19 +25,35 @@ async function render() {
   );
 }
 
-test("renderiza a página institucional do ITA", async () => {
-  const response = await render();
-  assert.equal(response.status, 200);
-  assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
+test("renderiza todas as páginas institucionais do ITA", async () => {
+  const worker = await getWorker();
+  const pages = [
+    ["/", /Raízes que/],
+    ["/quem-somos", /Memória que/],
+    ["/acoes", /Saberes em/],
+    ["/impacto", /Presença que/],
+    ["/apoie", /Transforme imposto em impacto social/],
+    ["/contato", /Uma conversa pode abrir muitos caminhos/],
+  ];
 
-  const html = await response.text();
-  assert.match(
-    html,
-    /<title>Instituto Terra Ancestral \| Cultura, educação e cuidado<\/title>/i,
-  );
-  assert.match(html, /Raízes que/);
-  assert.match(html, /Fortalecer quem faz o território florescer/);
-  assert.match(html, /1\.200/);
-  assert.match(html, /institutoita\.gerais@gmail\.com/);
-  assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/i);
+  for (const [pathname, expected] of pages) {
+    const response = await render(worker, pathname);
+    assert.equal(response.status, 200, pathname);
+    assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
+    const html = await response.text();
+    assert.match(html, expected, pathname);
+    assert.match(html, /Instituto Terra Ancestral/, pathname);
+    assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/i);
+  }
+});
+
+test("mantém contato, Instagram e apoio fiscal visíveis", async () => {
+  const worker = await getWorker();
+  const contact = await (await render(worker, "/contato")).text();
+  const support = await (await render(worker, "/apoie")).text();
+
+  assert.match(contact, /institutoita\.gerais@gmail\.com/);
+  assert.match(contact, /@ita\.gerais/);
+  assert.match(support, /Incentivo fiscal/);
+  assert.match(support, /não substitui orientação contábil ou tributária/);
 });
