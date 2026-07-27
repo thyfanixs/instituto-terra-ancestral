@@ -8,7 +8,7 @@ const navigation = [
   { href: "/quem-somos", label: "Quem somos" },
   { href: "/acoes", label: "Ações" },
   { href: "/impacto", label: "Impacto" },
-  { href: "/apoie", label: "Apoie" },
+  { href: "/apoie", label: "Apoie o ITA" },
   { href: "/contato", label: "Contato" },
 ];
 
@@ -27,7 +27,7 @@ export default function SiteHeader() {
           </Link>
         ))}
       </nav>
-      <Link className="header-cta" href="/apoie">Faça parte</Link>
+      <Link className="header-cta" href="/apoie">Apoie o ITA</Link>
       <details className="mobile-menu">
         <summary aria-label="Abrir menu"><span /><span /></summary>
         <nav aria-label="Navegação móvel">

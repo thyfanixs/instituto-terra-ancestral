@@ -47,13 +47,17 @@ test("renderiza todas as páginas institucionais do ITA", async () => {
   }
 });
 
-test("mantém contato, Instagram e apoio fiscal visíveis", async () => {
+test("mantém contatos, redes sociais, bazar e apoio fiscal visíveis", async () => {
   const worker = await getWorker();
   const contact = await (await render(worker, "/contato")).text();
   const support = await (await render(worker, "/apoie")).text();
 
   assert.match(contact, /institutoita\.gerais@gmail\.com/);
   assert.match(contact, /@ita\.gerais/);
+  assert.match(contact, /youtube\.com\/@itainstitutoterraancestral/);
+  assert.match(contact, /facebook\.com\/@itagerais/);
+  assert.match(contact, /\(31\) 97243\.2240/);
   assert.match(support, /Incentivo fiscal/);
+  assert.match(support, /Bazar Beneficente/);
   assert.match(support, /não substitui orientação contábil ou tributária/);
 });

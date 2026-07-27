@@ -30,10 +30,16 @@ export default function Contato() {
             <span>E-mail</span><strong>institutoita.gerais@gmail.com</strong><b aria-hidden="true">↗</b>
           </a>
           <a className="contact-card reveal" href="tel:+5531972432240">
-            <span>Telefone / WhatsApp</span><strong>(31) 97243-2240</strong><b aria-hidden="true">↗</b>
+            <span>Telefone / WhatsApp</span><strong>(31) 97243.2240</strong><b aria-hidden="true">↗</b>
           </a>
           <a className="contact-card social-card reveal" href="https://www.instagram.com/ita.gerais/" target="_blank" rel="noreferrer">
             <span>Instagram</span><strong>@ita.gerais</strong><b aria-hidden="true">↗</b>
+          </a>
+          <a className="contact-card youtube-card reveal" href="https://www.youtube.com/@itainstitutoterraancestral" target="_blank" rel="noreferrer">
+            <span>YouTube</span><strong>ITA Instituto Terra Ancestral</strong><b aria-hidden="true">↗</b>
+          </a>
+          <a className="contact-card facebook-card reveal" href="https://www.facebook.com/@itagerais/" target="_blank" rel="noreferrer">
+            <span>Facebook</span><strong>ITA - Instituto Terra Ancestral</strong><b aria-hidden="true">↗</b>
           </a>
         </div>
       </section>
@@ -48,8 +54,7 @@ export default function Contato() {
           <address>
             Rua Jornalista Nicolau Neto, 293<br />
             Portal das Acácias<br />
-            Pedro Leopoldo · MG<br />
-            CEP 33254-226
+            Pedro Leopoldo · MG · 33254-226
           </address>
         </div>
       </section>

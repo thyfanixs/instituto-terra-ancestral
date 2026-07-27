@@ -83,11 +83,13 @@ export default function Home() {
         <div className="social-copy">
           <span className="social-icon" aria-hidden="true">◎</span>
           <p className="kicker">Acompanhe o cotidiano</p>
-          <h2>@ita.gerais</h2>
+          <h2>ITA nas redes</h2>
           <p>Veja de perto as ações, encontros, parcerias e histórias que fazem o Instituto Terra Ancestral.</p>
-          <a className="button button-pink" href="https://www.instagram.com/ita.gerais/" target="_blank" rel="noreferrer">
-            Seguir no Instagram <span aria-hidden="true">↗</span>
-          </a>
+          <div className="social-links-row">
+            <a href="https://www.instagram.com/ita.gerais/" target="_blank" rel="noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+            <a href="https://www.youtube.com/@itainstitutoterraancestral" target="_blank" rel="noreferrer">YouTube <span aria-hidden="true">↗</span></a>
+            <a href="https://www.facebook.com/@itagerais/" target="_blank" rel="noreferrer">Facebook <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </section>
     </main>

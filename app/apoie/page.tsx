@@ -11,6 +11,7 @@ const supportWays = [
   { number: "01", title: "Incentivo fiscal", text: "Destine parte do imposto devido a projetos aprovados do Instituto, conforme o mecanismo, os limites e o período de captação aplicáveis." },
   { number: "02", title: "Parceria institucional", text: "Some recursos, conhecimento, estrutura ou oportunidades a uma ação construída com o território." },
   { number: "03", title: "Apoio direto", text: "Contribua para cursos, eventos, cuidado comunitário e manutenção das atividades do Instituto." },
+  { number: "04", title: "Bazar Beneficente", text: "Apoie o Bazar Beneficente do ITA. Para doar, participar ou conhecer as próximas oportunidades, fale com o Instituto." },
 ];
 
 export default function Apoie() {
@@ -46,6 +47,24 @@ export default function Apoie() {
             <span>{way.number}</span><h3>{way.title}</h3><p>{way.text}</p>
           </article>
         ))}
+      </section>
+
+      <section className="bazar-section">
+        <div className="bazar-image image-reveal">
+          <img src="/images/official/armazem-ita.jpg" alt="Espaço do Armazém ITA" />
+        </div>
+        <div className="bazar-copy">
+          <p className="kicker reveal">Bazar Beneficente</p>
+          <h2 className="reveal">Comprar, doar e apoiar.</h2>
+          <p className="reveal">
+            O Bazar Beneficente é mais uma forma de fortalecer o Instituto Terra
+            Ancestral. Entre em contato para saber como contribuir e acompanhar
+            as próximas oportunidades.
+          </p>
+          <a className="button button-dark reveal" href="tel:+5531972432240">
+            Falar com o ITA
+          </a>
+        </div>
       </section>
 
       <section className="incentive-panel">
