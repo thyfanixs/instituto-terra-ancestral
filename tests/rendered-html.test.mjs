@@ -40,6 +40,19 @@ test("renderiza todas as páginas institucionais do ITA", async () => {
   }
 });
 
+test("apresenta o alcance atualizado das ações de saúde", async () => {
+  const home = await readPage("/");
+  const impact = await readPage("/impacto");
+  const healthLabel = /pessoas acolhidas\/beneficiadas com as ações de saúde do ITA - Instituto Terra Ancestral/;
+
+  assert.match(home, /259/);
+  assert.match(home, healthLabel);
+  assert.match(impact, /259/);
+  assert.match(impact, healthLabel);
+  assert.doesNotMatch(home, /205[^<]*óculos entregues gratuitamente/);
+  assert.doesNotMatch(impact, /205[^<]*óculos entregues gratuitamente/);
+});
+
 test("mantém contatos, redes sociais, bazar e apoio fiscal visíveis", async () => {
   const contact = await readPage("/contato");
   const support = await readPage("/apoie");

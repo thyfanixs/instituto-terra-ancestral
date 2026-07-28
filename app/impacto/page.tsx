@@ -69,7 +69,7 @@ export default function Impacto() {
         </div>
         <div className="big-numbers">
           <article className="reveal"><strong>1.200</strong><span>pessoas diretamente impactadas</span></article>
-          <article className="reveal"><strong>205</strong><span>óculos entregues gratuitamente</span></article>
+          <article className="reveal"><strong>259</strong><span>pessoas acolhidas/beneficiadas com as ações de saúde do ITA - Instituto Terra Ancestral</span></article>
           <article className="reveal"><strong>643</strong><span>participantes em eventos culturais</span></article>
           <article className="reveal"><strong>13</strong><span>formações apresentadas no portfólio</span></article>
         </div>

@@ -3,7 +3,7 @@ import { assetPath } from "./lib/asset-path";
 
 const highlights = [
   { value: "1.200", label: "pessoas diretamente impactadas" },
-  { value: "205", label: "óculos entregues gratuitamente" },
+  { value: "259", label: "pessoas acolhidas/beneficiadas com as ações de saúde do ITA - Instituto Terra Ancestral" },
   { value: "643", label: "participantes em eventos culturais" },
 ];
 
