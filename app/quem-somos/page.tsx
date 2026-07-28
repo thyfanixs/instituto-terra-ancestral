@@ -24,7 +24,7 @@ export default function QuemSomos() {
         eyebrow="Quem somos"
         title="Memória que"
         accent="abre caminhos."
-        description="Uma organização da sociedade civil que articula saberes ancestrais, formação humana e inovação social."
+        description="Uma organização da sociedade civil que difunde, articula e fortalece as culturas afro-indígenas."
         image="/images/official/ancestralidade.jpg"
         imageAlt="Instrumentos e objetos ligados às tradições ancestrais"
         tone="pink"
@@ -33,13 +33,14 @@ export default function QuemSomos() {
       <section className="manifesto section">
         <p className="section-index reveal">Nossa história</p>
         <div>
-          <p className="display-copy reveal">
-            Com sede em Pedro Leopoldo, o ITA atua na difusão e no fortalecimento
-            das <strong>culturas afro-indígenas.</strong>
-          </p>
+          <p className="display-copy reveal">Cultura viva, saberes ancestrais e articulação em rede.</p>
           <div className="two-columns reveal">
-            <p>Articulamos coletivos, artistas, mestres da cultura popular e instituições parceiras para ampliar oportunidades e fortalecer identidades.</p>
-            <p>Nossa atuação alcança territórios da Região Metropolitana de Belo Horizonte e entorno, valorizando a potência de cada comunidade.</p>
+            <p>
+              O Instituto Terra Ancestral (ITA) é uma organização da sociedade civil que atua na difusão, articulação e fortalecimento das culturas afro-indígenas, promovendo o diálogo entre coletivos, grupos culturais, artistas, mestres da cultura popular e instituições parceiras em diferentes territórios da Região Metropolitana de Belo Horizonte e entorno.
+            </p>
+            <p>
+              Com sede em Pedro Leopoldo (MG), o ITA desenvolve ações orientadas pelos princípios da Cultura Viva, da valorização dos saberes ancestrais, da diversidade cultural e do intercâmbio dos agentes culturais locais, consolidando-se como um articulador regional em rede, contribuindo para o aumento do senso de pertencimento comunitário e a geração de renda.
+            </p>
           </div>
         </div>
       </section>
