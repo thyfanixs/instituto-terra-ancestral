@@ -8,12 +8,14 @@ export const metadata: Metadata = {
 };
 
 const values = [
-  ["01", "Ancestralidade", "Reconhecemos as memórias e os saberes que atravessam gerações."],
-  ["02", "Pertencimento", "Criamos espaços onde identidades e vínculos comunitários podem florescer."],
-  ["03", "Educação", "Aprendemos com a experiência, a troca e a diversidade de conhecimentos."],
-  ["04", "Cuidado integral", "Entendemos corpo, mente, cultura e território como dimensões conectadas."],
-  ["05", "Cooperação", "Construímos em rede, com escuta, reciprocidade e responsabilidade."],
-  ["06", "Ética e transparência", "Cuidamos das relações e dos recursos com seriedade e clareza."],
+  ["01", "Ancestralidade", "Valorizamos os saberes ancestrais como patrimônio vivo, fonte de conhecimento, inovação e transformação."],
+  ["02", "Pertencimento", "Fortalecemos identidades, memórias e vínculos com os territórios, promovendo o protagonismo das comunidades."],
+  ["03", "Educação", "Acreditamos na educação como caminho para a autonomia, a formação profissional e o desenvolvimento humano."],
+  ["04", "Cuidado integral", "Promovemos o bem viver por meio da integração entre saúde, cultura, espiritualidade, natureza e relações humanas."],
+  ["05", "Cooperação", "Atuamos em rede, valorizando o diálogo, as parcerias e a construção coletiva."],
+  ["06", "Diversidade", "Respeitamos e valorizamos a pluralidade de pessoas, culturas, saberes e modos de vida."],
+  ["07", "Sustentabilidade", "Assumimos o compromisso com o cuidado dos territórios, dos recursos naturais e das futuras gerações."],
+  ["08", "Ética e transparência", "Conduzimos nossas ações com integridade, responsabilidade e compromisso público."],
 ];
 
 export default function QuemSomos() {
