@@ -305,6 +305,22 @@ h1, h2, h3, .display-copy, blockquote {
 .value-card p { font-size: 14px; line-height: 1.6; margin: 0; }
 
 .actions-page { background: var(--paper); }
+.action-card-link { color: inherit; display: block; text-decoration: none; }
+.action-detail { background: var(--paper); }
+.action-detail-hero { background: var(--ink); color: var(--cream); display: grid; grid-template-columns: 1fr 1fr; min-height: 75vh; }
+.action-detail-copy { align-self: center; max-width: 620px; padding: 120px clamp(30px, 8vw, 130px); }
+.action-detail-copy .plain-link { display: inline-block; margin-bottom: 85px; }
+.action-detail-copy .kicker { color: var(--orange); }
+.action-detail-copy h1 { font-family: var(--display); font-size: clamp(54px, 7vw, 110px); line-height: .9; margin: 18px 0 30px; }
+.action-detail-copy > p:not(.kicker) { font-size: 18px; line-height: 1.65; max-width: 530px; }
+.action-detail-copy strong { color: var(--orange); display: block; margin-top: 28px; }
+.action-detail-hero > img { height: 100%; min-height: 560px; object-fit: cover; width: 100%; }
+.action-album { background: var(--cream); }
+.action-album-heading { align-items: end; display: flex; justify-content: space-between; margin-bottom: 55px; }
+.action-album-heading h2 { font-family: var(--display); font-size: clamp(46px, 6vw, 90px); line-height: .9; margin: 0; }
+.action-album-grid { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
+.action-album-grid figure { aspect-ratio: 1.12; margin: 0; overflow: hidden; }
+.action-album-grid img { height: 100%; object-fit: cover; width: 100%; }
 .actions-overview { background: var(--cream); display: grid; gap: 45px; grid-template-columns: .8fr 2fr; }
 .actions-overview-copy { max-width: 800px; }
 .actions-overview h2 { font-family: var(--display); font-size: clamp(40px, 5vw, 78px); line-height: .95; margin: 12px 0 30px; }
@@ -699,6 +715,12 @@ h1, h2, h3, .display-copy, blockquote {
   .page-hero h1 { font-size: 65px; margin-top: 42px; }
   .page-hero-image { min-height: 440px; }
   .values-heading, .actions-overview, .actions-page-heading, .initiatives-heading, .numbers-heading, .support-intro, .contact-page, .pix-section { grid-template-columns: 1fr; }
+  .action-detail-hero { grid-template-columns: 1fr; }
+  .action-detail-copy { padding: 80px 25px; }
+  .action-detail-copy .plain-link { margin-bottom: 55px; }
+  .action-detail-hero > img { min-height: 380px; }
+  .action-album-heading { align-items: start; flex-direction: column; gap: 18px; }
+  .action-album-grid { grid-template-columns: 1fr; }
   .values-grid, .action-gallery, .support-ways { grid-template-columns: 1fr; }
   .initiatives-heading > p:last-child { grid-column: auto; }
   .initiative-grid { grid-template-columns: 1fr; }

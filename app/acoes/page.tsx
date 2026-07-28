@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import PageHero from "../components/PageHero";
 import { assetPath } from "../lib/asset-path";
+import Link from "next/link";
+import { actionSlug } from "./action-details";
 
 export const metadata: Metadata = {
   title: "Ações",
@@ -244,13 +246,13 @@ export default function Acoes() {
         </div>
         <div className="action-gallery">
           {courses.map((action, index) => (
-            <article className={`gallery-card reveal card-${index + 1}`} key={action.title}>
+            <Link className={`gallery-card action-card-link reveal card-${index + 1}`} href={`/acoes/${actionSlug(action.title)}`} key={action.title}>
               <div><img src={assetPath(action.image)} alt={`Registro da ação ${action.title}`} /></div>
               <p className="eyebrow">{action.category}</p>
               <h3>{action.title}</h3>
               <p>{action.text}</p>
               <span className="action-meta">{action.meta}</span>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
@@ -263,7 +265,7 @@ export default function Acoes() {
         </div>
         <div className="initiative-grid">
           {initiatives.map((initiative) => (
-            <article className="initiative-card reveal" key={initiative.title}>
+            <Link className="initiative-card action-card-link reveal" href={`/acoes/${actionSlug(initiative.title)}`} key={initiative.title}>
               <div className="initiative-image">
                 <img src={assetPath(initiative.image)} alt={`Registro de ${initiative.title}`} />
               </div>
@@ -273,7 +275,7 @@ export default function Acoes() {
                 <p>{initiative.text}</p>
                 <strong>{initiative.meta}</strong>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
