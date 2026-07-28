@@ -60,6 +60,22 @@ export default function Contato() {
             Portal das Acácias<br />
             Pedro Leopoldo · MG · 33254-226
           </address>
+          <a
+            className="visit-map-link"
+            href="https://www.google.com/maps/search/?api=1&query=Rua%20Jornalista%20Nicolau%20Neto%2C%20293%2C%20Pedro%20Leopoldo%2C%20MG%2C%2033254-226"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Abrir no Google Maps ↗
+          </a>
+          <div className="visit-map">
+            <iframe
+              title="Localização do Instituto Terra Ancestral"
+              src="https://www.google.com/maps?q=Rua%20Jornalista%20Nicolau%20Neto%2C%20293%2C%20Pedro%20Leopoldo%2C%20MG%2C%2033254-226&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
       </section>
     </main>
