@@ -228,12 +228,20 @@ export default function Acoes() {
       />
 
       <section className="actions-overview section">
-        <p className="section-index reveal">Atuação</p>
+        <div className="actions-overview-intro reveal">
+          <p className="section-index">Atuação</p>
+          <p className="actions-overview-mark" aria-hidden="true">ITA</p>
+        </div>
         <div className="actions-overview-copy reveal">
           <p className="kicker">Aqui, no ITA</p>
-          <h2>Realizamos:</h2>
+          <h2>O fazer é<br /><em>coletivo.</em></h2>
           <ul>
-            {actionHighlights.map((action) => <li key={action}>{action}</li>)}
+            {actionHighlights.map((action, index) => (
+              <li key={action}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <p>{action}</p>
+              </li>
+            ))}
           </ul>
         </div>
       </section>
