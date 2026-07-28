@@ -249,7 +249,7 @@ export default function Acoes() {
       <section className="actions-page section">
         <div className="actions-page-heading reveal">
           <p className="section-index">Formação e saberes</p>
-          <h2>13 cursos.<br />Muitos caminhos.</h2>
+          <h2>Cursos e formações.<br />Muitos caminhos.</h2>
           <p>Os Ciclos de Tecnologias Ancestrais conectam qualificação profissional, memória, autonomia e economia criativa.</p>
         </div>
         <div className="action-gallery">
