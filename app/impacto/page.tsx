@@ -9,6 +9,25 @@ export const metadata: Metadata = {
 
 const territories = ["Pedro Leopoldo", "Belo Horizonte", "Sete Lagoas", "Confins", "Matozinhos", "Capim Branco", "Jequitibá"];
 
+const institutionalPartnerships = [
+  {
+    territory: "Belo Horizonte",
+    partners: ["Associação QuinTao das Artes", "Companhia artística teAtodo amanhã", "MandakNega — espaço gastronômico, cultural e afro-brasileiro", "G.E.S.T.O UFMG — Grupo de Estudos do Simbólico e Técnico da Olaria"],
+  },
+  { territory: "Sete Lagoas", partners: ["Alcunha Negada — espaço gastronômico, cultural e afro-brasileiro"] },
+  { territory: "Confins", partners: ["CERC"], note: "Parceiro institucional na realização de cursos de Cerâmica, Grafite e Artesanato de Bonecas." },
+  {
+    territory: "Matozinhos",
+    partners: ["Terreiro de Umbanda TUFF", "Quintal das Pretas e Companhia Pé de Pano", "Quintal das Marias", "Garagem Cultural"],
+  },
+  { territory: "Capim Branco", partners: ["Eco das Artes", "KombiCine e Cultura em Rota"] },
+  { territory: "Jequitibá", partners: ["Guarda de Massambique Nossa Senhora do Santíssimo Sacramento", "Guardas da Irmandade do Rosário de Jequitibá/MG"] },
+  {
+    territory: "Pedro Leopoldo",
+    partners: ["Festas de Congado e Folias de Reis e Guarda Congo Nossa Senhora do Rosário", "SEABRA — Coletivo de Empreendedores Negros", "Secretaria de Bem Estar e Cultura de Pedro Leopoldo", "Poesia a La Carte", "Grupo Ancês de Teatro Negro", "Ceramistas Maria Quem Dera"],
+  },
+];
+
 export default function Impacto() {
   return (
     <main>
@@ -49,6 +68,30 @@ export default function Impacto() {
         <div className="territory-image image-reveal">
           <img src={assetPath("/images/official/parceria-jequitiba.jpg")} alt="Encontro realizado em parceria institucional" />
         </div>
+      </section>
+
+      <section className="institutional-partnerships section">
+        <div className="institutional-partnerships-heading reveal">
+          <p className="section-index">Relações institucionais</p>
+          <div>
+            <p className="kicker">Parcerias por território</p>
+            <h2>Uma rede que faz acontecer.</h2>
+            <p>O ITA atua em aliança com coletivos, espaços culturais, grupos tradicionais, universidades e instituições públicas.</p>
+          </div>
+        </div>
+        <div className="partnership-territories">
+          {institutionalPartnerships.map((item, index) => (
+            <article className="partnership-territory reveal" key={item.territory}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{item.territory}</h3>
+              <ul>
+                {item.partners.map((partner) => <li key={partner}>{partner}</li>)}
+              </ul>
+              {item.note && <p>{item.note}</p>}
+            </article>
+          ))}
+        </div>
+        <p className="source-note">Fonte: Portfólio Institucional ITA, páginas 34 a 41.</p>
       </section>
 
       <section className="impact-quote section">
