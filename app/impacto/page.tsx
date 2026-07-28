@@ -91,7 +91,6 @@ export default function Impacto() {
             </article>
           ))}
         </div>
-        <p className="source-note">Fonte: Portfólio Institucional ITA, páginas 34 a 41.</p>
       </section>
 
       <section className="impact-quote section">
