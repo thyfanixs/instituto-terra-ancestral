@@ -34,19 +34,38 @@ export default async function ActionPage({ params }: ActionPageProps) {
         <img src={assetPath(action.image)} alt={`Registro da ação ${action.title}`} />
       </section>
 
-      <section className="action-album section">
-        <div className="action-album-heading">
-          <p className="section-index">Memória em imagens</p>
-          <h2>Álbum da ação.</h2>
+      <section className="action-story section">
+        <div className="action-story-heading">
+          <p className="section-index">Como acontece</p>
+          <h2>Saberes que viram prática.</h2>
         </div>
-        <div className="action-album-grid">
-          {action.photos.map((photo, index) => (
-            <figure key={photo}>
-              <img src={assetPath(photo)} alt={`${action.title} — foto ${index + 1}`} loading="lazy" />
-            </figure>
-          ))}
+        <div className="action-story-copy">
+          {action.description.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          {action.credit && (
+            <aside className="action-credit">
+              <p className="eyebrow">{action.credit.label}</p>
+              <h3>{action.credit.title}</h3>
+              <p>{action.credit.text}</p>
+            </aside>
+          )}
         </div>
       </section>
+
+      {action.photos.length > 0 && (
+        <section className="action-album section">
+          <div className="action-album-heading">
+            <p className="section-index">Memória em imagens</p>
+            <h2>Álbum da ação.</h2>
+          </div>
+          <div className="action-album-grid">
+            {action.photos.map((photo, index) => (
+              <figure key={photo}>
+                <img src={assetPath(photo)} alt={`${action.title} — foto ${index + 1}`} loading="lazy" />
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
     </main>
   );
 }

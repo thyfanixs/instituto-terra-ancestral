@@ -30,8 +30,8 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Build static site
-        run: npm run build
+      - name: Build and test static site
+        run: npm test
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact

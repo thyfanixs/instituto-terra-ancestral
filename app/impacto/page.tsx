@@ -28,6 +28,26 @@ const institutionalPartnerships = [
   },
 ];
 
+const partnershipPhotos = [
+  { src: "/images/gallery/parcerias/01.jpg", caption: "Jequitibá · Guardas da Irmandade do Rosário" },
+  { src: "/images/gallery/parcerias/02.jpg", caption: "Sete Lagoas · Alcunha Negada" },
+  { src: "/images/gallery/parcerias/03.jpg", caption: "Confins · CERC" },
+  { src: "/images/gallery/parcerias/04.jpg", caption: "Confins · CERC" },
+  { src: "/images/gallery/parcerias/05.jpg", caption: "Confins · CERC" },
+  { src: "/images/gallery/parcerias/06.jpg", caption: "Confins · CERC" },
+  { src: "/images/gallery/parcerias/07.jpg", caption: "Capim Branco · Eco das Artes" },
+  { src: "/images/gallery/parcerias/08.jpg", caption: "Capim Branco · Eco das Artes" },
+  { src: "/images/gallery/parcerias/09.jpg", caption: "Capim Branco · Eco das Artes" },
+  { src: "/images/gallery/parcerias/10.jpg", caption: "Matozinhos · Garagem Cultural" },
+  { src: "/images/gallery/parcerias/11.jpg", caption: "Matozinhos · Garagem Cultural" },
+  { src: "/images/gallery/parcerias/12.jpg", caption: "Belo Horizonte · GESTO UFMG" },
+  { src: "/images/gallery/parcerias/13.jpg", caption: "Matozinhos · Quintal das Pretas" },
+  { src: "/images/gallery/parcerias/14.jpg", caption: "Belo Horizonte · QuinTao das Artes" },
+  { src: "/images/gallery/parcerias/15.jpg", caption: "Belo Horizonte · QuinTao das Artes" },
+  { src: "/images/gallery/parcerias/16.jpg", caption: "Belo Horizonte · QuinTao das Artes" },
+  { src: "/images/gallery/parcerias/17.jpg", caption: "Matozinhos · Terreiro de Umbanda TUFF" },
+];
+
 export default function Impacto() {
   return (
     <main>
@@ -89,6 +109,22 @@ export default function Impacto() {
               </ul>
               {item.note && <p>{item.note}</p>}
             </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="partnership-gallery section">
+        <div className="partnership-gallery-heading reveal">
+          <p className="section-index">Parcerias em imagens</p>
+          <h2>Territórios conectados.</h2>
+          <p>Registros das instituições, coletivos e grupos que constroem ações junto com o ITA.</p>
+        </div>
+        <div className="partnership-photo-grid">
+          {partnershipPhotos.map((photo) => (
+            <figure className="reveal" key={photo.src}>
+              <img src={assetPath(photo.src)} alt={photo.caption} loading="lazy" />
+              <figcaption>{photo.caption}</figcaption>
+            </figure>
           ))}
         </div>
       </section>

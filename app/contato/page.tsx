@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   description: "Entre em contato com o Instituto Terra Ancestral e acompanhe suas redes sociais.",
 };
 
+const spacePhotos = [
+  { src: "/images/gallery/espaco-ita/01.jpg", alt: "Fachada do Instituto Terra Ancestral" },
+  { src: "/images/gallery/espaco-ita/02.jpg", alt: "Ilustração institucional do ITA" },
+];
+
 export default function Contato() {
   return (
     <main>
@@ -76,6 +81,20 @@ export default function Contato() {
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
+        </div>
+      </section>
+
+      <section className="space-gallery section">
+        <div className="space-gallery-heading reveal">
+          <p className="section-index">Espaço ITA</p>
+          <h2>Uma casa de encontros.</h2>
+        </div>
+        <div className="space-gallery-grid">
+          {spacePhotos.map((photo) => (
+            <figure className="image-reveal" key={photo.src}>
+              <img src={assetPath(photo.src)} alt={photo.alt} loading="lazy" />
+            </figure>
+          ))}
         </div>
       </section>
     </main>
