@@ -55,7 +55,12 @@ export default function QuemSomos() {
           <p className="reveal">
             Promover o fortalecimento de pessoas, comunidades e territórios por
             meio da educação, da cultura, da valorização dos saberes ancestrais
-            e do cuidado integral.
+            e do cuidado integral, cultivando pertencimento, autonomia e
+            cooperação para impulsionar o desenvolvimento social, econômico e
+            sustentável. O ITA atua conectando ancestralidade, inovação e
+            formação humana para ampliar oportunidades, fortalecer identidades
+            e contribuir para a construção de uma sociedade mais justa, diversa
+            e comprometida com o bem viver.
           </p>
         </div>
       </section>
