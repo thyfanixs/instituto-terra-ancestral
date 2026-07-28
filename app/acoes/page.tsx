@@ -189,6 +189,18 @@ const galleryGroups = [
   { title: "Rodas de conversa", folder: "rodas-de-conversa", count: 1 },
 ];
 
+const actionHighlights = [
+  "Ciclos de Tecnologias Ancestrais em territórios distintos",
+  "Oficinas e vivências",
+  "Cursos de qualificação profissional",
+  "Feiras e exposições",
+  "Círculos terapêuticos",
+  "Mutirões de Saúde Visual",
+  "Acesso ao uso medicinal da cannabis, em parceria com a Associação Flor da Vida",
+  "Rodas de conversa reunindo mestres de saberes e culturas afro-brasileiras, pesquisadores, lideranças religiosas e representantes de distintas culturas",
+  "Sessões de cinema e debates mobilizando repertórios estéticos, narrativos e territoriais",
+];
+
 function galleryPhotos(folder: string, count: number, title: string) {
   return Array.from({ length: count }, (_, index) => {
     const number = String(index + 1).padStart(2, "0");
@@ -212,6 +224,17 @@ export default function Acoes() {
         imageAlt="Participantes em atividade do curso de teatro negro"
         tone="orange"
       />
+
+      <section className="actions-overview section">
+        <p className="section-index reveal">Atuação</p>
+        <div className="actions-overview-copy reveal">
+          <p className="kicker">Aqui, no ITA</p>
+          <h2>Realizamos:</h2>
+          <ul>
+            {actionHighlights.map((action) => <li key={action}>{action}</li>)}
+          </ul>
+        </div>
+      </section>
 
       <section className="actions-page section">
         <div className="actions-page-heading reveal">

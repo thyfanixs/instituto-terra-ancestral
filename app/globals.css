@@ -305,6 +305,12 @@ h1, h2, h3, .display-copy, blockquote {
 .value-card p { font-size: 14px; line-height: 1.6; margin: 0; }
 
 .actions-page { background: var(--paper); }
+.actions-overview { background: var(--cream); display: grid; gap: 45px; grid-template-columns: .8fr 2fr; }
+.actions-overview-copy { max-width: 800px; }
+.actions-overview h2 { font-family: var(--display); font-size: clamp(40px, 5vw, 78px); line-height: .95; margin: 12px 0 30px; }
+.actions-overview ul { display: grid; gap: 13px; list-style: none; margin: 0; padding: 0; }
+.actions-overview li { border-top: 1px solid var(--line); font-size: 17px; line-height: 1.45; padding: 13px 0 0 28px; position: relative; }
+.actions-overview li::before { color: var(--orange); content: "•"; font-size: 22px; left: 0; line-height: 1; position: absolute; top: 10px; }
 .actions-page-heading { align-items: end; display: grid; gap: 45px; grid-template-columns: .8fr 2fr 1fr; margin-bottom: 75px; }
 .actions-page-heading h2 { margin: 0; }
 .actions-page-heading > p:last-child { font-size: 15px; line-height: 1.7; margin: 0; }
@@ -692,7 +698,7 @@ h1, h2, h3, .display-copy, blockquote {
   .page-hero-copy { padding: 72px 20px; }
   .page-hero h1 { font-size: 65px; margin-top: 42px; }
   .page-hero-image { min-height: 440px; }
-  .values-heading, .actions-page-heading, .initiatives-heading, .numbers-heading, .support-intro, .contact-page, .pix-section { grid-template-columns: 1fr; }
+  .values-heading, .actions-overview, .actions-page-heading, .initiatives-heading, .numbers-heading, .support-intro, .contact-page, .pix-section { grid-template-columns: 1fr; }
   .values-grid, .action-gallery, .support-ways { grid-template-columns: 1fr; }
   .initiatives-heading > p:last-child { grid-column: auto; }
   .initiative-grid { grid-template-columns: 1fr; }
