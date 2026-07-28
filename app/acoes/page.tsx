@@ -190,8 +190,8 @@ export default function Acoes() {
         title="Saberes em"
         accent="movimento."
         description="Cursos, oficinas, vivências, feiras e encontros que conectam formação, cultura, autonomia e cuidado."
-        image="/images/official/teatro-negro.jpg"
-        imageAlt="Participantes em atividade do curso de teatro negro"
+        image="/images/official/rodas-de-conversa.jpg"
+        imageAlt="Roda de conversa do ITA com participantes, obras artesanais e arte urbana"
         tone="orange"
       />
 
