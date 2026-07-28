@@ -53,7 +53,7 @@ export default function Home() {
         </div>
         <div className="feature-copy">
           <p className="kicker reveal">Cultura viva</p>
-          <h2 className="reveal">O território ensina. A gente faz circular.</h2>
+          <h2 className="reveal">Formação, produção e transformação de saberes.</h2>
           <p className="reveal">Oficinas, cursos, vivências e encontros construídos com quem guarda, pratica e reinventa os saberes de Minas Gerais.</p>
           <Link className="button button-dark reveal" href="/acoes">Ver todas as frentes</Link>
         </div>
