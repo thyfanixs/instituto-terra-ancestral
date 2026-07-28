@@ -528,8 +528,18 @@ h1, h2, h3, .display-copy, blockquote {
   text-transform: uppercase;
 }
 .pix-actions div strong { font-size: clamp(20px, 2.3vw, 31px); }
-.pix-contact { font-size: 13px !important; }
-.pix-contact a { border-bottom: 1px solid var(--ink); font-weight: 800; }
+.partnership-links { border-top: 1px solid rgba(35,24,21,.55); margin-top: 42px; padding-top: 20px; }
+.partnership-links > p:not(.kicker) { font-size: 14px; line-height: 1.55; margin: 9px 0 20px; max-width: 590px; }
+.partnership-links > div { display: grid; grid-template-columns: repeat(3, 1fr); }
+.partnership-links a { border-left: 1px solid rgba(35,24,21,.45); color: inherit; display: grid; gap: 8px; grid-template-columns: 1fr auto; padding: 14px 15px; text-decoration: none; transition: background .2s ease, color .2s ease; }
+.partnership-links a:first-child { border-left: 0; padding-left: 0; }
+.partnership-links a:hover { background: var(--ink); color: var(--cream); }
+.partnership-links a span { font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.partnership-links a strong { font-size: 13px; grid-column: 1; overflow-wrap: anywhere; }
+.partnership-links a b { align-self: center; font-size: 18px; font-weight: 400; grid-column: 2; grid-row: 1 / span 2; }
+.partnership-links-light { border-top-color: rgba(255,247,232,.55); }
+.partnership-links-light a { border-left-color: rgba(255,247,232,.45); }
+.partnership-links-light a:hover { background: var(--cream); color: var(--ink); }
 .support-ways { background: var(--paper); display: grid; gap: 0; grid-template-columns: repeat(4, 1fr); padding-top: 0; }
 .support-card { border-left: 1px solid var(--line); min-height: 390px; padding: 38px; position: relative; transition: background .3s ease, color .3s ease; }
 .support-card:hover { background: var(--pink); }
@@ -676,6 +686,9 @@ h1, h2, h3, .display-copy, blockquote {
   .pix-section { gap: 45px; padding: 78px 20px; }
   .pix-heading h2 { font-size: 75px; }
   .pix-actions { align-items: flex-start; flex-direction: column; }
+  .partnership-links > div { grid-template-columns: 1fr; }
+  .partnership-links a, .partnership-links a:first-child { border-left: 0; border-top: 1px solid rgba(35,24,21,.45); padding: 15px 0; }
+  .partnership-links-light a, .partnership-links-light a:first-child { border-top-color: rgba(255,247,232,.45); }
   .support-card { border-bottom: 1px solid var(--line); min-height: 330px; padding: 30px 20px; }
   .support-card h3 { margin-top: 75px; }
   .incentive-art { min-height: 350px; }

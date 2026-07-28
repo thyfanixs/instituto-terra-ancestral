@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import PageHero from "../components/PageHero";
 import { assetPath } from "../lib/asset-path";
 
@@ -13,6 +12,12 @@ const supportWays = [
   { number: "02", title: "Parceria institucional", text: "Some recursos, conhecimento, estrutura ou oportunidades a uma ação construída com o território." },
   { number: "03", title: "Apoio direto", text: "Contribua para cursos, eventos, cuidado comunitário e manutenção das atividades do Instituto." },
   { number: "04", title: "Bazar ITA", text: "O Bazar Beneficente Reconvexo fortalece e ajuda a garantir a continuidade das ações do Instituto." },
+];
+
+const partnershipLinks = [
+  { label: "E-mail", value: "institutoita.gerais@gmail.com", href: "mailto:institutoita.gerais@gmail.com" },
+  { label: "WhatsApp", value: "(31) 97243-2240", href: "https://wa.me/5531972432240" },
+  { label: "Instagram", value: "@ita.gerais", href: "https://www.instagram.com/ita.gerais/" },
 ];
 
 export default function Apoie() {
@@ -63,16 +68,18 @@ export default function Apoie() {
               <span>Chave PIX · CNPJ</span>
               <strong>60.485.003/0001-94</strong>
             </div>
-            <a className="button button-dark" href="mailto:institutoita.gerais@gmail.com">
-              Propor uma parceria
-            </a>
           </div>
-          <p className="pix-contact">
-            Quer apresentar uma proposta de parceria? Escreva para{" "}
-            <a href="mailto:institutoita.gerais@gmail.com">
-              institutoita.gerais@gmail.com
-            </a>.
-          </p>
+          <div className="partnership-links">
+            <p className="kicker">Obter parceria</p>
+            <p>Quer construir uma ação conosco? Escolha o melhor canal para conversar com o ITA.</p>
+            <div>
+              {partnershipLinks.map((contact) => (
+                <a href={contact.href} key={contact.label} target={contact.href.startsWith("http") ? "_blank" : undefined} rel={contact.href.startsWith("http") ? "noreferrer" : undefined}>
+                  <span>{contact.label}</span><strong>{contact.value}</strong><b aria-hidden="true">↗</b>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -126,7 +133,16 @@ export default function Apoie() {
             <strong>Transparência em primeiro lugar</strong>
             <span>Esta página não substitui orientação contábil ou tributária.</span>
           </div>
-          <Link className="button button-light" href="/contato">Quero apoiar</Link>
+          <div className="partnership-links partnership-links-light">
+            <p className="kicker">Vamos conversar</p>
+            <div>
+              {partnershipLinks.map((contact) => (
+                <a href={contact.href} key={contact.label} target={contact.href.startsWith("http") ? "_blank" : undefined} rel={contact.href.startsWith("http") ? "noreferrer" : undefined}>
+                  <span>{contact.label}</span><strong>{contact.value}</strong><b aria-hidden="true">↗</b>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </main>
