@@ -55,7 +55,7 @@ export default function Home() {
         <div className="hero-shade" aria-hidden="true" />
         <div className="home-hero-content">
           <p className="kicker hero-enter">Instituto Terra Ancestral · Pedro Leopoldo, MG</p>
-          <h1 className="hero-enter delay-1">Raízes que<br /><em>movem o futuro.</em></h1>
+          <h1 className="hero-enter delay-1">Saberes Ancestrais,<br /><em>Caminhos Para o Futuro!</em></h1>
           <p className="hero-lead hero-enter delay-2">
             Cultura, educação e cuidado para fortalecer pessoas, comunidades e territórios.
           </p>

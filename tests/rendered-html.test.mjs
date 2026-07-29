@@ -24,7 +24,7 @@ async function allHtmlFiles(directory) {
 
 test("renderiza todas as páginas institucionais do ITA", async () => {
   const pages = [
-    ["/", /Raízes que/],
+    ["/", /Saberes Ancestrais/],
     ["/quem-somos", /Memória que/],
     ["/acoes", /Saberes em/],
     ["/impacto", /Presença que/],
@@ -151,6 +151,14 @@ test("usa a foto indicada no banner principal", async () => {
   assert.match(styles, /background-position: 58% top/);
   assert.match(styles, /\.home-hero-content \{ max-width: 720px/);
   assert.match(styles, /font-size: clamp\(68px, 8\.3vw, 128px\)/);
+});
+
+test("usa a nova mensagem principal na página inicial", async () => {
+  const home = await readPage("/");
+  assert.match(home, /Saberes Ancestrais,/);
+  assert.match(home, /Caminhos Para o Futuro!/);
+  assert.doesNotMatch(home, /Raízes que/);
+  assert.doesNotMatch(home, /movem o futuro/);
 });
 
 test("usa a foto de cerâmica na seção de destaque inicial", async () => {
