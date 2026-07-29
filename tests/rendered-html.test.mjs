@@ -116,6 +116,25 @@ test("usa a identidade visual colorida na seção de destaque inicial", async ()
   assert.doesNotMatch(home, /\/images\/official\/culinaria-ancestral\.jpg/);
 });
 
+test("destaca quatro formações na página inicial com as fotos selecionadas", async () => {
+  const home = await readPage("/");
+  const featuredActions = [
+    ["/images/official/home-ceramica-paleontologica.jpg", "/acoes/ceramica/", "Animais paleontológicos"],
+    ["/images/official/home-agroecologia.jpg", "/acoes/agroecologia/", "Remédios da Terra"],
+    ["/images/official/home-corte-costura.jpg", "/acoes/costura-criativa/", "Tradições têxteis"],
+    ["/images/official/bonecas-ancestrais.jpg", "/acoes/bonecas-ancestrais/", "Memória e identidade"],
+  ];
+
+  assert.match(home, /class="home-action-highlights section"/);
+  assert.match(home, /Formações em destaque/);
+
+  for (const [image, href, title] of featuredActions) {
+    assert.ok(home.includes(image), image);
+    assert.ok(home.includes(`/instituto-terra-ancestral${href}`), href);
+    assert.ok(home.includes(title), title);
+  }
+});
+
 test("oferece acesso direto para apoiar o ITA no banner inicial", async () => {
   const home = await readPage("/");
   assert.match(home, /class="button button-pink" href="\/instituto-terra-ancestral\/apoie\/">Apoie o ITA/);

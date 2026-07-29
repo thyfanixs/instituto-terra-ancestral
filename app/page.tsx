@@ -8,6 +8,45 @@ const highlights = [
   { value: "643", label: "participações em eventos culturais e Feira ITA", emphasis: "fair", badge: "Feira ITA" },
 ];
 
+const featuredActions = [
+  {
+    index: "01",
+    eyebrow: "Cerâmica e patrimônio",
+    title: "Animais paleontológicos",
+    text: "O barro dá forma à memória do território e aos animais que atravessam sua história paleontológica.",
+    image: "/images/official/home-ceramica-paleontologica.jpg",
+    imageAlt: "Animais paleontológicos modelados em cerâmica durante formação do ITA",
+    href: "/acoes/ceramica",
+  },
+  {
+    index: "02",
+    eyebrow: "Agroecologia",
+    title: "Remédios da Terra",
+    text: "Cultivo, plantas medicinais e saberes ancestrais fortalecem autonomia, cuidado e vínculo com a terra.",
+    image: "/images/official/home-agroecologia.jpg",
+    imageAlt: "Turma de agroecologia reunida em uma horta",
+    href: "/acoes/agroecologia",
+  },
+  {
+    index: "03",
+    eyebrow: "Corte e costura",
+    title: "Tradições têxteis",
+    text: "Criação, técnica e identidade se encontram na produção de peças ligadas às celebrações e tradições culturais.",
+    image: "/images/official/home-corte-costura.jpg",
+    imageAlt: "Participantes trabalhando com tecidos em atividade de corte e costura",
+    href: "/acoes/costura-criativa",
+  },
+  {
+    index: "04",
+    eyebrow: "Bonecas ancestrais",
+    title: "Memória e identidade",
+    text: "Bonecas e figuras simbólicas transformam fibras, tecidos e histórias em tecnologias de cuidado e resistência.",
+    image: "/images/official/bonecas-ancestrais.jpg",
+    imageAlt: "Boneca ancestral produzida durante formação do ITA",
+    href: "/acoes/bonecas-ancestrais",
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -60,6 +99,32 @@ export default function Home() {
           <h2 className="reveal">Formação, produção e transformação de saberes.</h2>
           <p className="reveal">Oficinas, cursos, vivências e encontros construídos com quem guarda, pratica e reinventa os saberes de Minas Gerais.</p>
           <Link className="button button-dark reveal" href="/acoes">Ver todas as frentes</Link>
+        </div>
+      </section>
+
+      <section className="home-action-highlights section">
+        <div className="home-action-highlights-heading reveal">
+          <p className="section-index">Formações em destaque</p>
+          <h2>Saberes que ganham forma.</h2>
+          <p>Conheça quatro experiências que conectam território, criação, ancestralidade e autonomia.</p>
+        </div>
+        <div className="home-action-grid">
+          {featuredActions.map((action) => (
+            <Link className="home-action-card reveal" href={action.href} key={action.title}>
+              <div className="home-action-image image-reveal">
+                <img src={assetPath(action.image)} alt={action.imageAlt} loading="lazy" />
+              </div>
+              <div className="home-action-card-body">
+                <div className="home-action-meta">
+                  <span>{action.index}</span>
+                  <p>{action.eyebrow}</p>
+                </div>
+                <h3>{action.title}</h3>
+                <p>{action.text}</p>
+                <strong>Conheça a formação <span aria-hidden="true">↗</span></strong>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
