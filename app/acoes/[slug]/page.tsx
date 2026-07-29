@@ -58,11 +58,19 @@ export default async function ActionPage({ params }: ActionPageProps) {
             <h2>Álbum da ação.</h2>
           </div>
           <div className="action-album-grid">
-            {action.photos.map((photo, index) => (
-              <figure key={photo}>
-                <img src={assetPath(photo)} alt={`${action.title} — foto ${index + 1}`} loading="lazy" />
-              </figure>
-            ))}
+            {action.photos.map((photo, index) => {
+              const caption = action.photoCaptions?.[photo];
+              return (
+                <figure key={photo}>
+                  <img
+                    src={assetPath(photo)}
+                    alt={caption ? `${caption} em apresentação cultural` : `${action.title} — foto ${index + 1}`}
+                    loading="lazy"
+                  />
+                  {caption && <figcaption>{caption}</figcaption>}
+                </figure>
+              );
+            })}
           </div>
         </section>
       )}

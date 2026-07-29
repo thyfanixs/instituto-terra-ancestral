@@ -13,6 +13,7 @@ export type ActionDetail = {
   description: string[];
   meta: string;
   photos: string[];
+  photoCaptions?: Record<string, string>;
   credit?: ActionCredit;
 };
 
@@ -281,7 +282,6 @@ export const actionDetails: ActionDetail[] = [
     ],
     meta: "2 edições · cerca de 400 participantes",
     photos: [
-      "/images/gallery/eventos-culturais/02.jpg",
       "/images/gallery/eventos-culturais/03.jpg",
     ],
   },
@@ -395,6 +395,9 @@ export const actionDetails: ActionDetail[] = [
     ],
     meta: "643 participações em eventos culturais e Feira ITA",
     photos: gallery("eventos-culturais", 3),
+    photoCaptions: {
+      "/images/gallery/eventos-culturais/02.jpg": "Lavadeiras de Jequitibá",
+    },
   },
 ];
 

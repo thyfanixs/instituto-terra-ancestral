@@ -217,6 +217,17 @@ test("corrige o título e a foto de ancestralidade e tradição", async () => {
   assert.doesNotMatch(detail, /\/images\/official\/ancestralidade\.jpg/);
 });
 
+test("associa as Lavadeiras de Jequitibá somente a eventos culturais", async () => {
+  const fair = await readPage("/acoes/feira-ita");
+  const events = await readPage("/acoes/eventos-culturais");
+  const lavadeirasPhoto = "/images/gallery/eventos-culturais/02.jpg";
+
+  assert.ok(!fair.includes(lavadeirasPhoto));
+  assert.ok(events.includes(lavadeirasPhoto));
+  assert.match(events, /Lavadeiras de Jequitibá em apresentação cultural/);
+  assert.match(events, /<figcaption>Lavadeiras de Jequitibá<\/figcaption>/);
+});
+
 test("mantém contatos, redes sociais, bazar e apoio fiscal visíveis", async () => {
   const contact = await readPage("/contato");
   const support = await readPage("/apoie");
