@@ -67,6 +67,47 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
   width: 100%;
 }
 .desktop-nav a:hover::after, .desktop-nav a.active::after { transform: scaleX(1); }
+.nav-item { position: relative; }
+.nav-item > a { align-items: center; display: flex; gap: 5px; }
+.nav-caret {
+  color: var(--orange);
+  font-size: 15px;
+  line-height: 0;
+  transform: translateY(-1px);
+  transition: transform .2s ease;
+}
+.desktop-submenu {
+  background: var(--wine-dark);
+  border-top: 3px solid var(--orange);
+  box-shadow: 0 18px 35px rgba(25, 7, 10, .28);
+  display: grid;
+  left: -18px;
+  min-width: 205px;
+  opacity: 0;
+  padding: 8px 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  transform: translateY(8px);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+  visibility: hidden;
+}
+.desktop-submenu a {
+  padding: 13px 18px;
+  white-space: nowrap;
+}
+.desktop-submenu a::after { display: none; }
+.desktop-submenu a:hover,
+.desktop-submenu a:focus-visible { background: rgba(255, 255, 255, .09); color: var(--orange); }
+.nav-item-with-submenu:hover .desktop-submenu,
+.nav-item-with-submenu:focus-within .desktop-submenu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  visibility: visible;
+}
+.nav-item-with-submenu:hover .nav-caret,
+.nav-item-with-submenu:focus-within .nav-caret { transform: rotate(180deg) translateY(1px); }
 .header-cta {
   border: 1px solid rgba(255,255,255,.58);
   border-radius: 999px;
@@ -521,6 +562,7 @@ h1, h2, h3, .display-copy, blockquote {
 }
 
 .actions-page { background: var(--paper); }
+.action-anchor { scroll-margin-top: 24px; }
 .action-card-link { color: inherit; display: block; text-decoration: none; }
 .action-detail { background: var(--paper); }
 .action-detail-hero { background: var(--ink); color: var(--cream); display: grid; grid-template-columns: 1fr 1fr; min-height: 75vh; }
@@ -981,14 +1023,30 @@ h1, h2, h3, .display-copy, blockquote {
   .site-header { grid-template-columns: 1fr auto auto; }
   .desktop-nav { display: none; }
   .mobile-menu { display: block; justify-self: end; margin-left: 14px; position: relative; }
-  .mobile-menu summary { cursor: pointer; height: 40px; list-style: none; position: relative; width: 42px; }
+  .mobile-menu > summary { cursor: pointer; height: 40px; list-style: none; position: relative; width: 42px; }
   .mobile-menu summary::-webkit-details-marker { display: none; }
-  .mobile-menu summary span { background: var(--paper); height: 2px; left: 7px; position: absolute; top: 15px; transition: transform .2s ease; width: 28px; }
-  .mobile-menu summary span:last-child { top: 24px; }
-  .mobile-menu[open] summary span:first-child { top: 20px; transform: rotate(45deg); }
-  .mobile-menu[open] summary span:last-child { top: 20px; transform: rotate(-45deg); }
+  .mobile-menu > summary span { background: var(--paper); height: 2px; left: 7px; position: absolute; top: 15px; transition: transform .2s ease; width: 28px; }
+  .mobile-menu > summary span:last-child { top: 24px; }
+  .mobile-menu[open] > summary span:first-child { top: 20px; transform: rotate(45deg); }
+  .mobile-menu[open] > summary span:last-child { top: 20px; transform: rotate(-45deg); }
   .mobile-menu nav { background: var(--wine-dark); display: flex; flex-direction: column; min-width: 230px; padding: 18px 25px 25px; position: absolute; right: -20px; top: 55px; }
   .mobile-menu nav a { border-bottom: 1px solid rgba(255,255,255,.14); font-size: 12px; font-weight: 800; padding: 14px 0; text-transform: uppercase; }
+  .mobile-submenu { border-bottom: 1px solid rgba(255,255,255,.14); }
+  .mobile-submenu > summary {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 12px;
+    font-weight: 800;
+    justify-content: space-between;
+    list-style: none;
+    padding: 14px 0;
+    text-transform: uppercase;
+  }
+  .mobile-submenu > summary span { color: var(--orange); font-size: 18px; transition: transform .2s ease; }
+  .mobile-submenu[open] > summary span { transform: rotate(45deg); }
+  .mobile-submenu > div { border-left: 2px solid var(--orange); display: grid; margin: 0 0 10px 4px; padding-left: 14px; }
+  .mobile-submenu > div a { border-bottom: 0; color: rgba(255,255,255,.82); font-size: 11px; padding: 10px 0; }
   .action-gallery { grid-template-columns: repeat(2, 1fr); }
   .actions-page-heading { grid-template-columns: .7fr 2fr; }
   .actions-page-heading > p:last-child { grid-column: 2; }

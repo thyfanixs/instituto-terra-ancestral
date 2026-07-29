@@ -41,6 +41,35 @@ test("renderiza todas as páginas institucionais do ITA", async () => {
   }
 });
 
+test("oferece três categorias no submenu de ações e destinos correspondentes", async () => {
+  const home = await readPage("/");
+  const actions = await readPage("/acoes");
+
+  assert.match(home, /nav-item nav-item-with-submenu/);
+  assert.match(home, /aria-label="Categorias de ações"/);
+  assert.match(home, /class="mobile-submenu"/);
+
+  const submenuDestinations = [
+    ["/instituto-terra-ancestral/acoes/#formacao", "Formação"],
+    ["/instituto-terra-ancestral/acoes/#saude", "Saúde"],
+    ["/instituto-terra-ancestral/acoes/#acoes-culturais", "Ações culturais"],
+  ];
+
+  for (const [href, label] of submenuDestinations) {
+    assert.ok(home.includes(`href="${href}"`), href);
+    assert.ok(home.includes(`>${label}</a>`), label);
+  }
+
+  const formationIndex = actions.indexOf('id="formacao"');
+  const healthIndex = actions.indexOf('id="saude"');
+  const cultureIndex = actions.indexOf('id="acoes-culturais"');
+
+  assert.ok(formationIndex >= 0 && formationIndex < healthIndex);
+  assert.ok(healthIndex < cultureIndex);
+  assert.ok(actions.indexOf("Mutirão de Saúde Visual") > healthIndex);
+  assert.ok(actions.indexOf("Eventos culturais") > cultureIndex);
+});
+
 test("apresenta os indicadores atualizados de impacto", async () => {
   const home = await readPage("/");
   const impact = await readPage("/impacto");

@@ -103,7 +103,7 @@ const courses = [
   },
 ];
 
-const initiatives = [
+const culturalInitiatives = [
   {
     title: "Armazém ITA",
     category: "Economia solidária",
@@ -126,27 +126,6 @@ const initiatives = [
     meta: "Memória, fé e pertencimento",
   },
   {
-    title: "Círculo Terapêutico",
-    category: "Saúde e bem viver",
-    image: "/images/official/circulo-terapeutico.jpg",
-    text: "Escuta, acolhimento e práticas coletivas de cuidado comunitário com acompanhamento profissional.",
-    meta: "1 turma · 15 mulheres",
-  },
-  {
-    title: "Mutirão de Saúde Visual",
-    category: "Acesso à saúde",
-    image: "/images/portfolio/page-28-01.jpeg",
-    text: "Exames especializados, atendimento médico, prescrição e encaminhamento para óculos gratuitos.",
-    meta: "4 mutirões · 284 atendimentos · 205 óculos",
-  },
-  {
-    title: "Tratamento medicinal de cannabis",
-    category: "Cuidado integral",
-    image: "/images/portfolio/page-26-02.jpeg",
-    text: "Orientação e acesso responsável ao tratamento, em parceria com a Associação Flor da Vida.",
-    meta: "25 pessoas contempladas",
-  },
-  {
     title: "Cine Comunidade",
     category: "Cinema e direitos humanos",
     image: "/images/portfolio/page-31-01.jpeg",
@@ -166,6 +145,30 @@ const initiatives = [
     image: "/images/official/congadar.jpg",
     text: "Apresentações, feiras, vivências e experiências gastronômicas que celebram a diversidade cultural.",
     meta: "643 participações em eventos culturais e Feira ITA",
+  },
+];
+
+const healthInitiatives = [
+  {
+    title: "Círculo Terapêutico",
+    category: "Saúde e bem viver",
+    image: "/images/official/circulo-terapeutico.jpg",
+    text: "Escuta, acolhimento e práticas coletivas de cuidado comunitário com acompanhamento profissional.",
+    meta: "1 turma · 15 mulheres",
+  },
+  {
+    title: "Mutirão de Saúde Visual",
+    category: "Acesso à saúde",
+    image: "/images/portfolio/page-28-01.jpeg",
+    text: "Exames especializados, atendimento médico, prescrição e encaminhamento para óculos gratuitos.",
+    meta: "4 mutirões · 284 atendimentos · 205 óculos",
+  },
+  {
+    title: "Tratamento medicinal de cannabis",
+    category: "Cuidado integral",
+    image: "/images/portfolio/page-26-02.jpeg",
+    text: "Orientação e acesso responsável ao tratamento, em parceria com a Associação Flor da Vida.",
+    meta: "25 pessoas contempladas",
   },
 ];
 
@@ -214,7 +217,7 @@ export default function Acoes() {
         </div>
       </section>
 
-      <section className="actions-page section">
+      <section className="actions-page action-anchor section" id="formacao">
         <div className="actions-page-heading reveal">
           <p className="section-index">Formação e saberes</p>
           <h2>Cursos e formações.<br />Muitos caminhos.</h2>
@@ -233,14 +236,14 @@ export default function Acoes() {
         </div>
       </section>
 
-      <section className="initiatives-section section">
+      <section className="initiatives-section action-anchor section" id="saude">
         <div className="initiatives-heading reveal">
-          <p className="section-index">Outras frentes de atuação</p>
-          <h2>Cultura, cuidado e comunidade.</h2>
-          <p>Além das formações, o ITA mantém ações permanentes de circulação cultural, saúde, economia solidária e participação social.</p>
+          <p className="section-index">Saúde</p>
+          <h2>Cuidado integral e bem viver.</h2>
+          <p>Ações de acolhimento, acesso à saúde e práticas coletivas fortalecem o cuidado com o corpo, a mente e a comunidade.</p>
         </div>
         <div className="initiative-grid">
-          {initiatives.map((initiative) => (
+          {healthInitiatives.map((initiative) => (
             <Link className="initiative-card action-card-link reveal" href={`/acoes/${actionSlug(initiative.title)}`} key={initiative.title}>
               <div className="initiative-image">
                 <img src={assetPath(initiative.image)} alt={`Registro de ${initiative.title}`} />
@@ -291,6 +294,29 @@ export default function Acoes() {
               de Jeffrey Young.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="initiatives-section action-anchor section" id="acoes-culturais">
+        <div className="initiatives-heading reveal">
+          <p className="section-index">Ações culturais</p>
+          <h2>Cultura, memória e comunidade.</h2>
+          <p>Feiras, encontros, cinema e tradições vivas fazem os saberes circularem e fortalecem identidades, redes locais e participação social.</p>
+        </div>
+        <div className="initiative-grid">
+          {culturalInitiatives.map((initiative) => (
+            <Link className="initiative-card action-card-link reveal" href={`/acoes/${actionSlug(initiative.title)}`} key={initiative.title}>
+              <div className="initiative-image">
+                <img src={assetPath(initiative.image)} alt={`Registro de ${initiative.title}`} />
+              </div>
+              <div className="initiative-copy">
+                <p className="eyebrow">{initiative.category}</p>
+                <h3>{initiative.title}</h3>
+                <p>{initiative.text}</p>
+                <strong>{initiative.meta}</strong>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
