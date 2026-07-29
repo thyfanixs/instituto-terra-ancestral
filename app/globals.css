@@ -776,7 +776,7 @@ h1, h2, h3, .display-copy, blockquote {
 .numbers-section { background: var(--orange); }
 .numbers-heading { align-items: end; display: grid; gap: 50px; grid-template-columns: .8fr 2.2fr; }
 .numbers-heading h2 { margin: 0; max-width: 920px; }
-.big-numbers { border-top: 1px solid var(--ink); display: grid; grid-template-columns: repeat(5, 1fr); margin-top: 70px; }
+.big-numbers { border-top: 1px solid var(--ink); display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 70px; }
 .big-numbers article { border-right: 1px solid var(--ink); padding: 30px 25px; }
 .big-numbers article:last-child { border-right: 0; }
 .source-note { font-size: 9px; letter-spacing: .12em; margin: 32px 0 0; text-transform: uppercase; }

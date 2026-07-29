@@ -72,7 +72,6 @@ export default function Impacto() {
           <article className="reveal"><strong>324</strong><span>pessoas acolhidas/beneficiadas com as ações de saúde do ITA - Instituto Terra Ancestral</span></article>
           <article className="reveal"><strong>473</strong><span>participações em oficinas e cursos gratuitos do ITA</span></article>
           <article className="reveal"><strong>643</strong><span>participações em eventos culturais e Feira ITA</span></article>
-          <article className="reveal"><strong>13</strong><span>formações apresentadas no portfólio</span></article>
         </div>
         <p className="source-note">Fonte: portfólio institucional do Instituto Terra Ancestral.</p>
       </section>
