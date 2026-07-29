@@ -53,6 +53,12 @@ test("apresenta o alcance atualizado das ações de saúde", async () => {
   assert.doesNotMatch(impact, /205[^<]*óculos entregues gratuitamente/);
 });
 
+test("usa a foto indicada no banner principal", async () => {
+  const home = await readPage("/");
+  assert.match(home, /\/images\/gallery\/ancestralidade\/01\.jpg/);
+  assert.doesNotMatch(home, /--home-hero-image[^;]*teatro-negro\.jpg/);
+});
+
 test("mantém contatos, redes sociais, bazar e apoio fiscal visíveis", async () => {
   const contact = await readPage("/contato");
   const support = await readPage("/apoie");

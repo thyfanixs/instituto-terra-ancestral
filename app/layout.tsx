@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
-      <body style={{ "--home-hero-image": `url("${assetPath("/images/official/teatro-negro.jpg")}")` } as CSSProperties}>
+      <body style={{ "--home-hero-image": `url("${assetPath("/images/gallery/ancestralidade/01.jpg")}")` } as CSSProperties}>
         <SiteHeader />
         <MotionObserver />
         {children}
