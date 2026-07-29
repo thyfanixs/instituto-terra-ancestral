@@ -478,9 +478,9 @@ h1, h2, h3, .display-copy, blockquote {
 .values-heading { display: grid; gap: 60px; grid-template-columns: 1fr 2.6fr; margin-bottom: 60px; }
 .values-heading h2 { font-size: clamp(58px, 7vw, 105px); line-height: .9; margin: 0; text-transform: uppercase; }
 .values-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.value-card { border-left: 1px solid var(--line); border-top: 1px solid var(--line); min-height: 270px; padding: 28px; }
+.value-card { border-left: 1px solid var(--line); border-top: 1px solid var(--line); min-height: 300px; min-width: 0; padding: 28px; }
 .value-card span { color: var(--red); font-size: 11px; font-weight: 900; }
-.value-card h3 { font-size: clamp(28px, 3vw, 44px); line-height: 1; margin: 55px 0 16px; text-transform: uppercase; }
+.value-card h3 { font-size: clamp(26px, 2.3vw, 38px); hyphens: auto; line-height: 1; margin: 55px 0 16px; overflow-wrap: anywhere; text-transform: uppercase; }
 .value-card p { font-size: 14px; line-height: 1.6; margin: 0; }
 
 .acting-section { background: var(--cream); }
@@ -1234,7 +1234,7 @@ h1, h2, h3, .display-copy, blockquote {
   .initiative-grid { grid-template-columns: 1fr; }
   .initiative-card { min-height: 500px; }
   .initiative-copy h3.initiative-title-long { font-size: 34px; }
-  .value-card { min-height: 235px; padding: 22px 16px; }
+  .value-card { min-height: 275px; padding: 22px 16px; }
   .value-card h3 { font-size: clamp(22px, 7vw, 32px); margin-top: 38px; }
   .value-card p { font-size: 13px; }
   .acting-heading, .acting-programs-heading { gap: 38px; margin-bottom: 48px; }
