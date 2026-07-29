@@ -76,7 +76,7 @@ const courses = [
   {
     title: "Educação patrimonial e arte",
     category: "Patrimônio vivo",
-    image: "/images/official/ancestralidade.jpg",
+    image: "/images/official/educacao-patrimonial-e-arte.jpeg",
     text: "Memórias individuais e coletivas transformadas em processos artísticos por meio do fazer manual.",
     meta: "3 turmas · 46 estudantes",
   },

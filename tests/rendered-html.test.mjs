@@ -65,6 +65,12 @@ test("usa a identidade visual colorida na seção de destaque inicial", async ()
   assert.doesNotMatch(home, /\/images\/official\/culinaria-ancestral\.jpg/);
 });
 
+test("usa a foto indicada no card de educação patrimonial e arte", async () => {
+  const actions = await readPage("/acoes");
+  assert.match(actions, /\/images\/official\/educacao-patrimonial-e-arte\.jpeg/);
+  assert.match(actions, /Registro da ação Educação patrimonial e arte/);
+});
+
 test("mantém contatos, redes sociais, bazar e apoio fiscal visíveis", async () => {
   const contact = await readPage("/contato");
   const support = await readPage("/apoie");
