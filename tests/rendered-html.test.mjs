@@ -169,17 +169,20 @@ test("usa a foto de cerâmica na seção de destaque inicial", async () => {
   assert.doesNotMatch(home, /\/images\/official\/culinaria-ancestral\.jpg/);
 });
 
-test("destaca quatro formações na página inicial com as fotos selecionadas", async () => {
+test("destaca seis formações na página inicial com as fotos selecionadas", async () => {
   const home = await readPage("/");
   const featuredActions = [
     ["/images/official/home-ceramica-paleontologica.jpg", "/acoes/ceramica/", "Animais paleontológicos"],
     ["/images/official/home-agroecologia.jpg", "/acoes/agroecologia/", "Remédios da Terra"],
     ["/images/official/home-corte-costura.jpg", "/acoes/costura-criativa/", "Tradições têxteis"],
     ["/images/official/bonecas-ancestrais.jpg", "/acoes/bonecas-ancestrais/", "Memória e identidade"],
+    ["/images/official/marcenaria-criativa-card.jpeg", "/acoes/marcenaria-criativa/", "Marcenaria criativa"],
+    ["/images/official/biojoias.jpg", "/acoes/biojoias-e-macrame/", "Biojoias indígenas e macramê"],
   ];
 
   assert.match(home, /class="home-action-highlights section"/);
   assert.match(home, /Formações em destaque/);
+  assert.equal((home.match(/class="home-action-card reveal"/g) ?? []).length, 6);
 
   for (const [image, href, title] of featuredActions) {
     assert.ok(home.includes(image), image);

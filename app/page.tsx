@@ -45,6 +45,24 @@ const featuredActions = [
     imageAlt: "Boneca ancestral produzida durante formação do ITA",
     href: "/acoes/bonecas-ancestrais",
   },
+  {
+    index: "05",
+    eyebrow: "Ofícios tradicionais",
+    title: "Marcenaria criativa",
+    text: "Madeira, sustentabilidade e reaproveitamento se encontram na criação de peças autorais inspiradas no território.",
+    image: "/images/official/marcenaria-criativa-card.jpeg",
+    imageAlt: "Participante trabalhando a madeira durante formação de marcenaria criativa",
+    href: "/acoes/marcenaria-criativa",
+  },
+  {
+    index: "06",
+    eyebrow: "Arte indígena",
+    title: "Biojoias indígenas e macramê",
+    text: "Sementes, pedras, fibras naturais e técnicas de macramê valorizam natureza, identidade cultural e saberes indígenas.",
+    image: "/images/official/biojoias.jpg",
+    imageAlt: "Produção de biojoias indígenas e peças em macramê durante formação do ITA",
+    href: "/acoes/biojoias-e-macrame",
+  },
 ];
 
 export default function Home() {

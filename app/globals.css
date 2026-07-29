@@ -289,7 +289,7 @@ h1, h2, h3, .display-copy, blockquote {
 .home-action-grid {
   display: grid;
   gap: 22px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .home-action-card {
   background: var(--cream);
