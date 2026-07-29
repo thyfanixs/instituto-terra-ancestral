@@ -12,7 +12,7 @@ const territories = ["Pedro Leopoldo", "Belo Horizonte", "Sete Lagoas", "Confins
 const institutionalPartnerships = [
   {
     territory: "Belo Horizonte",
-    partners: ["Associação QuinTao das Artes", "Companhia artística teAtodo amanhã", "MandakNega — espaço gastronômico, cultural e afro-brasileiro", "G.E.S.T.O UFMG — Grupo de Estudos do Simbólico e Técnico da Olaria"],
+    partners: ["Associação QuinTao das Artes", "Companhia artística teAtodo amanhã", "MandakNega — espaço gastronômico, cultural e afro-brasileiro", "G.E.S.T.O UFMG — Grupo de Estudos do Simbólico e Técnico da Olaria", "Comitê de Cultura de Minas Gerais"],
   },
   { territory: "Sete Lagoas", partners: ["Alcunha Negada — espaço gastronômico, cultural e afro-brasileiro"] },
   { territory: "Confins", partners: ["CERC"], note: "Parceiro institucional na realização de cursos de Cerâmica, Grafite e Artesanato de Bonecas." },

@@ -93,6 +93,7 @@ test("apresenta os indicadores atualizados de impacto", async () => {
   assert.match(impact, trainingLabel);
   assert.match(impact, /643/);
   assert.match(impact, cultureLabel);
+  assert.match(impact, /Comitê de Cultura de Minas Gerais/);
   assert.doesNotMatch(impact, /formações apresentadas no portfólio/);
   assert.doesNotMatch(impact, /<strong>13<\/strong>/);
   assert.doesNotMatch(home, /259/);
