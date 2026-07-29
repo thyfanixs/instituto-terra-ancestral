@@ -393,7 +393,7 @@ export const actionDetails: ActionDetail[] = [
       "Os eventos reúnem artistas, mestres da cultura popular, músicos, poetas, escritores, artesãos, pesquisadores e grupos tradicionais de diferentes territórios.",
       "Apresentações, feiras, vivências e experiências gastronômicas afro-indígenas conectam tradição e contemporaneidade, fortalecem o pertencimento comunitário e reconhecem a diversidade como patrimônio vivo.",
     ],
-    meta: "11 eventos · cerca de 643 participantes",
+    meta: "643 participações em eventos culturais e Feira ITA",
     photos: gallery("eventos-culturais", 3),
   },
 ];

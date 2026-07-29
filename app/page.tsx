@@ -3,8 +3,9 @@ import { assetPath } from "./lib/asset-path";
 
 const highlights = [
   { value: "1.200", label: "pessoas diretamente impactadas" },
-  { value: "259", label: "pessoas acolhidas/beneficiadas com as ações de saúde do ITA - Instituto Terra Ancestral" },
-  { value: "643", label: "participantes em eventos culturais" },
+  { value: "324", label: "pessoas acolhidas/beneficiadas com as ações de saúde do ITA - Instituto Terra Ancestral" },
+  { value: "473", label: "participações em oficinas e cursos gratuitos do ITA" },
+  { value: "643", label: "participações em eventos culturais e Feira ITA" },
 ];
 
 export default function Home() {

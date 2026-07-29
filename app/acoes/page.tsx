@@ -165,7 +165,7 @@ const initiatives = [
     category: "Cultura viva",
     image: "/images/official/congadar.jpg",
     text: "Apresentações, feiras, vivências e experiências gastronômicas que celebram a diversidade cultural.",
-    meta: "11 eventos · cerca de 643 participantes",
+    meta: "643 participações em eventos culturais e Feira ITA",
   },
 ];
 

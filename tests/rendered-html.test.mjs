@@ -41,15 +41,27 @@ test("renderiza todas as páginas institucionais do ITA", async () => {
   }
 });
 
-test("apresenta o alcance atualizado das ações de saúde", async () => {
+test("apresenta os indicadores atualizados de impacto", async () => {
   const home = await readPage("/");
   const impact = await readPage("/impacto");
   const healthLabel = /pessoas acolhidas\/beneficiadas com as ações de saúde do ITA - Instituto Terra Ancestral/;
+  const trainingLabel = /participações em oficinas e cursos gratuitos do ITA/;
+  const cultureLabel = /participações em eventos culturais e Feira ITA/;
 
-  assert.match(home, /259/);
+  assert.match(home, /324/);
   assert.match(home, healthLabel);
-  assert.match(impact, /259/);
+  assert.match(home, /473/);
+  assert.match(home, trainingLabel);
+  assert.match(home, /643/);
+  assert.match(home, cultureLabel);
+  assert.match(impact, /324/);
   assert.match(impact, healthLabel);
+  assert.match(impact, /473/);
+  assert.match(impact, trainingLabel);
+  assert.match(impact, /643/);
+  assert.match(impact, cultureLabel);
+  assert.doesNotMatch(home, /259/);
+  assert.doesNotMatch(impact, /259/);
   assert.doesNotMatch(home, /205[^<]*óculos entregues gratuitamente/);
   assert.doesNotMatch(impact, /205[^<]*óculos entregues gratuitamente/);
 });
