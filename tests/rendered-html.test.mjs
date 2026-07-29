@@ -70,6 +70,12 @@ test("oferece acesso direto para apoiar o ITA no banner inicial", async () => {
   assert.match(home, /class="button button-pink" href="\/instituto-terra-ancestral\/apoie\/">Apoie o ITA/);
 });
 
+test("usa a foto indicada na seção de missão", async () => {
+  const about = await readPage("/quem-somos");
+  assert.match(about, /\/images\/official\/depoimento-barbara-ione-estudantes\.jpg/);
+  assert.match(about, /Bárbara e Ione, estudantes do ITA, em um abraço/);
+});
+
 test("usa a foto indicada no card de educação patrimonial e arte", async () => {
   const actions = await readPage("/acoes");
   assert.match(actions, /\/images\/official\/educacao-patrimonial-e-arte\.jpeg/);

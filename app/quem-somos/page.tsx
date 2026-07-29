@@ -49,7 +49,7 @@ export default function QuemSomos() {
 
       <section className="mission-block">
         <div className="mission-photo image-reveal">
-          <img src={assetPath("/images/official/rodas-de-conversa.jpg")} alt="Roda de conversa promovida pelo Instituto" />
+          <img src={assetPath("/images/official/depoimento-barbara-ione-estudantes.jpg")} alt="Bárbara e Ione, estudantes do ITA, em um abraço" />
         </div>
         <div className="mission-text">
           <p className="kicker reveal">Nossa missão</p>
