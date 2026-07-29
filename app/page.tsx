@@ -146,31 +146,14 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <Link className="impact-link reveal" href="/impacto">
-          Conheça nosso alcance <span aria-hidden="true">→</span>
-        </Link>
-      </section>
-
-      <section className="home-testimonial-spotlight">
-        <div className="home-testimonial-photo image-reveal">
-          <img
-            src={assetPath("/images/testimonials/rafaela.webp")}
-            alt="Rafaela Carneiro durante uma atividade de formação do ITA"
-            loading="lazy"
-          />
-        </div>
-        <div className="home-testimonial-copy">
-          <p className="kicker reveal">Vozes do ITA</p>
-          <h2 className="reveal">Histórias que mostram o impacto.</h2>
-          <blockquote className="reveal">
-            “No ITA, as diferenças são tesouros e não problemas.”
-          </blockquote>
-          <p className="home-testimonial-author reveal">
-            <strong>Rafaela Carneiro</strong>
-            <span>Estudante de Cerâmica e Economia Criativa</span>
-          </p>
-          <Link className="button button-pink reveal" href="/impacto/#depoimentos">
-            Conheça os depoimentos <span aria-hidden="true">→</span>
+        <div className="impact-actions reveal">
+          <Link className="impact-link" href="/impacto">
+            Conheça nosso alcance <span aria-hidden="true">→</span>
+          </Link>
+          <Link className="impact-testimonials-link" href="/impacto/#depoimentos">
+            <span>Vozes do ITA</span>
+            <strong>Conheça os depoimentos</strong>
+            <b aria-hidden="true">→</b>
           </Link>
         </div>
       </section>

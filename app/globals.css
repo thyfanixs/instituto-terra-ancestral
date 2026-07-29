@@ -383,43 +383,23 @@ h1, h2, h3, .display-copy, blockquote {
 }
 .impact-list strong, .big-numbers strong { display: block; font-family: Impact, sans-serif; font-size: clamp(62px, 7vw, 106px); font-weight: 400; line-height: 1; }
 .impact-list span, .big-numbers span { display: block; font-size: 12px; font-weight: 900; line-height: 1.4; max-width: 190px; text-transform: uppercase; }
-.impact-link { border-bottom: 1px solid var(--ink); display: inline-flex; font-size: 11px; font-weight: 900; gap: 60px; margin-top: 35px; padding: 12px 0; text-transform: uppercase; }
-.home-testimonial-spotlight {
+.impact-actions { align-items: center; display: flex; flex-wrap: wrap; gap: 18px 30px; margin-top: 35px; }
+.impact-link { border-bottom: 1px solid var(--ink); display: inline-flex; font-size: 11px; font-weight: 900; gap: 60px; padding: 12px 0; text-transform: uppercase; }
+.impact-testimonials-link {
+  align-items: center;
   background: var(--wine-dark);
   color: var(--paper);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 690px;
+  gap: 3px 20px;
+  grid-template-columns: 1fr auto;
+  min-width: min(100%, 330px);
+  padding: 15px 17px;
+  transition: background .25s ease, transform .25s ease;
 }
-.home-testimonial-photo { min-height: 690px; overflow: hidden; }
-.home-testimonial-photo img {
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: transform .7s cubic-bezier(.2,.7,.2,1);
-  width: 100%;
-}
-.home-testimonial-spotlight:hover .home-testimonial-photo img { transform: scale(1.025); }
-.home-testimonial-copy { align-self: center; padding: 80px clamp(30px, 7vw, 108px); }
-.home-testimonial-copy h2 {
-  color: var(--orange);
-  font-size: clamp(57px, 6.5vw, 98px);
-  line-height: .88;
-  margin: 25px 0 38px;
-  text-transform: uppercase;
-}
-.home-testimonial-copy blockquote {
-  border-left: 3px solid var(--pink);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(21px, 2.1vw, 31px);
-  font-weight: 500;
-  line-height: 1.45;
-  margin: 0;
-  padding-left: 24px;
-}
-.home-testimonial-author { display: grid; gap: 5px; margin: 30px 0 35px; }
-.home-testimonial-author strong { font-size: 15px; text-transform: uppercase; }
-.home-testimonial-author span { font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.impact-testimonials-link:hover { background: var(--blue); transform: translateY(-2px); }
+.impact-testimonials-link > span { color: var(--orange); font-size: 9px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+.impact-testimonials-link > strong { font-size: 13px; grid-column: 1; text-transform: uppercase; }
+.impact-testimonials-link > b { align-self: center; font-size: 24px; font-weight: 400; grid-column: 2; grid-row: 1 / span 2; }
 .social-strip { background: var(--blue); color: var(--paper); display: grid; grid-template-columns: 1.1fr .9fr; min-height: 600px; }
 .social-photo img { height: 100%; object-fit: cover; width: 100%; }
 .social-copy { align-self: center; padding: 75px clamp(30px, 7vw, 105px); position: relative; }
@@ -1289,18 +1269,18 @@ h1, h2, h3, .display-copy, blockquote {
   .display-copy { font-size: 37px; }
   .home-intro-row, .two-columns { grid-template-columns: 1fr; }
   .circle-link { height: 130px; margin-top: 15px; width: 130px; }
-  .home-feature, .home-testimonial-spotlight, .social-strip, .mission-block, .circle-spotlight, .territory-section, .visit-section, .incentive-panel, .bazar-section { grid-template-columns: 1fr; }
-  .feature-photo, .home-testimonial-photo, .social-photo, .mission-photo, .circle-spotlight-image, .territory-image, .visit-image, .bazar-image { min-height: 390px; }
-  .feature-copy, .home-testimonial-copy, .social-copy, .mission-text, .circle-spotlight-copy, .territory-copy, .visit-copy, .incentive-content, .bazar-copy { padding: 70px 20px; }
-  .home-testimonial-spotlight { min-height: 0; }
-  .home-testimonial-copy h2 { font-size: 53px; }
-  .home-testimonial-copy blockquote { font-size: 20px; }
+  .home-feature, .social-strip, .mission-block, .circle-spotlight, .territory-section, .visit-section, .incentive-panel, .bazar-section { grid-template-columns: 1fr; }
+  .feature-photo, .social-photo, .mission-photo, .circle-spotlight-image, .territory-image, .visit-image, .bazar-image { min-height: 390px; }
+  .feature-copy, .social-copy, .mission-text, .circle-spotlight-copy, .territory-copy, .visit-copy, .incentive-content, .bazar-copy { padding: 70px 20px; }
   .feature-copy h2, .impact-title h2, .social-copy h2, .actions-page-heading h2, .numbers-heading h2, .territory-copy h2, .contact-lead h2, .visit-copy h2, .support-intro h2 { font-size: 53px; }
   .impact-list { grid-template-columns: 1fr; }
   .impact-list article, .impact-list article:not(:first-child) { border-bottom: 1px solid var(--ink); border-right: 0; min-height: 0; padding: 25px 0; }
   .impact-list article.impact-featured { border-bottom: 0; margin: 0; min-height: 0; padding: 28px 22px; }
   .impact-badge-slot { display: none; min-height: 0; }
   .impact-badge-slot.has-badge { display: block; margin-bottom: 20px; }
+  .impact-actions { align-items: stretch; flex-direction: column; }
+  .impact-link { align-self: flex-start; }
+  .impact-testimonials-link { min-width: 0; width: 100%; }
   .page-hero { grid-template-columns: 1fr; padding-top: 74px; }
   .page-hero-copy { padding: 72px 20px; }
   .page-hero h1 { font-size: 65px; margin-top: 42px; }

@@ -129,11 +129,12 @@ test("encerra a página de impacto com os sete depoimentos e suas fotos", async 
 
 test("destaca os depoimentos na página inicial com acesso direto à seção", async () => {
   const home = await readPage("/");
-  assert.match(home, /class="home-testimonial-spotlight"/);
-  assert.match(home, /Histórias que mostram o impacto/);
-  assert.match(home, /\/images\/testimonials\/rafaela\.webp/);
+  assert.match(home, /class="impact-testimonials-link"/);
+  assert.match(home, /Vozes do ITA/);
   assert.match(home, /href="\/instituto-terra-ancestral\/impacto\/#depoimentos"/);
   assert.match(home, /Conheça os depoimentos/);
+  assert.doesNotMatch(home, /class="home-testimonial-spotlight"/);
+  assert.doesNotMatch(home, /\/images\/testimonials\/rafaela\.webp/);
 });
 
 test("usa a foto indicada no banner principal", async () => {
