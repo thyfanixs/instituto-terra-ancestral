@@ -119,7 +119,11 @@ test("encerra a página de impacto com os sete depoimentos e suas fotos", async 
   assert.match(impact, /class="testimonials-section section"/);
   assert.match(impact, /id="depoimentos"/);
   assert.match(impact, /Impacto contado por quem vive/);
+  assert.match(impact, /class="testimonials-carousel"/);
+  assert.match(impact, /aria-label="Depoimento anterior"/);
+  assert.match(impact, /aria-label="Próximo depoimento"/);
   assert.equal((impact.match(/class="testimonial-card/g) ?? []).length, 7);
+  assert.doesNotMatch(impact, /testimonial-featured/);
 
   for (const [name, image] of testimonials) {
     assert.ok(impact.includes(name), name);

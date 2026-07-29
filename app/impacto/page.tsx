@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "../components/PageHero";
+import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import { assetPath } from "../lib/asset-path";
 
 export const metadata: Metadata = {
@@ -181,33 +182,7 @@ export default function Impacto() {
             <p>Os resultados também aparecem nas trajetórias de quem encontra no ITA um espaço de formação, expressão, acolhimento e pertencimento.</p>
           </div>
         </div>
-        <div className="testimonials-grid">
-          {testimonials.map((testimonial, index) => (
-            <article
-              className={`testimonial-card reveal${index === 0 ? " testimonial-featured" : ""}`}
-              key={testimonial.name}
-            >
-              <div className="testimonial-media">
-                <img
-                  src={assetPath(testimonial.image)}
-                  alt={`Retrato de ${testimonial.name}, estudante do ITA`}
-                  loading="lazy"
-                />
-              </div>
-              <div className="testimonial-copy">
-                <span className="testimonial-number">{String(index + 1).padStart(2, "0")}</span>
-                <blockquote>{testimonial.quote}</blockquote>
-                <footer>
-                  <div>
-                    <strong>{testimonial.name}</strong>
-                    <span>{testimonial.course}</span>
-                  </div>
-                  <p><span>Indicaria o ITA</span><strong>10/10</strong></p>
-                </footer>
-              </div>
-            </article>
-          ))}
-        </div>
+        <TestimonialsCarousel testimonials={testimonials} />
       </section>
     </main>
   );
