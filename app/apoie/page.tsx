@@ -29,8 +29,8 @@ export default function Apoie() {
         title="Sua escolha"
         accent="move territórios."
         description="Pessoas e organizações podem ajudar o ITA a ampliar o acesso à cultura, à formação e ao cuidado."
-        image="/images/official/biojoias.jpg"
-        imageAlt="Biojoias e artesanatos produzidos em atividades do Instituto"
+        image="/images/official/thayna-vini-feira-ita.jpg"
+        imageAlt="Thayná e Vini durante a Feira ITA"
         tone="wine"
       />
 

@@ -76,6 +76,12 @@ test("usa a foto indicada na seção de missão", async () => {
   assert.match(about, /Bárbara e Ione, estudantes do ITA, em um abraço/);
 });
 
+test("usa a foto indicada no banner de apoio", async () => {
+  const support = await readPage("/apoie");
+  assert.match(support, /\/images\/official\/thayna-vini-feira-ita\.jpg/);
+  assert.match(support, /Thayná e Vini durante a Feira ITA/);
+});
+
 test("usa a foto indicada no card de educação patrimonial e arte", async () => {
   const actions = await readPage("/acoes");
   assert.match(actions, /\/images\/official\/educacao-patrimonial-e-arte\.jpeg/);
