@@ -394,7 +394,7 @@ export const actionDetails: ActionDetail[] = [
       "Apresentações, feiras, vivências e experiências gastronômicas afro-indígenas conectam tradição e contemporaneidade, fortalecem o pertencimento comunitário e reconhecem a diversidade como patrimônio vivo.",
     ],
     meta: "643 participações em eventos culturais e Feira ITA",
-    photos: gallery("eventos-culturais", 3),
+    photos: gallery("eventos-culturais", 2),
     photoCaptions: {
       "/images/gallery/eventos-culturais/02.jpg": "Lavadeiras de Jequitibá",
     },

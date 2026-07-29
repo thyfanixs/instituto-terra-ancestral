@@ -221,9 +221,12 @@ test("associa as Lavadeiras de Jequitibá somente a eventos culturais", async ()
   const fair = await readPage("/acoes/feira-ita");
   const events = await readPage("/acoes/eventos-culturais");
   const lavadeirasPhoto = "/images/gallery/eventos-culturais/02.jpg";
+  const fairPhoto = "/images/gallery/eventos-culturais/03.jpg";
 
   assert.ok(!fair.includes(lavadeirasPhoto));
   assert.ok(events.includes(lavadeirasPhoto));
+  assert.ok(fair.includes(fairPhoto));
+  assert.ok(!events.includes(fairPhoto));
   assert.match(events, /Lavadeiras de Jequitibá em apresentação cultural/);
   assert.match(events, /<figcaption>Lavadeiras de Jequitibá<\/figcaption>/);
 });
