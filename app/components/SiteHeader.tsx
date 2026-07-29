@@ -9,6 +9,7 @@ const navigation = [
   { href: "/quem-somos", label: "Quem somos" },
   { href: "/acoes", label: "Ações" },
   { href: "/impacto", label: "Impacto" },
+  { href: "/noticias", label: "Notícias" },
   { href: "/apoie", label: "Apoie o ITA" },
   { href: "/contato", label: "Contato" },
 ];

@@ -28,6 +28,7 @@ test("renderiza todas as páginas institucionais do ITA", async () => {
     ["/quem-somos", /Memória que/],
     ["/acoes", /Saberes em/],
     ["/impacto", /Presença que/],
+    ["/noticias", /ITA na/],
     ["/apoie", /Faça parte dessa transformação/],
     ["/contato", /Uma conversa pode abrir muitos caminhos/],
   ];
@@ -80,6 +81,20 @@ test("usa a foto indicada no banner de apoio", async () => {
   const support = await readPage("/apoie");
   assert.match(support, /\/images\/official\/thayna-vini-feira-ita\.jpg/);
   assert.match(support, /Thayná e Vini durante a Feira ITA/);
+});
+
+test("reúne as aparições do ITA na imprensa", async () => {
+  const news = await readPage("/noticias");
+  const links = [
+    "https://www.otempo.com.br/cidades/2025/6/26/evento-em-pedro-leopoldo-propaga-saberes-ancestrais-no-proximo-sabado",
+    "https://www.otempo.com.br/entretenimento/2025/9/5/projeto-promove-a-ancestralidade-com-cursos-gratuitos-e-continuos-na-grande-bh",
+    "https://www.otempo.com.br/entretenimento/2025/9/25/instituto-de-promove-ancestralidade-na-grande-bh-inaugura-sede-com-programacao-cultural",
+  ];
+
+  for (const link of links) assert.ok(news.includes(link), link);
+  assert.match(news, /href="\/instituto-terra-ancestral\/noticias\/"/);
+  assert.match(news, /O TEMPO/);
+  assert.match(news, /target="_blank"/);
 });
 
 test("usa a foto indicada no card de educação patrimonial e arte", async () => {
