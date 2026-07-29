@@ -106,8 +106,12 @@ test("apresenta os indicadores atualizados de impacto", async () => {
 
 test("usa a foto indicada no banner principal", async () => {
   const home = await readPage("/");
+  const styles = await readFile(path.join(projectRoot, "app", "globals.css"), "utf8");
   assert.match(home, /\/images\/gallery\/ancestralidade\/01\.jpg/);
   assert.doesNotMatch(home, /--home-hero-image[^;]*teatro-negro\.jpg/);
+  assert.match(styles, /background: var\(--home-hero-image\) center top \/ cover/);
+  assert.match(styles, /transform-origin: center top/);
+  assert.match(styles, /background-position: 58% top/);
 });
 
 test("usa a identidade visual colorida na seção de destaque inicial", async () => {
