@@ -172,7 +172,7 @@ export default function Impacto() {
         </div>
       </section>
 
-      <section className="testimonials-section section">
+      <section className="testimonials-section section" id="depoimentos">
         <div className="testimonials-heading reveal">
           <p className="section-index">Vozes do ITA</p>
           <div>

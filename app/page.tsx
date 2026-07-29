@@ -151,6 +151,30 @@ export default function Home() {
         </Link>
       </section>
 
+      <section className="home-testimonial-spotlight">
+        <div className="home-testimonial-photo image-reveal">
+          <img
+            src={assetPath("/images/testimonials/rafaela.webp")}
+            alt="Rafaela Carneiro durante uma atividade de formação do ITA"
+            loading="lazy"
+          />
+        </div>
+        <div className="home-testimonial-copy">
+          <p className="kicker reveal">Vozes do ITA</p>
+          <h2 className="reveal">Histórias que mostram o impacto.</h2>
+          <blockquote className="reveal">
+            “No ITA, as diferenças são tesouros e não problemas.”
+          </blockquote>
+          <p className="home-testimonial-author reveal">
+            <strong>Rafaela Carneiro</strong>
+            <span>Estudante de Cerâmica e Economia Criativa</span>
+          </p>
+          <Link className="button button-pink reveal" href="/impacto/#depoimentos">
+            Conheça os depoimentos <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </section>
+
       <section className="social-strip">
         <div className="social-photo image-reveal">
           <img src={assetPath("/images/official/feira-ita.jpg")} alt="Peças artesanais expostas na Feira ITA" />

@@ -117,6 +117,7 @@ test("encerra a página de impacto com os sete depoimentos e suas fotos", async 
   ];
 
   assert.match(impact, /class="testimonials-section section"/);
+  assert.match(impact, /id="depoimentos"/);
   assert.match(impact, /Impacto contado por quem vive/);
   assert.equal((impact.match(/class="testimonial-card/g) ?? []).length, 7);
 
@@ -124,6 +125,15 @@ test("encerra a página de impacto com os sete depoimentos e suas fotos", async 
     assert.ok(impact.includes(name), name);
     assert.ok(impact.includes(image), image);
   }
+});
+
+test("destaca os depoimentos na página inicial com acesso direto à seção", async () => {
+  const home = await readPage("/");
+  assert.match(home, /class="home-testimonial-spotlight"/);
+  assert.match(home, /Histórias que mostram o impacto/);
+  assert.match(home, /\/images\/testimonials\/rafaela\.webp/);
+  assert.match(home, /href="\/instituto-terra-ancestral\/impacto\/#depoimentos"/);
+  assert.match(home, /Conheça os depoimentos/);
 });
 
 test("usa a foto indicada no banner principal", async () => {
