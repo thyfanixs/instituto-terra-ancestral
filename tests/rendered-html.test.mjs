@@ -54,6 +54,10 @@ test("apresenta os indicadores atualizados de impacto", async () => {
   assert.match(home, trainingLabel);
   assert.match(home, /643/);
   assert.match(home, cultureLabel);
+  assert.match(home, /impact-featured impact-health/);
+  assert.match(home, /impact-featured impact-fair/);
+  assert.match(home, /<small class="impact-badge">Saúde<\/small>/);
+  assert.match(home, /<small class="impact-badge">Feira ITA<\/small>/);
   assert.match(impact, /324/);
   assert.match(impact, healthLabel);
   assert.match(impact, /473/);

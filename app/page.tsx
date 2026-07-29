@@ -3,9 +3,9 @@ import { assetPath } from "./lib/asset-path";
 
 const highlights = [
   { value: "1.200", label: "pessoas diretamente impactadas" },
-  { value: "324", label: "pessoas acolhidas/beneficiadas com as ações de saúde do ITA - Instituto Terra Ancestral" },
+  { value: "324", label: "pessoas acolhidas/beneficiadas com as ações de saúde do ITA - Instituto Terra Ancestral", emphasis: "health", badge: "Saúde" },
   { value: "473", label: "participações em oficinas e cursos gratuitos do ITA" },
-  { value: "643", label: "participações em eventos culturais e Feira ITA" },
+  { value: "643", label: "participações em eventos culturais e Feira ITA", emphasis: "fair", badge: "Feira ITA" },
 ];
 
 export default function Home() {
@@ -70,7 +70,11 @@ export default function Home() {
         </div>
         <div className="impact-list">
           {highlights.map((item, index) => (
-            <article className={`reveal delay-${index + 1}`} key={item.label}>
+            <article
+              className={`reveal delay-${index + 1}${item.emphasis ? ` impact-featured impact-${item.emphasis}` : ""}`}
+              key={item.label}
+            >
+              {item.badge && <small className="impact-badge">{item.badge}</small>}
               <strong>{item.value}</strong><span>{item.label}</span>
             </article>
           ))}
