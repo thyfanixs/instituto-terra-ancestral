@@ -62,7 +62,7 @@ const courses = [
   {
     title: "Costura criativa",
     category: "Tradições têxteis",
-    image: "/images/official/costura-criativa.jpg",
+    image: "/images/official/curso-de-costura-criativa.jpeg",
     text: "Modelagem, costura e reaproveitamento de tecidos para peças autorais, festas e celebrações tradicionais.",
     meta: "3 turmas · 31 estudantes",
   },

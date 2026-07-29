@@ -71,6 +71,12 @@ test("usa a foto indicada no card de educação patrimonial e arte", async () =>
   assert.match(actions, /Registro da ação Educação patrimonial e arte/);
 });
 
+test("usa a foto indicada no card de costura criativa", async () => {
+  const actions = await readPage("/acoes");
+  assert.match(actions, /\/images\/official\/curso-de-costura-criativa\.jpeg/);
+  assert.match(actions, /Registro da ação Costura criativa/);
+});
+
 test("mantém contatos, redes sociais, bazar e apoio fiscal visíveis", async () => {
   const contact = await readPage("/contato");
   const support = await readPage("/apoie");
