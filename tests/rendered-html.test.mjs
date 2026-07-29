@@ -164,6 +164,21 @@ test("mantém contatos, redes sociais, bazar e apoio fiscal visíveis", async ()
   assert.match(support, /não substitui orientação contábil ou tributária/);
 });
 
+test("exibe o TikTok oficial em todos os pontos de redes sociais", async () => {
+  const home = await readPage("/");
+  const contact = await readPage("/contato");
+  const support = await readPage("/apoie");
+  const profile = /https:\/\/www\.tiktok\.com\/@ita\.gerais/;
+
+  assert.match(home, profile);
+  assert.match(home, /TikTok <span aria-hidden="true">↗<\/span>/);
+  assert.match(contact, profile);
+  assert.match(contact, /<span>TikTok<\/span><strong>@ita\.gerais<\/strong>/);
+  assert.match(support, profile);
+  assert.match(support, /<span>TikTok<\/span><strong>@ita\.gerais<\/strong>/);
+  assert.match(contact, />TikTok ↗<\/a>/);
+});
+
 test("gera as páginas detalhadas das 22 ações", async () => {
   const actionSlugs = [
     "economia-criativa",

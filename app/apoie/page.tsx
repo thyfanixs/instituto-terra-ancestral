@@ -18,6 +18,7 @@ const partnershipLinks = [
   { label: "E-mail", value: "institutoita.gerais@gmail.com", href: "mailto:institutoita.gerais@gmail.com" },
   { label: "WhatsApp", value: "(31) 97243-2240", href: "https://wa.me/5531972432240" },
   { label: "Instagram", value: "@ita.gerais", href: "https://www.instagram.com/ita.gerais/" },
+  { label: "TikTok", value: "@ita.gerais", href: "https://www.tiktok.com/@ita.gerais" },
 ];
 
 export default function Apoie() {

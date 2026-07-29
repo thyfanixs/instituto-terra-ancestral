@@ -20,6 +20,7 @@ export default function SiteFooter() {
         <a href="https://www.instagram.com/ita.gerais/" target="_blank" rel="noreferrer">Instagram ↗</a>
         <a href="https://www.youtube.com/@itainstitutoterraancestral" target="_blank" rel="noreferrer">YouTube ↗</a>
         <a href="https://www.facebook.com/@itagerais/" target="_blank" rel="noreferrer">Facebook ↗</a>
+        <a href="https://www.tiktok.com/@ita.gerais" target="_blank" rel="noreferrer">TikTok ↗</a>
       </div>
       <div className="footer-bottom"><span>© 2026 ITA</span><Link href="/apoie">Apoie o ITA</Link></div>
     </footer>

@@ -50,6 +50,9 @@ export default function Contato() {
           <a className="contact-card facebook-card reveal" href="https://www.facebook.com/@itagerais/" target="_blank" rel="noreferrer">
             <span>Facebook</span><strong>ITA - Instituto Terra Ancestral</strong><b aria-hidden="true">↗</b>
           </a>
+          <a className="contact-card tiktok-card reveal" href="https://www.tiktok.com/@ita.gerais" target="_blank" rel="noreferrer">
+            <span>TikTok</span><strong>@ita.gerais</strong><b aria-hidden="true">↗</b>
+          </a>
         </div>
       </section>
 

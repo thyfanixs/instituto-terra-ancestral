@@ -715,6 +715,7 @@ h1, h2, h3, .display-copy, blockquote {
 .contact-card.social-card:hover { background: var(--pink); }
 .contact-card.youtube-card:hover { background: var(--red); color: var(--paper); }
 .contact-card.facebook-card:hover { background: var(--blue); color: var(--paper); }
+.contact-card.tiktok-card:hover { background: var(--ink); color: var(--paper); }
 .visit-section { background: var(--wine); color: var(--paper); display: grid; grid-template-columns: 1.1fr .9fr; min-height: 620px; }
 .visit-image img { height: 100%; object-fit: cover; width: 100%; }
 .visit-copy { align-self: center; padding: 75px clamp(30px, 7vw, 108px); }

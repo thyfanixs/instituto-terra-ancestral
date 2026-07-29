@@ -97,6 +97,7 @@ export default function Home() {
             <a href="https://www.instagram.com/ita.gerais/" target="_blank" rel="noreferrer">Instagram <span aria-hidden="true">↗</span></a>
             <a href="https://www.youtube.com/@itainstitutoterraancestral" target="_blank" rel="noreferrer">YouTube <span aria-hidden="true">↗</span></a>
             <a href="https://www.facebook.com/@itagerais/" target="_blank" rel="noreferrer">Facebook <span aria-hidden="true">↗</span></a>
+            <a href="https://www.tiktok.com/@ita.gerais" target="_blank" rel="noreferrer">TikTok <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
