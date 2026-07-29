@@ -77,6 +77,12 @@ test("usa a foto indicada no card de costura criativa", async () => {
   assert.match(actions, /Registro da ação Costura criativa/);
 });
 
+test("usa a foto indicada no card de marcenaria criativa", async () => {
+  const actions = await readPage("/acoes");
+  assert.match(actions, /\/images\/official\/marcenaria-criativa-card\.jpeg/);
+  assert.match(actions, /Registro da ação Marcenaria criativa/);
+});
+
 test("mantém contatos, redes sociais, bazar e apoio fiscal visíveis", async () => {
   const contact = await readPage("/contato");
   const support = await readPage("/apoie");

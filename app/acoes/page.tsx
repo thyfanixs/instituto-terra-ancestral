@@ -90,7 +90,7 @@ const courses = [
   {
     title: "Marcenaria criativa",
     category: "Ofícios tradicionais",
-    image: "/images/official/marcenaria-criativa.jpg",
+    image: "/images/official/marcenaria-criativa-card.jpeg",
     text: "Trabalho com madeira, sustentabilidade e criação de peças inspiradas nas referências do território.",
     meta: "3 turmas · 18 estudantes",
   },
