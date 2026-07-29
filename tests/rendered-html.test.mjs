@@ -316,16 +316,19 @@ test("usa as descrições ampliadas do portfólio institucional", async () => {
   assert.match(circle, /Terapia do Esquema de Jeffrey Young/);
 });
 
-test("mantém as fotos no contexto correto e exibe os 62 registros", async () => {
+test("mantém as fotos selecionadas no contexto correto e exibe os 60 registros", async () => {
   const health = await readPage("/acoes/mutirao-de-saude-visual");
   const cannabis = await readPage("/acoes/tratamento-medicinal-de-cannabis");
+  const impact = await readPage("/impacto");
   assert.doesNotMatch(health, /\/images\/gallery\/parcerias\//);
   assert.doesNotMatch(cannabis, /\/images\/gallery\/parcerias\//);
+  assert.doesNotMatch(impact, /\/images\/gallery\/parcerias\/15\.jpg/);
+  assert.doesNotMatch(impact, /\/images\/gallery\/parcerias\/16\.jpg/);
 
   const htmlFiles = await allHtmlFiles(outputRoot);
   const html = (await Promise.all(htmlFiles.map((file) => readFile(file, "utf8")))).join("\n");
   const galleryPhotos = new Set(
     [...html.matchAll(/\/images\/gallery\/[^"&<>\s)]+\.jpg/g)].map(([photo]) => photo),
   );
-  assert.equal(galleryPhotos.size, 62, "todas as 62 imagens oficiais devem aparecer no site");
+  assert.equal(galleryPhotos.size, 60, "as 60 imagens selecionadas devem aparecer no site");
 });

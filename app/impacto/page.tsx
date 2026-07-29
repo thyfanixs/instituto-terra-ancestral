@@ -43,8 +43,6 @@ const partnershipPhotos = [
   { src: "/images/gallery/parcerias/12.jpg", caption: "Belo Horizonte · GESTO UFMG" },
   { src: "/images/gallery/parcerias/13.jpg", caption: "Matozinhos · Quintal das Pretas" },
   { src: "/images/gallery/parcerias/14.jpg", caption: "Belo Horizonte · QuinTao das Artes" },
-  { src: "/images/gallery/parcerias/15.jpg", caption: "Belo Horizonte · QuinTao das Artes" },
-  { src: "/images/gallery/parcerias/16.jpg", caption: "Belo Horizonte · QuinTao das Artes" },
   { src: "/images/gallery/parcerias/17.jpg", caption: "Matozinhos · Terreiro de Umbanda TUFF" },
 ];
 
