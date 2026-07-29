@@ -94,7 +94,7 @@ export default function Apoie() {
 
       <section className="bazar-section">
         <div className="bazar-image image-reveal">
-          <img src={assetPath("/images/official/armazem-ita.jpg")} alt="Espaço do Armazém ITA" />
+          <img src={assetPath("/images/official/bazar-ita.jpg")} alt="Pessoas participando do Bazar Beneficente Reconvexo do ITA" />
         </div>
         <div className="bazar-copy">
           <p className="kicker reveal">Bazar ITA</p>

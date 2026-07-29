@@ -227,6 +227,13 @@ test("usa a foto indicada no banner de apoio", async () => {
   assert.match(support, /Thayná e Vini durante a Feira ITA/);
 });
 
+test("usa a foto indicada na seção do Bazar ITA", async () => {
+  const support = await readPage("/apoie");
+  assert.match(support, /\/images\/official\/bazar-ita\.jpg/);
+  assert.match(support, /Pessoas participando do Bazar Beneficente Reconvexo do ITA/);
+  assert.doesNotMatch(support, /\/images\/official\/armazem-ita\.jpg/);
+});
+
 test("reúne as aparições do ITA na imprensa", async () => {
   const news = await readPage("/noticias");
   const links = [
