@@ -46,6 +46,51 @@ const partnershipPhotos = [
   { src: "/images/gallery/parcerias/17.jpg", caption: "Matozinhos · Terreiro de Umbanda TUFF" },
 ];
 
+const testimonials = [
+  {
+    name: "Rafaela Carneiro",
+    course: "Cerâmica e Economia Criativa",
+    image: "/images/testimonials/rafaela.webp",
+    quote: "Sinto que há uma liberdade para a criação e para adotarmos o ritmo de aprendizado mais coerente com nossas habilidades. Além disso, expandiu-se minha percepção sobre temas e conceitos que estavam engessados dentro do meu repertório. O curso de cerâmica vai muito além das técnicas de modelagem do barro. Resgatou em mim um olhar contemplativo, a possibilidade de seguir um ritmo de produção leve e conectado com minha criatividade, possibilitou que eu criasse vínculos com pessoas incríveis, me oportunizou escutar e aprender com as histórias e experiências dos colegas, além de me possibilitar sentir pertencente a um grupo no qual as diferenças são tesouros e não problemas.",
+  },
+  {
+    name: "Bárbara",
+    course: "Cerâmica, Economia Criativa, Biojoias Indígenas e Macramê",
+    image: "/images/testimonials/barbara.webp",
+    quote: "O ITA é ótimo, muito organizado e ambiente acolhedor. Professoras capacitadas e pacientes. Recursos de qualidade e com a quantidade suficiente. A estrutura é muito boa e tem uma ótima localização. Pessoas boas existem, e lugares acolhedores também! Minha vida mudou depois que comecei os cursos no ITA. Os encontros em dias de estudo geram muito aprendizado. Sinto que estarei capacitada para desenvolver as atividades ensinadas e estar no local é muito bom, ambiente muito agradável!",
+  },
+  {
+    name: "Iorrany",
+    course: "Grafite e Economia Criativa",
+    image: "/images/testimonials/iorrany.webp",
+    quote: "É um curso que aprimora meu lado artístico, aqui no ITA tenho possibilidade de crescer e desenvolver habilidades e oportunidade de me expressar! O ITA é um lugar super acolhedor além de ajudar a expandir muitos horizontes, conhecer pessoas de todos os tipos e desenvolver seu intelecto de uma forma incrível. Felicidade e admiração.",
+  },
+  {
+    name: "Isabella",
+    course: "Cerâmica, Biojoias Indígenas, Macramê e Economia Criativa",
+    image: "/images/testimonials/isabella.webp",
+    quote: "O ITA oferece curso de qualidade e dispõe de professoras e equipe muito bem qualificadas. Além de se possuir um ambiente que atende totalmente as necessidades dos cursos ofertados. O futuro é coletivo. No ITA tive a oportunidade de desenvolver habilidades manuais, o que no mercado formal de trabalho, não é possível. O trabalho desenvolvido no Instituto é muito sério e acredito que poderei colocar em prática tudo o que estou aprendendo, de forma profissional.",
+  },
+  {
+    name: "Marcelo",
+    course: "Cerâmica, Teatro Negro e Economia Criativa",
+    image: "/images/testimonials/marcelo.webp",
+    quote: "As pessoas envolvidas nas atividades, além de profissionais, são muito atenciosas. A maneira que somos recebidos é de um carinho enorme, as professoras são muito competentes. Resgate a cultura da nossa cidade.",
+  },
+  {
+    name: "Natasha",
+    course: "Teatro Negro, Cerâmica e Economia Criativa",
+    image: "/images/testimonials/natasha.webp",
+    quote: "É tudo muito organizado, com professoras qualificadas e atividades bem projetadas. O ITA é muito acolhedor. Aqui, eu posso ser Natasha 100%, sem me esconder, sem me omitir.",
+  },
+  {
+    name: "Vitória",
+    course: "Teatro Negro · parceria com o Grupo Ancês",
+    image: "/images/testimonials/vitoria.webp",
+    quote: "As aulas têm sido incríveis! A didática do curso e espaço são acolhedores, permitindo aprender diferentes técnicas e tornando a experiência ainda melhor. O curso está contribuindo muito para a minha formação e atuação artística/profissional. Sim, eu pretendo continuar minha trajetória artística/cultural após o curso de Teatro Negro. Em uma escala de 0 a 10: 10. Eu indico os cursos e atividades do ITA para outras pessoas. Renascimento. O curso tem sido um reencontro com diversas possibilidades e aprendizados que carrego para a minha vida pessoal e profissional!",
+  },
+];
+
 export default function Impacto() {
   return (
     <main>
@@ -127,8 +172,42 @@ export default function Impacto() {
         </div>
       </section>
 
-      <section className="impact-quote section">
-        <blockquote className="reveal">“O impacto acontece quando o conhecimento encontra espaço para circular.”</blockquote>
+      <section className="testimonials-section section">
+        <div className="testimonials-heading reveal">
+          <p className="section-index">Vozes do ITA</p>
+          <div>
+            <p className="kicker">Depoimentos</p>
+            <h2>Impacto contado por quem vive.</h2>
+            <p>Os resultados também aparecem nas trajetórias de quem encontra no ITA um espaço de formação, expressão, acolhimento e pertencimento.</p>
+          </div>
+        </div>
+        <div className="testimonials-grid">
+          {testimonials.map((testimonial, index) => (
+            <article
+              className={`testimonial-card reveal${index === 0 ? " testimonial-featured" : ""}`}
+              key={testimonial.name}
+            >
+              <div className="testimonial-media">
+                <img
+                  src={assetPath(testimonial.image)}
+                  alt={`Retrato de ${testimonial.name}, estudante do ITA`}
+                  loading="lazy"
+                />
+              </div>
+              <div className="testimonial-copy">
+                <span className="testimonial-number">{String(index + 1).padStart(2, "0")}</span>
+                <blockquote>{testimonial.quote}</blockquote>
+                <footer>
+                  <div>
+                    <strong>{testimonial.name}</strong>
+                    <span>{testimonial.course}</span>
+                  </div>
+                  <p><span>Indicaria o ITA</span><strong>10/10</strong></p>
+                </footer>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
     </main>
   );

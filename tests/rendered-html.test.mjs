@@ -104,6 +104,28 @@ test("apresenta os indicadores atualizados de impacto", async () => {
   assert.doesNotMatch(impact, /205[^<]*óculos entregues gratuitamente/);
 });
 
+test("encerra a página de impacto com os sete depoimentos e suas fotos", async () => {
+  const impact = await readPage("/impacto");
+  const testimonials = [
+    ["Rafaela Carneiro", "/images/testimonials/rafaela.webp"],
+    ["Bárbara", "/images/testimonials/barbara.webp"],
+    ["Iorrany", "/images/testimonials/iorrany.webp"],
+    ["Isabella", "/images/testimonials/isabella.webp"],
+    ["Marcelo", "/images/testimonials/marcelo.webp"],
+    ["Natasha", "/images/testimonials/natasha.webp"],
+    ["Vitória", "/images/testimonials/vitoria.webp"],
+  ];
+
+  assert.match(impact, /class="testimonials-section section"/);
+  assert.match(impact, /Impacto contado por quem vive/);
+  assert.equal((impact.match(/class="testimonial-card/g) ?? []).length, 7);
+
+  for (const [name, image] of testimonials) {
+    assert.ok(impact.includes(name), name);
+    assert.ok(impact.includes(image), image);
+  }
+});
+
 test("usa a foto indicada no banner principal", async () => {
   const home = await readPage("/");
   const styles = await readFile(path.join(projectRoot, "app", "globals.css"), "utf8");
