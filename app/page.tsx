@@ -24,6 +24,9 @@ export default function Home() {
               Conheça nossas ações <span aria-hidden="true">↗</span>
             </Link>
             <Link className="plain-link" href="/quem-somos">Descubra o ITA</Link>
+            <Link className="button button-pink" href="/apoie">
+              Apoie o ITA <span aria-hidden="true">↗</span>
+            </Link>
           </div>
         </div>
         <div className="hero-scroll" aria-hidden="true">

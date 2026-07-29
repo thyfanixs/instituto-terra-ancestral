@@ -164,7 +164,7 @@ h1, h2, h3, .display-copy, blockquote {
 }
 .home-hero h1 em { color: var(--orange); font-style: normal; }
 .hero-lead { font-size: clamp(18px, 2vw, 27px); line-height: 1.45; margin: 35px 0 0; max-width: 600px; }
-.hero-actions { align-items: center; display: flex; gap: 28px; margin-top: 38px; }
+.hero-actions { align-items: center; display: flex; flex-wrap: wrap; gap: 28px; margin-top: 38px; }
 .plain-link { border-bottom: 1px solid rgba(255,255,255,.6); font-size: 12px; font-weight: 800; padding: 6px 0; }
 .hero-scroll {
   bottom: 32px;

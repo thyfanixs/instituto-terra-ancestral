@@ -65,6 +65,11 @@ test("usa a identidade visual colorida na seção de destaque inicial", async ()
   assert.doesNotMatch(home, /\/images\/official\/culinaria-ancestral\.jpg/);
 });
 
+test("oferece acesso direto para apoiar o ITA no banner inicial", async () => {
+  const home = await readPage("/");
+  assert.match(home, /class="button button-pink" href="\/instituto-terra-ancestral\/apoie\/">Apoie o ITA/);
+});
+
 test("usa a foto indicada no card de educação patrimonial e arte", async () => {
   const actions = await readPage("/acoes");
   assert.match(actions, /\/images\/official\/educacao-patrimonial-e-arte\.jpeg/);
