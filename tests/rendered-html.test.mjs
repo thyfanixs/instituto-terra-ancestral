@@ -59,6 +59,12 @@ test("usa a foto indicada no banner principal", async () => {
   assert.doesNotMatch(home, /--home-hero-image[^;]*teatro-negro\.jpg/);
 });
 
+test("usa a identidade visual colorida na seção de destaque inicial", async () => {
+  const home = await readPage("/");
+  assert.match(home, /\/images\/official\/logo-1-3-colorida\.png/);
+  assert.doesNotMatch(home, /\/images\/official\/culinaria-ancestral\.jpg/);
+});
+
 test("mantém contatos, redes sociais, bazar e apoio fiscal visíveis", async () => {
   const contact = await readPage("/contato");
   const support = await readPage("/apoie");

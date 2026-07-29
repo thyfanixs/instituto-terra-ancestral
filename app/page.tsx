@@ -49,7 +49,7 @@ export default function Home() {
 
       <section className="home-feature">
         <div className="feature-photo image-reveal">
-          <img src={assetPath("/images/official/culinaria-ancestral.jpg")} alt="Atividade de culinária ancestral do ITA" />
+          <img src={assetPath("/images/official/logo-1-3-colorida.png")} alt="Identidade visual colorida do Instituto Terra Ancestral" />
         </div>
         <div className="feature-copy">
           <p className="kicker reveal">Cultura viva</p>
