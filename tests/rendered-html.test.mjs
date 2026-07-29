@@ -68,6 +68,8 @@ test("oferece três categorias no submenu de ações e destinos correspondentes"
   assert.ok(healthIndex < cultureIndex);
   assert.ok(actions.indexOf("Mutirão de Saúde Visual") > healthIndex);
   assert.ok(actions.indexOf("Eventos culturais") > cultureIndex);
+  assert.doesNotMatch(actions, /Encontro é também tecnologia social/);
+  assert.doesNotMatch(actions, /class="culture-banner"/);
 });
 
 test("apresenta os indicadores atualizados de impacto", async () => {

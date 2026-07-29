@@ -322,16 +322,6 @@ export default function Acoes() {
         </div>
       </section>
 
-      <section className="culture-banner">
-        <div className="culture-banner-photo image-reveal">
-          <img src={assetPath("/images/official/congadar.jpg")} alt="Evento cultural com participação do Congadar" />
-        </div>
-        <div className="culture-banner-copy reveal">
-          <p className="kicker">Cultura viva</p>
-          <h2>Encontro é também tecnologia social.</h2>
-          <p>Eventos culturais, rodas de conversa e articulações fortalecem redes, celebram identidades e fazem os saberes circularem.</p>
-        </div>
-      </section>
     </main>
   );
 }

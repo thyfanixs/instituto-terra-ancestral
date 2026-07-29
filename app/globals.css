@@ -707,12 +707,6 @@ h1, h2, h3, .display-copy, blockquote {
   padding-top: 16px;
   text-transform: uppercase;
 }
-.culture-banner { background: var(--blue); color: var(--paper); display: grid; grid-template-columns: 1.1fr .9fr; min-height: 650px; }
-.culture-banner-photo img { height: 100%; object-fit: cover; width: 100%; }
-.culture-banner-copy { align-self: center; padding: 70px clamp(30px, 7vw, 108px); }
-.culture-banner-copy h2 { color: var(--orange); font-size: clamp(55px, 6vw, 92px); line-height: .9; margin: 25px 0 35px; text-transform: uppercase; }
-.culture-banner-copy > p:last-child { font-size: 17px; line-height: 1.7; }
-
 .circle-spotlight {
   background: var(--wine);
   color: var(--paper);
@@ -1101,9 +1095,9 @@ h1, h2, h3, .display-copy, blockquote {
   .display-copy { font-size: 37px; }
   .home-intro-row, .two-columns { grid-template-columns: 1fr; }
   .circle-link { height: 130px; margin-top: 15px; width: 130px; }
-  .home-feature, .social-strip, .mission-block, .culture-banner, .circle-spotlight, .territory-section, .visit-section, .incentive-panel, .bazar-section { grid-template-columns: 1fr; }
-  .feature-photo, .social-photo, .mission-photo, .culture-banner-photo, .circle-spotlight-image, .territory-image, .visit-image, .bazar-image { min-height: 390px; }
-  .feature-copy, .social-copy, .mission-text, .culture-banner-copy, .circle-spotlight-copy, .territory-copy, .visit-copy, .incentive-content, .bazar-copy { padding: 70px 20px; }
+  .home-feature, .social-strip, .mission-block, .circle-spotlight, .territory-section, .visit-section, .incentive-panel, .bazar-section { grid-template-columns: 1fr; }
+  .feature-photo, .social-photo, .mission-photo, .circle-spotlight-image, .territory-image, .visit-image, .bazar-image { min-height: 390px; }
+  .feature-copy, .social-copy, .mission-text, .circle-spotlight-copy, .territory-copy, .visit-copy, .incentive-content, .bazar-copy { padding: 70px 20px; }
   .feature-copy h2, .impact-title h2, .social-copy h2, .actions-page-heading h2, .numbers-heading h2, .territory-copy h2, .contact-lead h2, .visit-copy h2, .support-intro h2 { font-size: 53px; }
   .impact-list { grid-template-columns: 1fr; }
   .impact-list article, .impact-list article:not(:first-child) { border-bottom: 1px solid var(--ink); border-right: 0; padding: 25px 0; }
