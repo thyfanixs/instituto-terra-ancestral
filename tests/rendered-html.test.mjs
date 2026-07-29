@@ -106,6 +106,40 @@ test("explica a origem e o significado do nome ITA antes da história institucio
   assert.match(about, /futuro de bem viver/);
 });
 
+test("apresenta todas as frentes de atuação depois dos valores", async () => {
+  const about = await readPage("/quem-somos");
+  const valuesIndex = about.indexOf("Valores que viram prática");
+  const actingIndex = about.indexOf("Nossa atuação");
+
+  assert.ok(valuesIndex >= 0 && actingIndex > valuesIndex);
+
+  const expectedContent = [
+    "Educação Popular",
+    "Saúde Coletiva",
+    "Educação Socioambiental",
+    "Saberes Ancestrais",
+    "Justiça e Direitos",
+    "Cultura e Identidade",
+    "Soberania Alimentar",
+    "Economia Criativa",
+    "Lazer e Articulação Comunitária",
+    "Pesquisa e Políticas Públicas",
+    "Educação Popular e Formação Profissional",
+    "Saúde Coletiva e Farmácias Vivas",
+    "Comunidades Tradicionais e Defesa de Direitos",
+    "Cultura e Expressões Ancestrais",
+    "Lazer, Comunidade e Educação",
+    "Lei 10.639/03 em todas as formações",
+    "LGBTQIAPN+",
+    "Nosso impacto vai além da técnica",
+    "sociedade mais justa, solidária e sustentável",
+  ];
+
+  for (const content of expectedContent) {
+    assert.ok(about.includes(content), content);
+  }
+});
+
 test("usa a foto indicada no banner de apoio", async () => {
   const support = await readPage("/apoie");
   assert.match(support, /\/images\/official\/thayna-vini-feira-ita\.jpg/);

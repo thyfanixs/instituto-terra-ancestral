@@ -18,6 +18,110 @@ const values = [
   ["08", "Ética e transparência", "Conduzimos nossas ações com integridade, responsabilidade e compromisso público."],
 ];
 
+const actionAreas = [
+  ["01", "Educação Popular"],
+  ["02", "Saúde Coletiva"],
+  ["03", "Educação Socioambiental"],
+  ["04", "Saberes Ancestrais"],
+  ["05", "Justiça e Direitos"],
+  ["06", "Cultura e Identidade"],
+  [
+    "07",
+    "Soberania Alimentar",
+    "Produção de xaropes, repelentes, produtos de limpeza e higiene pessoal, entre outros produtos agroecológicos.",
+  ],
+  ["08", "Economia Criativa"],
+  ["09", "Lazer e Articulação Comunitária"],
+  ["10", "Pesquisa e Políticas Públicas"],
+];
+
+const actionPrograms = [
+  {
+    number: "A",
+    title: "Educação Popular e Formação Profissional",
+    lead: "Ofícios que unem tradição e inovação.",
+    items: [
+      "Corte, costura e estamparia",
+      "Panificação, alimentação ancestral e quitandas",
+      "Marcenaria e mobiliário sustentável",
+      "Artesanato, cerâmica e agroecologia",
+      "Aulas voltadas à economia solidária, ao cooperativismo e à justiça ambiental",
+    ],
+  },
+  {
+    number: "B",
+    title: "Saúde Coletiva e Farmácias Vivas",
+    lead: "Saúde como direito coletivo.",
+    items: [
+      "Integração entre saberes tradicionais, SUS e práticas como reiki, auriculoterapia, yoga e musicoterapia",
+      "Rodas de escuta, saúde mental popular e autocuidado",
+      "Farmácias Vivas que reúnem benzedeiras, raizeiras, parteiras e hortas medicinais",
+    ],
+  },
+  {
+    number: "C",
+    title: "Comunidades Tradicionais e Defesa de Direitos",
+    lead: "Apoio técnico e jurídico para povos e comunidades tradicionais.",
+    items: [
+      "Mapeamento territorial",
+      "Assessoria jurídica e formação em direitos humanos",
+      "Defesa da identidade, do território e da autodeterminação",
+      "Luta por justiça para mulheres, LGBTQIAPN+, povos de terreiro e indígenas",
+      "Produção de diagnósticos técnicos e promoção do diálogo comunitário",
+    ],
+  },
+  {
+    number: "D",
+    title: "Cultura e Expressões Ancestrais",
+    lead: "Cultura como direito.",
+    items: [
+      "Oficinas de tambor, grafite, capoeira, dança afro e teatro",
+      "Artes visuais a partir da reciclagem",
+      "Celebrações, rituais sagrados e tradições orais",
+      "Apoio a artistas periféricos e comunidades tradicionais",
+    ],
+  },
+  {
+    number: "E",
+    title: "Soberania Alimentar e Economia Criativa",
+    lead: "Autonomia territorial, produção e geração de renda.",
+    items: [
+      "Hortas comunitárias interligadas, quintais produtivos e feiras agroecológicas",
+      "Criação de cooperativas, redes de troca e moedas sociais",
+      "Gastronomia ancestral como geração de renda",
+      "Produção com identidade cultural e autonomia territorial",
+    ],
+  },
+  {
+    number: "F",
+    title: "Lazer, Comunidade e Educação",
+    lead: "Encontro, aprendizagem e cuidado em comunidade.",
+    items: [
+      "Cineclubes, rodas de conversa e eventos intergeracionais",
+      "Esporte comunitário: caminhadas ecológicas, judô, muay thai e funcional",
+      "Cursinho preparatório para o ENEM com abordagem crítica e inclusiva",
+      "Espaço educativo para filhos e filhas das cursistas, garantindo permanência e cuidado",
+    ],
+  },
+];
+
+const actionPrinciples = [
+  "Equidade e inclusão",
+  "Valorização da ancestralidade",
+  "Inovação com raízes culturais",
+  "Lei 10.639/03 em todas as formações",
+];
+
+const actionImpacts = [
+  "Protagonismo, empoderamento e transformação social",
+  "Desenvolvimento econômico com relações de trabalho harmoniosas e sustentáveis com o meio ambiente",
+  "Saúde do corpo e da mente",
+  "Fortalecimento do pertencimento e da identidade coletiva",
+  "Redes de apoio que podem reduzir a vulnerabilidade social",
+  "Confiança mútua e participação cidadã",
+  "Intercâmbio de saberes e experiências",
+];
+
 export default function QuemSomos() {
   return (
     <main>
@@ -94,6 +198,74 @@ export default function QuemSomos() {
               <span>{number}</span><h3>{title}</h3><p>{text}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="acting-section section">
+        <div className="acting-heading reveal">
+          <p className="section-index">Nossa atuação</p>
+          <div>
+            <h2>Muitas frentes.<br /><em>Um compromisso.</em></h2>
+            <p>
+              O ITA atua em diversas frentes conectadas, com base no respeito
+              aos saberes populares, à ancestralidade e ao bem viver.
+            </p>
+          </div>
+        </div>
+        <div className="acting-areas">
+          {actionAreas.map(([number, title, detail]) => (
+            <article className="acting-area reveal" key={number}>
+              <span>{number}</span>
+              <h3>{title}</h3>
+              {detail && <p>{detail}</p>}
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="acting-programs section">
+        <div className="acting-programs-heading reveal">
+          <p className="section-index">Frentes em prática</p>
+          <h2>Atuação que transforma territórios.</h2>
+        </div>
+        <div className="acting-program-grid">
+          {actionPrograms.map(({ number, title, lead, items }) => (
+            <article className="acting-program-card reveal" key={number}>
+              <span>{number}</span>
+              <div>
+                <h3>{title}</h3>
+                <p className="acting-program-lead">{lead}</p>
+                <ul>
+                  {items.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="acting-commitment section">
+        <div className="acting-principles reveal">
+          <p className="section-index">Princípios e público-alvo</p>
+          <h2>Para quem fazemos.</h2>
+          <ul>
+            {actionPrinciples.map((principle) => <li key={principle}>{principle}</li>)}
+          </ul>
+          <p className="acting-audience">
+            Mulheres, negritudes, pessoas LGBTQIAPN+, povos tradicionais,
+            indígenas e comunidades periféricas.
+          </p>
+        </div>
+        <div className="acting-impact reveal">
+          <p className="section-index">Impacto e compromisso</p>
+          <h2>Nosso impacto vai além da técnica.</h2>
+          <ul>
+            {actionImpacts.map((impact) => <li key={impact}>{impact}</li>)}
+          </ul>
+          <p className="acting-closing">
+            Com sede em Pedro Leopoldo — MG, atuamos por uma sociedade mais
+            justa, solidária e sustentável.
+          </p>
         </div>
       </section>
     </main>
