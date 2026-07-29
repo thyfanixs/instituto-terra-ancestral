@@ -32,6 +32,22 @@ export default function QuemSomos() {
         tone="pink"
       />
 
+      <section className="why-ita section">
+        <div className="why-ita-heading reveal">
+          <p className="section-index">Origem do nome</p>
+          <h2>POR QUE<br /><em>ITA?</em></h2>
+        </div>
+        <div className="why-ita-copy">
+          <p className="reveal">&ldquo;ITA&rdquo; vem do Tupi-Guarani e significa pedra.</p>
+          <p className="reveal">Representa força, resistência e ancestralidade.</p>
+          <p className="reveal">Na tradição africana, as pedras são guardiãs da sabedoria ancestral.</p>
+          <p className="reveal">
+            O ITA é a pedra fundamental de uma sociedade que respeita o passado
+            como fonte de conhecimento e que mira num futuro de bem viver.
+          </p>
+        </div>
+      </section>
+
       <section className="manifesto section">
         <p className="section-index reveal">Nossa história</p>
         <div>

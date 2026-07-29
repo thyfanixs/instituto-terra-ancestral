@@ -93,6 +93,19 @@ test("usa a foto indicada na seção de missão", async () => {
   assert.match(about, /Bárbara e Ione, estudantes do ITA, em um abraço/);
 });
 
+test("explica a origem e o significado do nome ITA antes da história institucional", async () => {
+  const about = await readPage("/quem-somos");
+  const whyIndex = about.indexOf("POR QUE");
+  const historyIndex = about.indexOf("Nossa história");
+
+  assert.ok(whyIndex >= 0 && whyIndex < historyIndex);
+  assert.match(about, /“ITA” vem do Tupi-Guarani e significa pedra/);
+  assert.match(about, /Representa força, resistência e ancestralidade/);
+  assert.match(about, /as pedras são guardiãs da sabedoria ancestral/);
+  assert.match(about, /pedra fundamental de uma sociedade que respeita o passado/);
+  assert.match(about, /futuro de bem viver/);
+});
+
 test("usa a foto indicada no banner de apoio", async () => {
   const support = await readPage("/apoie");
   assert.match(support, /\/images\/official\/thayna-vini-feira-ita\.jpg/);
