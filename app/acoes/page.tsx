@@ -121,7 +121,7 @@ const culturalInitiatives = [
   {
     title: "Ancestralidade e tradição",
     category: "Patrimônio cultural",
-    image: "/images/official/ancestralidade.jpg",
+    image: "/images/official/ancestralidade-e-tradicao.jpg",
     text: "Salvaguarda e fortalecimento de Congados, Folias de Reis, Candombe, Festas de Terreiros e religiões de matriz africana.",
     meta: "Memória, fé e pertencimento",
   },
@@ -311,7 +311,9 @@ export default function Acoes() {
               </div>
               <div className="initiative-copy">
                 <p className="eyebrow">{initiative.category}</p>
-                <h3>{initiative.title}</h3>
+                <h3 className={initiative.title === "Ancestralidade e tradição" ? "initiative-title-long" : undefined}>
+                  {initiative.title}
+                </h3>
                 <p>{initiative.text}</p>
                 <strong>{initiative.meta}</strong>
               </div>

@@ -207,6 +207,16 @@ test("usa a foto indicada no card de marcenaria criativa", async () => {
   assert.match(actions, /Registro da ação Marcenaria criativa/);
 });
 
+test("corrige o título e a foto de ancestralidade e tradição", async () => {
+  const actions = await readPage("/acoes");
+  const detail = await readPage("/acoes/ancestralidade-e-tradicao");
+
+  assert.match(actions, /\/images\/official\/ancestralidade-e-tradicao\.jpg/);
+  assert.match(detail, /\/images\/official\/ancestralidade-e-tradicao\.jpg/);
+  assert.match(actions, /class="initiative-title-long">Ancestralidade e tradição<\/h3>/);
+  assert.doesNotMatch(detail, /\/images\/official\/ancestralidade\.jpg/);
+});
+
 test("mantém contatos, redes sociais, bazar e apoio fiscal visíveis", async () => {
   const contact = await readPage("/contato");
   const support = await readPage("/apoie");

@@ -289,7 +289,7 @@ export const actionDetails: ActionDetail[] = [
     slug: "ancestralidade-e-tradicao",
     title: "Ancestralidade e tradição",
     category: "Patrimônio cultural",
-    image: "/images/official/ancestralidade.jpg",
+    image: "/images/official/ancestralidade-e-tradicao.jpg",
     summary: "Salvaguarda e fortalecimento de Congados, Folias de Reis, Candombe, Festas de Terreiros e religiões de matriz africana.",
     description: [
       "O ITA atua na salvaguarda do patrimônio material e imaterial, contribuindo para fomentar, organizar e realizar Festas de Congado, Folias de Reis, Candombe e Festas de Terreiros.",
