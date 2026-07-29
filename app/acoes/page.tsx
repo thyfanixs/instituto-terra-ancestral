@@ -6,7 +6,7 @@ import { actionSlug } from "./action-details";
 
 export const metadata: Metadata = {
   title: "Ações",
-  description: "Conheça os cursos, vivências, eventos e ações culturais do Instituto Terra Ancestral.",
+  description: "Conheça os cursos, vivências e eventos formativos do Instituto Terra Ancestral.",
 };
 
 const courses = [
@@ -299,7 +299,7 @@ export default function Acoes() {
 
       <section className="initiatives-section action-anchor section" id="acoes-culturais">
         <div className="initiatives-heading reveal">
-          <p className="section-index">Ações culturais</p>
+          <p className="section-index">Eventos formativos</p>
           <h2>Cultura, memória e comunidade.</h2>
           <p>Feiras, encontros, cinema e tradições vivas fazem os saberes circularem e fortalecem identidades, redes locais e participação social.</p>
         </div>

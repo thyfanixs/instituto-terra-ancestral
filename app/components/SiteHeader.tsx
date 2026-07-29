@@ -13,7 +13,7 @@ type NavigationItem = {
 const actionSubmenu = [
   { href: "/acoes#formacao", label: "Formação" },
   { href: "/acoes#saude", label: "Saúde" },
-  { href: "/acoes#acoes-culturais", label: "Ações culturais" },
+  { href: "/acoes#acoes-culturais", label: "Eventos formativos" },
 ] as const;
 
 const navigation: NavigationItem[] = [

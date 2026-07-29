@@ -52,7 +52,7 @@ test("oferece três categorias no submenu de ações e destinos correspondentes"
   const submenuDestinations = [
     ["/instituto-terra-ancestral/acoes/#formacao", "Formação"],
     ["/instituto-terra-ancestral/acoes/#saude", "Saúde"],
-    ["/instituto-terra-ancestral/acoes/#acoes-culturais", "Ações culturais"],
+    ["/instituto-terra-ancestral/acoes/#acoes-culturais", "Eventos formativos"],
   ];
 
   for (const [href, label] of submenuDestinations) {
