@@ -139,7 +139,9 @@ export default function Home() {
               className={`reveal delay-${index + 1}${item.emphasis ? ` impact-featured impact-${item.emphasis}` : ""}`}
               key={item.label}
             >
-              {item.badge && <small className="impact-badge">{item.badge}</small>}
+              <div className={`impact-badge-slot${item.badge ? " has-badge" : ""}`}>
+                {item.badge && <small className="impact-badge">{item.badge}</small>}
+              </div>
               <strong>{item.value}</strong><span>{item.label}</span>
             </article>
           ))}
