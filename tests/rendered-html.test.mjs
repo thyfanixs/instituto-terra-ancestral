@@ -50,9 +50,9 @@ test("oferece três categorias no submenu de ações e destinos correspondentes"
   assert.match(home, /class="mobile-submenu"/);
 
   const submenuDestinations = [
-    ["/instituto-terra-ancestral/acoes/#formacao", "Formação"],
-    ["/instituto-terra-ancestral/acoes/#saude", "Saúde"],
-    ["/instituto-terra-ancestral/acoes/#acoes-culturais", "Eventos formativos"],
+    ["/acoes/#formacao", "Formação"],
+    ["/acoes/#saude", "Saúde"],
+    ["/acoes/#acoes-culturais", "Eventos formativos"],
   ];
 
   for (const [href, label] of submenuDestinations) {
@@ -135,7 +135,7 @@ test("destaca os depoimentos na página inicial com acesso direto à seção", a
   const home = await readPage("/");
   assert.match(home, /class="impact-testimonials-link"/);
   assert.match(home, /Vozes do ITA/);
-  assert.match(home, /href="\/instituto-terra-ancestral\/impacto\/#depoimentos"/);
+  assert.match(home, /href="\/impacto\/#depoimentos"/);
   assert.match(home, /Conheça os depoimentos/);
   assert.doesNotMatch(home, /class="home-testimonial-spotlight"/);
   assert.doesNotMatch(home, /\/images\/testimonials\/rafaela\.webp/);
@@ -186,14 +186,14 @@ test("destaca seis formações na página inicial com as fotos selecionadas", as
 
   for (const [image, href, title] of featuredActions) {
     assert.ok(home.includes(image), image);
-    assert.ok(home.includes(`/instituto-terra-ancestral${href}`), href);
+    assert.ok(home.includes(href), href);
     assert.ok(home.includes(title), title);
   }
 });
 
 test("oferece acesso direto para apoiar o ITA no banner inicial", async () => {
   const home = await readPage("/");
-  assert.match(home, /class="button button-pink" href="\/instituto-terra-ancestral\/apoie\/">Apoie o ITA/);
+  assert.match(home, /class="button button-pink" href="\/apoie\/">Apoie o ITA/);
 });
 
 test("usa a foto indicada na seção de missão", async () => {
@@ -271,7 +271,7 @@ test("reúne as aparições do ITA na imprensa", async () => {
   ];
 
   for (const link of links) assert.ok(news.includes(link), link);
-  assert.match(news, /href="\/instituto-terra-ancestral\/noticias\/"/);
+  assert.match(news, /href="\/noticias\/"/);
   assert.match(news, /O TEMPO/);
   assert.match(news, /target="_blank"/);
 });
