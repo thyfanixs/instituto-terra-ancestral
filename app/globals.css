@@ -197,9 +197,9 @@ h1, h2, h3, .display-copy, blockquote {
   inset: 0;
   position: absolute;
 }
-.home-hero-content { max-width: 900px; position: relative; z-index: 3; }
+.home-hero-content { max-width: 720px; position: relative; z-index: 3; }
 .home-hero h1 {
-  font-size: clamp(72px, 10.3vw, 158px);
+  font-size: clamp(68px, 8.3vw, 128px);
   letter-spacing: -.025em;
   line-height: .79;
   margin: 25px 0 0;

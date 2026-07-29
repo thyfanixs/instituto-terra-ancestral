@@ -112,6 +112,8 @@ test("usa a foto indicada no banner principal", async () => {
   assert.match(styles, /background: var\(--home-hero-image\) center top \/ cover/);
   assert.match(styles, /transform-origin: center top/);
   assert.match(styles, /background-position: 58% top/);
+  assert.match(styles, /\.home-hero-content \{ max-width: 720px/);
+  assert.match(styles, /font-size: clamp\(68px, 8\.3vw, 128px\)/);
 });
 
 test("usa a identidade visual colorida na seção de destaque inicial", async () => {
