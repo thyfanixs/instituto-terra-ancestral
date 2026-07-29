@@ -92,7 +92,7 @@ export default function Home() {
 
       <section className="home-feature">
         <div className="feature-photo image-reveal">
-          <img src={assetPath("/images/official/logo-1-3-colorida.png")} alt="Identidade visual colorida do Instituto Terra Ancestral" />
+          <img src={assetPath("/images/official/home-ceramica.webp")} alt="Mestra ceramista apresentando uma peça produzida em barro" />
         </div>
         <div className="feature-copy">
           <p className="kicker reveal">Cultura viva</p>

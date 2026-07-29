@@ -149,9 +149,11 @@ test("usa a foto indicada no banner principal", async () => {
   assert.match(styles, /font-size: clamp\(68px, 8\.3vw, 128px\)/);
 });
 
-test("usa a identidade visual colorida na seção de destaque inicial", async () => {
+test("usa a foto de cerâmica na seção de destaque inicial", async () => {
   const home = await readPage("/");
-  assert.match(home, /\/images\/official\/logo-1-3-colorida\.png/);
+  assert.match(home, /\/images\/official\/home-ceramica\.webp/);
+  assert.match(home, /Mestra ceramista apresentando uma peça produzida em barro/);
+  assert.doesNotMatch(home, /\/images\/official\/logo-1-3-colorida\.png/);
   assert.doesNotMatch(home, /\/images\/official\/culinaria-ancestral\.jpg/);
 });
 

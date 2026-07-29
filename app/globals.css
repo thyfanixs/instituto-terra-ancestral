@@ -257,7 +257,7 @@ h1, h2, h3, .display-copy, blockquote {
 .circle-link b { font-size: 22px; margin-top: 10px; }
 .circle-link:hover { background: var(--orange); transform: rotate(-5deg); }
 .home-feature { background: var(--wine); color: var(--paper); display: grid; grid-template-columns: 1.05fr .95fr; min-height: 720px; }
-.feature-photo img { height: 100%; object-fit: cover; width: 100%; }
+.feature-photo img { height: 100%; object-fit: cover; object-position: center 48%; width: 100%; }
 .feature-copy { align-self: center; padding: 80px clamp(32px, 7vw, 108px); }
 .feature-copy h2, .impact-title h2, .social-copy h2, .actions-page-heading h2, .numbers-heading h2, .territory-copy h2, .contact-lead h2, .visit-copy h2, .support-intro h2 {
   font-size: clamp(54px, 6.3vw, 98px);
