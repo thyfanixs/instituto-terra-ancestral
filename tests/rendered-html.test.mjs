@@ -417,3 +417,13 @@ test("mantém as fotos selecionadas no contexto correto e exibe os 60 registros"
   );
   assert.equal(galleryPhotos.size, 60, "as 60 imagens selecionadas devem aparecer no site");
 });
+
+test("usa a foto indicada no banner de Quem Somos", async () => {
+  const about = await readPage("/quem-somos");
+
+  assert.match(about, /\/images\/official\/quem-somos-ancestralidade\.jpeg/);
+  assert.match(
+    about,
+    /Mulher indígena diante da identidade visual do Instituto Terra Ancestral/,
+  );
+});

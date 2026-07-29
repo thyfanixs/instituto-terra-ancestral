@@ -131,8 +131,8 @@ export default function QuemSomos() {
         title="Memória que"
         accent="abre caminhos."
         description="Uma organização da sociedade civil que difunde, articula e fortalece as culturas afro-indígenas."
-        image="/images/official/ancestralidade.jpg"
-        imageAlt="Instrumentos e objetos ligados às tradições ancestrais"
+        image="/images/official/quem-somos-ancestralidade.jpeg"
+        imageAlt="Mulher indígena diante da identidade visual do Instituto Terra Ancestral"
         tone="pink"
       />
 
