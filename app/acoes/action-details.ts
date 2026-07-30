@@ -25,7 +25,7 @@ const gallery = (folder: string, count: number) =>
 export const actionDetails: ActionDetail[] = [
   {
     slug: "economia-criativa",
-    title: "Economia criativa",
+    title: "Economia Criativa",
     category: "Arte, negócio e propósito",
     image: "/images/official/economia-criativa.jpg",
     summary: "Formação que integra território, identidades, comercialização e valorização do trabalho criativo.",
