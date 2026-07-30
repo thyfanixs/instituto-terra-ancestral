@@ -8,8 +8,30 @@ export const metadata: Metadata = {
 };
 
 const spacePhotos = [
-  { src: "/images/gallery/espaco-ita/01.jpg", alt: "Fachada do Instituto Terra Ancestral" },
-  { src: "/images/gallery/espaco-ita/02.jpg", alt: "Ilustração institucional do ITA" },
+  {
+    src: "/images/gallery/contato/01-teatro-negro.webp",
+    alt: "Participantes reunidos em abraço durante o curso de Teatro Negro",
+  },
+  {
+    src: "/images/gallery/contato/02-circulo-terapeutico.webp",
+    alt: "Participantes em atividade coletiva no espaço do Instituto Terra Ancestral",
+  },
+  {
+    src: "/images/gallery/contato/03-ceramica-oficina.webp",
+    alt: "Oficina de cerâmica realizada no Instituto Terra Ancestral",
+  },
+  {
+    src: "/images/gallery/contato/04-ceramica-turma.webp",
+    alt: "Turma de cerâmica apresenta as peças produzidas durante a formação",
+  },
+  {
+    src: "/images/gallery/contato/05-caderno-artesanal.webp",
+    alt: "Participantes exibem trabalhos produzidos na oficina de caderno artesanal",
+  },
+  {
+    src: "/images/gallery/contato/06-agroecologia.webp",
+    alt: "Turma da ação de agroecologia realizada em parceria pelo ITA",
+  },
 ];
 
 export default function Contato() {

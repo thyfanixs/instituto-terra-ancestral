@@ -9,7 +9,8 @@ const outputRoot = path.join(projectRoot, "out");
 
 async function readPage(pathname = "/") {
   const relative = pathname === "/" ? "index.html" : `${pathname.replace(/^\/|\/$/g, "")}/index.html`;
-  return readFile(path.join(outputRoot, relative), "utf8");
+  const html = await readFile(path.join(outputRoot, relative), "utf8");
+  return html.replaceAll("/instituto-terra-ancestral/", "/");
 }
 
 async function allHtmlFiles(directory) {
@@ -338,6 +339,24 @@ test("mantém contatos, redes sociais, bazar e apoio fiscal visíveis", async ()
   assert.match(support, /não substitui orientação contábil ou tributária/);
 });
 
+test("exibe as seis fotos mais recentes na galeria da página de contato", async () => {
+  const contact = await readPage("/contato");
+  const galleryPhotos = [
+    "/images/gallery/contato/01-teatro-negro.webp",
+    "/images/gallery/contato/02-circulo-terapeutico.webp",
+    "/images/gallery/contato/03-ceramica-oficina.webp",
+    "/images/gallery/contato/04-ceramica-turma.webp",
+    "/images/gallery/contato/05-caderno-artesanal.webp",
+    "/images/gallery/contato/06-agroecologia.webp",
+  ];
+
+  for (const photo of galleryPhotos) {
+    assert.ok(contact.includes(photo), photo);
+  }
+
+  assert.doesNotMatch(contact, /\/images\/gallery\/espaco-ita\/0[12]\.jpg/);
+});
+
 test("exibe o TikTok oficial em todos os pontos de redes sociais", async () => {
   const home = await readPage("/");
   const contact = await readPage("/contato");
@@ -413,7 +432,7 @@ test("mantém as fotos selecionadas no contexto correto e exibe os novos álbuns
   const htmlFiles = await allHtmlFiles(outputRoot);
   const html = (await Promise.all(htmlFiles.map((file) => readFile(file, "utf8")))).join("\n");
   const galleryPhotos = new Set(
-    [...html.matchAll(/\/images\/gallery\/[^"&<>\s)]+\.jpg/g)].map(([photo]) => photo),
+    [...html.matchAll(/\/images\/gallery\/[^"&<>\s)]+\.(?:jpe?g|webp)/g)].map(([photo]) => photo),
   );
   assert.ok(galleryPhotos.size >= 200, "os álbuns ampliados devem aparecer no site");
 });
