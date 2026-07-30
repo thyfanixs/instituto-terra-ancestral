@@ -241,7 +241,7 @@ export const actionDetails: ActionDetail[] = [
   },
   {
     slug: "teatro-negro",
-    title: "Teatro negro",
+    title: "Teatro Negro",
     category: "Corpo e identidade",
     image: "/images/official/teatro-negro.jpg",
     summary: "Criação coletiva, oralidade e ancestralidade para fortalecer narrativas afro-brasileiras e protagonismo.",
