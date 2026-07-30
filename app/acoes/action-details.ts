@@ -189,7 +189,7 @@ export const actionDetails: ActionDetail[] = [
     slug: "educacao-patrimonial-e-arte",
     title: "Educação patrimonial e arte",
     category: "Patrimônio vivo",
-    image: "/images/official/ancestralidade.jpg",
+    image: "/images/official/educacao-patrimonial-e-arte-detalhe.jpg",
     summary: "Memórias individuais e coletivas transformadas em processos artísticos por meio do fazer manual.",
     description: [
       "A formação promove o encontro entre memória, patrimônio e território, transformando lembranças individuais e coletivas em processos artísticos construídos pelo fazer manual.",
