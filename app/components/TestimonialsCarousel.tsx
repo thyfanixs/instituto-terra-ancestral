@@ -40,7 +40,7 @@ export default function TestimonialsCarousel({ testimonials }: TestimonialsCarou
 
     const timer = window.setInterval(() => {
       setCurrent((value) => (value + 1) % testimonials.length);
-    }, 5000);
+    }, 4000);
 
     return () => window.clearInterval(timer);
   }, [paused, testimonials.length]);
@@ -50,8 +50,6 @@ export default function TestimonialsCarousel({ testimonials }: TestimonialsCarou
       className="testimonials-carousel"
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={() => setPaused(false)}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
     >
       <div
         className="testimonials-viewport"
