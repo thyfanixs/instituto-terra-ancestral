@@ -61,7 +61,7 @@ export const actionDetails: ActionDetail[] = [
   },
   {
     slug: "bonecas-ancestrais",
-    title: "Bonecas ancestrais",
+    title: "Bonecas Ancestrais",
     category: "Memória e identidade",
     image: "/images/official/bonecas-ancestrais.jpg",
     summary: "Bonecas de pano, Abayomi e figuras simbólicas como tecnologias ancestrais de cuidado e resistência.",
@@ -79,7 +79,7 @@ export const actionDetails: ActionDetail[] = [
   },
   {
     slug: "biojoias-e-macrame",
-    title: "Biojoias e macramê",
+    title: "Biojoias e Macramê",
     category: "Arte indígena",
     image: "/images/official/biojoias.jpg",
     summary: "Criação com sementes, pedras, fibras naturais e técnicas que valorizam natureza e identidade cultural.",
@@ -97,7 +97,7 @@ export const actionDetails: ActionDetail[] = [
   },
   {
     slug: "caderno-artesanal",
-    title: "Caderno artesanal",
+    title: "Caderno Artesanal",
     category: "Memória em papel",
     image: "/images/official/caderno-artesanal.jpg",
     summary: "Encadernação manual, reaproveitamento de materiais e criação de lugares de expressão e registro da vida.",
@@ -116,7 +116,7 @@ export const actionDetails: ActionDetail[] = [
   {
     slug: "ceramica",
     title: "Cerâmica",
-    category: "Terra e patrimônio",
+    category: "Terra e Patrimônio",
     image: "/images/official/ceramica.jpg",
     summary: "O barro como matéria de criação, memória e pertencimento, articulando técnicas e identidade territorial.",
     description: [
@@ -133,7 +133,7 @@ export const actionDetails: ActionDetail[] = [
   },
   {
     slug: "cerveja-artesanal",
-    title: "Cerveja artesanal",
+    title: "Cerveja Artesanal",
     category: "Saberes e experimentação",
     image: "/images/official/cerveja-artesanal.jpg",
     summary: "Produção artesanal em diálogo com ingredientes, ervas e especiarias presentes em diferentes culturas.",
@@ -151,7 +151,7 @@ export const actionDetails: ActionDetail[] = [
   },
   {
     slug: "costura-criativa",
-    title: "Costura criativa",
+    title: "Costura Criativa",
     category: "Tradições têxteis",
     image: "/images/official/costura-criativa.jpg",
     summary: "Modelagem, costura e reaproveitamento de tecidos para peças autorais, festas e celebrações tradicionais.",
@@ -169,7 +169,7 @@ export const actionDetails: ActionDetail[] = [
   },
   {
     slug: "culinaria-ancestral",
-    title: "Culinária ancestral",
+    title: "Culinária Ancestral",
     category: "Saberes e sabores",
     image: "/images/official/culinaria-ancestral.jpg",
     summary: "Receitas e modos de preparo afro-indígenas que reafirmam a cozinha como lugar de cuidado e memória.",
@@ -187,7 +187,7 @@ export const actionDetails: ActionDetail[] = [
   },
   {
     slug: "educacao-patrimonial-e-arte",
-    title: "Educação patrimonial e arte",
+    title: "Educação Patrimonial e Arte",
     category: "Patrimônio vivo",
     image: "/images/official/educacao-patrimonial-e-arte-detalhe.jpg",
     summary: "Memórias individuais e coletivas transformadas em processos artísticos por meio do fazer manual.",
@@ -206,7 +206,7 @@ export const actionDetails: ActionDetail[] = [
   {
     slug: "grafite",
     title: "Grafite",
-    category: "Arte urbana",
+    category: "Arte Urbana",
     image: "/images/official/grafite.jpg",
     summary: "Expressão e ocupação simbólica do território a partir do congado, das tradições negras e da fé.",
     description: [
@@ -223,7 +223,7 @@ export const actionDetails: ActionDetail[] = [
   },
   {
     slug: "marcenaria-criativa",
-    title: "Marcenaria criativa",
+    title: "Marcenaria Criativa",
     category: "Ofícios tradicionais",
     image: "/images/official/marcenaria-criativa.jpg",
     summary: "Trabalho com madeira, sustentabilidade e criação de peças inspiradas nas referências do território.",
@@ -287,7 +287,7 @@ export const actionDetails: ActionDetail[] = [
   },
   {
     slug: "ancestralidade-e-tradicao",
-    title: "Ancestralidade e tradição",
+    title: "Ancestralidade e Tradição",
     category: "Patrimônio cultural",
     image: "/images/official/ancestralidade-e-tradicao.jpg",
     summary: "Salvaguarda e fortalecimento de Congados, Folias de Reis, Candombe, Festas de Terreiros e religiões de matriz africana.",
@@ -341,7 +341,7 @@ export const actionDetails: ActionDetail[] = [
   },
   {
     slug: "tratamento-medicinal-de-cannabis",
-    title: "Tratamento medicinal de cannabis",
+    title: "Tratamento Medicinal de Cannabis",
     category: "Cuidado integral",
     image: "/images/official/flor-da-vida-ita.png",
     summary: "Orientação e acesso responsável ao tratamento, em parceria com a Associação Flor da Vida.",
@@ -385,7 +385,7 @@ export const actionDetails: ActionDetail[] = [
   },
   {
     slug: "eventos-culturais",
-    title: "Eventos culturais",
+    title: "Eventos Culturais",
     category: "Cultura viva",
     image: "/images/official/congadar.jpg",
     summary: "Apresentações, feiras, vivências e experiências gastronômicas que celebram a diversidade cultural.",
