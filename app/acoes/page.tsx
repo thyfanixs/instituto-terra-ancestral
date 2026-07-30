@@ -166,7 +166,7 @@ const healthInitiatives = [
   {
     title: "Tratamento medicinal de cannabis",
     category: "Cuidado integral",
-    image: "/images/portfolio/page-26-02.jpeg",
+    image: "/images/official/flor-da-vida-ita.png",
     text: "Orientação e acesso responsável ao tratamento, em parceria com a Associação Flor da Vida.",
     meta: "25 pessoas contempladas",
   },

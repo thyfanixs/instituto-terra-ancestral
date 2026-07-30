@@ -343,7 +343,7 @@ export const actionDetails: ActionDetail[] = [
     slug: "tratamento-medicinal-de-cannabis",
     title: "Tratamento medicinal de cannabis",
     category: "Cuidado integral",
-    image: "/images/portfolio/page-26-02.jpeg",
+    image: "/images/official/flor-da-vida-ita.png",
     summary: "Orientação e acesso responsável ao tratamento, em parceria com a Associação Flor da Vida.",
     description: [
       "A iniciativa oferece acolhimento, avaliação e encaminhamento qualificado para o uso terapêutico do óleo de cannabis com responsabilidade, segurança e cuidado.",
