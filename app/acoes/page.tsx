@@ -20,7 +20,7 @@ const courses = [
   {
     title: "Agroecologia",
     category: "Remédios da Terra",
-    image: "/images/official/agroecologia.jpg",
+    image: "/images/gallery/agroecologia/10.jpg",
     text: "Cultivo agroecológico, plantas medicinais, compostagem e diálogo entre saberes ancestrais e científicos.",
     meta: "2 turmas · 39 estudantes",
   },
