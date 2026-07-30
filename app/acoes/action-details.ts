@@ -34,7 +34,7 @@ export const actionDetails: ActionDetail[] = [
       "Os saberes ancestrais são reconhecidos como importantes impulsionadores da transformação social e econômica, fortalecendo o trabalho criativo e os empreendimentos dos participantes.",
     ],
     meta: "3 turmas · 64 estudantes",
-    photos: gallery("economia-criativa", 2),
+    photos: gallery("economia-criativa", 8),
     credit: {
       label: "Facilitação",
       title: "Tati Otoni",
@@ -52,7 +52,7 @@ export const actionDetails: ActionDetail[] = [
       "A formação reúne mestres dos saberes tradicionais, agricultores, pesquisadores e estudantes em práticas de cultivo agroecológico, repelentes naturais, compostagem, xaropes e banhos de folhas, fortalecendo autonomia, saúde integral e uma relação ética com a terra.",
     ],
     meta: "2 turmas · 39 estudantes",
-    photos: gallery("agroecologia", 4),
+    photos: gallery("agroecologia", 10),
     credit: {
       label: "Facilitação",
       title: "Vinícius Moreira e mestres do território",
@@ -70,7 +70,7 @@ export const actionDetails: ActionDetail[] = [
       "Na confecção de bonecas de pano, Abayomi, cavalos de pau, orixás, santas e outras figuras simbólicas, são desenvolvidas técnicas de costura, bordado, modelagem e criação, compreendidas como tecnologias ancestrais de cuidado, identidade, espiritualidade e resistência cultural.",
     ],
     meta: "3 turmas · 32 estudantes",
-    photos: gallery("bonecas-ancestrais", 4),
+    photos: gallery("bonecas-ancestrais", 10),
     credit: {
       label: "Facilitação",
       title: "Daise Aparecida",
@@ -88,7 +88,7 @@ export const actionDetails: ActionDetail[] = [
       "As técnicas de macramê e de confecção de biojoias valorizam o uso sustentável da natureza, a arte e a identidade cultural em um espaço de troca de saberes e fortalecimento das tradições.",
     ],
     meta: "2 turmas · 31 estudantes",
-    photos: gallery("biojoias-macrame", 1),
+    photos: gallery("biojoias-macrame", 10),
     credit: {
       label: "Facilitação",
       title: "Thayná Pataxó",
@@ -106,7 +106,7 @@ export const actionDetails: ActionDetail[] = [
       "Mais que produzir peças artesanais, compreende o livro e o caderno como lugares de memória, expressão e registro da vida, valorizando o fazer manual, a criatividade e a autonomia.",
     ],
     meta: "2 turmas · 18 estudantes",
-    photos: gallery("caderno-artesanal", 1),
+    photos: gallery("caderno-artesanal", 2),
     credit: {
       label: "Facilitação",
       title: "Cláudia Maria",
@@ -124,7 +124,7 @@ export const actionDetails: ActionDetail[] = [
       "As atividades promovem o diálogo entre saberes tradicionais e acadêmicos, incluindo intercâmbio com o Grupo GESTO, da UFMG.",
     ],
     meta: "4 turmas · 54 estudantes",
-    photos: gallery("ceramica", 8),
+    photos: gallery("ceramica", 33),
     credit: {
       label: "Facilitação",
       title: "Laila Kierulff",
@@ -142,7 +142,7 @@ export const actionDetails: ActionDetail[] = [
       "Realizado em parceria com a Cervejaria Tezius, o curso promove a troca entre cervejeiros e mestres de saberes tradicionais, valorizando experimentação e produção artesanal.",
     ],
     meta: "1 turma · 6 estudantes",
-    photos: gallery("cerveja-artesanal", 1),
+    photos: gallery("cerveja-artesanal", 4),
     credit: {
       label: "Facilitação",
       title: "Tezinho Machado",
@@ -160,7 +160,7 @@ export const actionDetails: ActionDetail[] = [
       "O fazer manual é tratado como tecnologia ancestral que articula criatividade, sustentabilidade, memória e identidade cultural, fortalecendo as tradições têxteis.",
     ],
     meta: "3 turmas · 31 estudantes",
-    photos: gallery("costura-criativa", 1),
+    photos: gallery("costura-criativa", 8),
     credit: {
       label: "Facilitação",
       title: "Edite Ribeiro",
@@ -178,7 +178,7 @@ export const actionDetails: ActionDetail[] = [
       "As atividades resgatam práticas culinárias afro-indígenas historicamente invisibilizadas e reafirmam a cozinha como lugar de cuidado, identidade, espiritualidade e produção de conhecimento.",
     ],
     meta: "3 turmas · 27 estudantes",
-    photos: gallery("culinaria-ancestral", 1),
+    photos: gallery("culinaria-ancestral", 8),
     credit: {
       label: "Parceria formativa",
       title: "MandakNega",
@@ -196,7 +196,7 @@ export const actionDetails: ActionDetail[] = [
       "Escultura em papel, pintura, papier collé, papier-mâché e materiais reciclados dialogam com pinturas rupestres africanas e com o patrimônio arqueológico de Pedro Leopoldo, compreendendo o patrimônio como experiência viva.",
     ],
     meta: "3 turmas · 46 estudantes",
-    photos: [],
+    photos: gallery("educacao-patrimonial-e-arte", 11),
     credit: {
       label: "Parceria formativa",
       title: "Eco das Artes",
@@ -214,7 +214,7 @@ export const actionDetails: ActionDetail[] = [
       "As técnicas partem de referências locais - congado, tradições negras, ervas sagradas, expressões de fé e paisagens urbanas - e incluem composição, planejamento e cuidado com o espaço público.",
     ],
     meta: "4 turmas · 46 estudantes",
-    photos: gallery("grafite", 1),
+    photos: gallery("grafite", 11),
     credit: {
       label: "Facilitação",
       title: "Simone Carvalho",
@@ -232,7 +232,7 @@ export const actionDetails: ActionDetail[] = [
       "Técnicas de marcenaria, sustentabilidade e reaproveitamento de materiais estimulam peças autorais, autonomia produtiva, fazer coletivo e economia criativa.",
     ],
     meta: "3 turmas · 18 estudantes",
-    photos: gallery("marcenaria-criativa", 1),
+    photos: gallery("marcenaria-criativa", 15),
     credit: {
       label: "Facilitação",
       title: "Artur Camargos",
@@ -250,7 +250,7 @@ export const actionDetails: ActionDetail[] = [
       "Corpo, voz, oralidade e ancestralidade transformam experiências cotidianas em linguagem cênica, contribuindo para a educação antirracista, a memória negra local e o protagonismo.",
     ],
     meta: "3 turmas · 61 estudantes",
-    photos: gallery("teatro-negro", 2),
+    photos: gallery("teatro-negro", 24),
     credit: {
       label: "Facilitação",
       title: "Joviane Àiyé",
@@ -268,7 +268,7 @@ export const actionDetails: ActionDetail[] = [
       "A comercialização gera recursos para novos insumos, manutenção das atividades e continuidade dos projetos, conectando aprendizagem, geração de renda e valorização dos saberes ancestrais.",
     ],
     meta: "Ciclo de aprendizagem e sustentabilidade",
-    photos: gallery("armazem", 1),
+    photos: gallery("armazem", 2),
   },
   {
     slug: "feira-ita",
@@ -281,9 +281,7 @@ export const actionDetails: ActionDetail[] = [
       "A primeira edição reuniu aproximadamente 150 participantes. A segunda, realizada como mostra de encerramento do Projeto Marãiwá, recebeu cerca de 250 pessoas.",
     ],
     meta: "2 edições · cerca de 400 participantes",
-    photos: [
-      "/images/gallery/eventos-culturais/03.jpg",
-    ],
+    photos: gallery("feira-ita", 7),
   },
   {
     slug: "ancestralidade-e-tradicao",
@@ -296,7 +294,7 @@ export const actionDetails: ActionDetail[] = [
       "A ação reconhece a responsabilidade sociocultural de fortalecer expressões de cultura e religiosidade que construíram Minas Gerais e valoriza as religiões de matriz africana, seus saberes, práticas rituais e memórias comunitárias.",
     ],
     meta: "Memória, fé e pertencimento",
-    photos: gallery("ancestralidade", 9),
+    photos: gallery("ancestralidade", 17),
     credit: {
       label: "Articulação territorial",
       title: "Terreiros e grupos tradicionais",
@@ -314,7 +312,7 @@ export const actionDetails: ActionDetail[] = [
       "Rodas de conversa, práticas da Psicologia, exercícios de respiração, autoconhecimento, autoavaliação, expressão corporal e reflexão coletiva valorizam o círculo como prática ancestral de fortalecimento emocional, respeito e pertencimento.",
     ],
     meta: "1 turma · 15 mulheres",
-    photos: gallery("circulo-terapeutico", 2),
+    photos: gallery("circulo-terapeutico", 7),
     credit: {
       label: "Mediação",
       title: "Angela Valentim",
@@ -332,7 +330,7 @@ export const actionDetails: ActionDetail[] = [
       "A ação fortalece o direito à saúde, amplia o cuidado comunitário e contribui para a autonomia e a qualidade de vida das pessoas atendidas.",
     ],
     meta: "4 mutirões · 284 atendimentos · 205 óculos",
-    photos: [],
+    photos: gallery("mutirao-de-saude-visual", 4),
     credit: {
       label: "Parceria",
       title: "Instituto IBIS",
@@ -350,7 +348,7 @@ export const actionDetails: ActionDetail[] = [
       "Consulta médica, avaliação social e acesso a óleos prescritos a preço social ou gratuitamente promovem qualidade de vida e democratizam terapias baseadas em evidências científicas. A expectativa é alcançar 50 beneficiários até o final de 2026.",
     ],
     meta: "25 pessoas contempladas",
-    photos: [],
+    photos: gallery("tratamento-medicinal-de-cannabis", 4),
     credit: {
       label: "Parceria",
       title: "Associação Flor da Vida",
@@ -368,7 +366,7 @@ export const actionDetails: ActionDetail[] = [
       "O projeto foi credenciado para a 15ª Mostra de Cinema e Direitos Humanos, realizada pelo Ministério da Cultura em parceria com o Ministério dos Direitos Humanos e da Cidadania.",
     ],
     meta: "8 sessões · 241 participantes",
-    photos: [],
+    photos: gallery("cine-comunidade", 3),
   },
   {
     slug: "rodas-de-conversa",
@@ -381,7 +379,7 @@ export const actionDetails: ActionDetail[] = [
       "O ITA reconhece a roda de conversa como tecnologia ancestral de educação, participação e cuidado, capaz de fortalecer vínculos, promover o diálogo entre diferentes saberes e contribuir para a formação cidadã.",
     ],
     meta: "8 encontros · 213 participantes",
-    photos: gallery("rodas-de-conversa", 1),
+    photos: gallery("rodas-de-conversa", 7),
   },
   {
     slug: "eventos-culturais",
@@ -394,7 +392,7 @@ export const actionDetails: ActionDetail[] = [
       "Apresentações, feiras, vivências e experiências gastronômicas afro-indígenas conectam tradição e contemporaneidade, fortalecem o pertencimento comunitário e reconhecem a diversidade como patrimônio vivo.",
     ],
     meta: "643 participações em eventos culturais e Feira ITA",
-    photos: gallery("eventos-culturais", 2),
+    photos: gallery("eventos-culturais", 14),
     photoCaptions: {
       "/images/gallery/eventos-culturais/02.jpg": "Lavadeiras de Jequitibá",
     },
