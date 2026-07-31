@@ -68,7 +68,7 @@ test("oferece três categorias no submenu de ações e destinos correspondentes"
   assert.ok(formationIndex >= 0 && formationIndex < healthIndex);
   assert.ok(healthIndex < cultureIndex);
   assert.ok(actions.indexOf("Mutirão de Saúde Visual") > healthIndex);
-  assert.ok(actions.indexOf("Eventos culturais") > cultureIndex);
+  assert.ok(actions.indexOf("Apresentações artísticas") > cultureIndex);
   assert.doesNotMatch(actions, /Encontro é também tecnologia social/);
   assert.doesNotMatch(actions, /class="culture-banner"/);
 });
@@ -77,8 +77,8 @@ test("apresenta os indicadores atualizados de impacto", async () => {
   const home = await readPage("/");
   const impact = await readPage("/impacto");
   const healthLabel = /pessoas acolhidas\/beneficiadas com as ações de saúde do ITA - Instituto Terra Ancestral/;
-  const trainingLabel = /participações em oficinas e cursos gratuitos do ITA/;
-  const cultureLabel = /participações em eventos culturais e Feira ITA/;
+  const trainingLabel = /pessoas em oficinas e cursos gratuitos do ITA/;
+  const cultureLabel = /pessoas em eventos culturais e Feira ITA/;
 
   assert.match(home, /324/);
   assert.match(home, healthLabel);
@@ -125,6 +125,7 @@ test("encerra a página de impacto com os sete depoimentos e suas fotos", async 
   assert.match(impact, /aria-label="Próximo depoimento"/);
   assert.equal((impact.match(/class="testimonial-card/g) ?? []).length, 7);
   assert.doesNotMatch(impact, /testimonial-featured/);
+  assert.match(impact, /object-fit:contain/);
 
   for (const [name, image] of testimonials) {
     assert.ok(impact.includes(name), name);
@@ -138,8 +139,10 @@ test("destaca os depoimentos na página inicial com acesso direto à seção", a
   assert.match(home, /Vozes do ITA/);
   assert.match(home, /href="\/impacto\/#depoimentos"/);
   assert.match(home, /Conheça os depoimentos/);
-  assert.doesNotMatch(home, /class="home-testimonial-spotlight"/);
-  assert.doesNotMatch(home, /\/images\/testimonials\/rafaela\.webp/);
+  assert.match(home, /class="home-testimonial-spotlight"/);
+  assert.match(home, /\/images\/testimonials\/natasha\.webp/);
+  assert.match(home, /Aqui, eu posso ser Natasha 100%/);
+  assert.match(home, /Conheça todos os depoimentos/);
 });
 
 test("usa a foto indicada no banner principal", async () => {
@@ -170,10 +173,17 @@ test("usa a foto de cerâmica na seção de destaque inicial", async () => {
   assert.doesNotMatch(home, /\/images\/official\/culinaria-ancestral\.jpg/);
 });
 
+test("atualiza a apresentação das formações na página inicial", async () => {
+  const home = await readPage("/");
+  assert.match(home, /Transmissão, produção e transformação de saberes/);
+  assert.match(home, /Conheça as experiências que conectam território, criação, ancestralidade e autonomia/);
+  assert.doesNotMatch(home, /Conheça quatro experiências/);
+});
+
 test("destaca seis formações na página inicial com as fotos selecionadas", async () => {
   const home = await readPage("/");
   const featuredActions = [
-    ["/images/official/home-ceramica-paleontologica.jpg", "/acoes/ceramica/", "Animais paleontológicos"],
+    ["/images/official/home-ceramica-paleontologica.jpg", "/acoes/ceramica/", "Cotidiano e patrimônio"],
     ["/images/official/home-agroecologia.jpg", "/acoes/agroecologia/", "Remédios da Terra"],
     ["/images/official/home-corte-costura.jpg", "/acoes/costura-criativa/", "Tradições têxteis"],
     ["/images/official/bonecas-ancestrais.jpg", "/acoes/bonecas-ancestrais/", "Memória e identidade"],
@@ -233,7 +243,15 @@ test("apresenta todas as frentes de atuação depois dos valores", async () => {
     "Soberania Alimentar",
     "Economia Criativa",
     "Lazer e Articulação Comunitária",
-    "Pesquisa e Políticas Públicas",
+    "Pesquisas e Políticas Públicas",
+    "Transmissão de saberes pautada pelo reconhecimento e valorização de quem veio antes.",
+    "Mutirão de saúde visual, acesso ao tratamento terapêutico com cannabis, espaço de acolhimento coletivo.",
+    "Valorização da agroecologia, práticas de reciclagem e fortalecimento da noção de pertencimento ao território.",
+    "Valorização e reconhecimento dos saberes tradicionais como tecnologias capazes de construir futuros de bem viver.",
+    "Promoção de pertencimento e reconhecimento ao valorizar a cultura local e o território.",
+    "Impulsiona ofícios criativos como fonte de renda.",
+    "Promoção de lazer e bem-estar a partir da produção de eventos culturais, possibilitando acesso à cultura.",
+    "Realização de pesquisas e gestão de políticas públicas culturais.",
     "Educação Popular e Formação Profissional",
     "Saúde Coletiva e Farmácias Vivas",
     "Comunidades Tradicionais e Defesa de Direitos",
@@ -242,7 +260,7 @@ test("apresenta todas as frentes de atuação depois dos valores", async () => {
     "Lei 10.639/03 em todas as formações",
     "LGBTQIAPN+",
     "Nosso impacto vai além da técnica",
-    "sociedade mais justa, solidária e sustentável",
+    "O ITA - Instituto Terra Ancestral atua em outros territórios de Minas Gerais",
   ];
 
   for (const content of expectedContent) {
@@ -252,6 +270,8 @@ test("apresenta todas as frentes de atuação depois dos valores", async () => {
 
 test("usa a foto indicada no banner de apoio", async () => {
   const support = await readPage("/apoie");
+  assert.match(support, /Sua colaboração/);
+  assert.match(support, /move territórios/);
   assert.match(support, /\/images\/official\/thayna-vini-feira-ita\.jpg/);
   assert.match(support, /Thayná e Vini durante a Feira ITA/);
 });
@@ -269,11 +289,16 @@ test("reúne as aparições do ITA na imprensa", async () => {
     "https://www.otempo.com.br/cidades/2025/6/26/evento-em-pedro-leopoldo-propaga-saberes-ancestrais-no-proximo-sabado",
     "https://www.otempo.com.br/entretenimento/2025/9/5/projeto-promove-a-ancestralidade-com-cursos-gratuitos-e-continuos-na-grande-bh",
     "https://www.otempo.com.br/entretenimento/2025/9/25/instituto-de-promove-ancestralidade-na-grande-bh-inaugura-sede-com-programacao-cultural",
+    "https://www.youtube.com/live/_1HxDAnnRPA?si=h-OHmxHDjzQ6mG0v&amp;t=114",
+    "https://www.instagram.com/reel/DaF7XQ0Oabg/",
+    "https://www.instagram.com/reel/DaD3he0BXVC/",
   ];
 
   for (const link of links) assert.ok(news.includes(link), link);
   assert.match(news, /href="\/noticias\/"/);
   assert.match(news, /O TEMPO/);
+  assert.match(news, /ITATIAIA/);
+  assert.match(news, /POR DENTRO DE TUDO/);
   assert.match(news, /target="_blank"/);
 });
 
@@ -302,6 +327,7 @@ test("corrige o título e a foto de ancestralidade e tradição", async () => {
   assert.match(actions, /\/images\/official\/ancestralidade-e-tradicao\.jpg/);
   assert.match(detail, /\/images\/official\/ancestralidade-e-tradicao\.jpg/);
   assert.match(actions, /class="initiative-title-long">Ancestralidade e tradição<\/h3>/);
+  assert.ok(actions.indexOf("Ancestralidade e tradição") < actions.indexOf("Armazém ITA"));
   assert.doesNotMatch(detail, /\/images\/official\/ancestralidade\.jpg/);
 });
 
@@ -317,6 +343,24 @@ test("associa as Lavadeiras de Jequitibá somente a eventos culturais", async ()
   assert.ok(!events.includes(fairPhoto));
   assert.match(events, /Lavadeiras de Jequitibá em apresentação cultural/);
   assert.match(events, /<figcaption>Lavadeiras de Jequitibá<\/figcaption>/);
+});
+
+test("atualiza apresentação artística, agroecologia e parcerias institucionais", async () => {
+  const actions = await readPage("/acoes");
+  const agroecology = await readPage("/acoes/agroecologia");
+  const events = await readPage("/acoes/eventos-culturais");
+  const impact = await readPage("/impacto");
+
+  assert.match(actions, /Apresentações artísticas/);
+  assert.match(events, /Apresentações Artísticas/);
+  assert.match(events, /Shows, espetáculos teatrais, palhaçaria, performances artísticas, exposições artísticas, ensaio de blocos de carnaval e escola de samba/);
+  assert.match(actions, /\/images\/official\/home-agroecologia\.jpg/);
+  assert.match(agroecology, /\/images\/official\/home-agroecologia\.jpg/);
+  assert.match(impact, /CEABRA — Coletivo de Empreendedores Negros/);
+  assert.doesNotMatch(impact, /SEABRA — Coletivo de Empreendedores Negros/);
+  assert.match(impact, /G\.E\.S\.T\.O UFMG — Grupo de Estudos do Simbólico e Técnico da Olaria/);
+  assert.match(impact, /Associação QuinTao das Artes/);
+  assert.match(impact, /Quintal das Pretas e Companhia Pé de Pano/);
 });
 
 test("mantém contatos, redes sociais, bazar e apoio fiscal visíveis", async () => {
@@ -373,6 +417,7 @@ test("exibe o TikTok oficial em todos os pontos de redes sociais", async () => {
 });
 
 test("gera as páginas detalhadas das 22 ações", async () => {
+  const actions = await readPage("/acoes");
   const actionSlugs = [
     "economia-criativa",
     "agroecologia",
@@ -399,6 +444,7 @@ test("gera as páginas detalhadas das 22 ações", async () => {
   ];
 
   for (const slug of actionSlugs) {
+    assert.match(actions, new RegExp(`href="/acoes/${slug}/"`), `card sem link: ${slug}`);
     const html = await readPage(`/acoes/${slug}`);
     assert.match(html, /Saberes que viram prática/, slug);
     assert.match(html, /Todas as ações/, slug);

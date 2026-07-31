@@ -19,20 +19,20 @@ const values = [
 ];
 
 const actionAreas = [
-  ["01", "Educação Popular"],
-  ["02", "Saúde Coletiva"],
-  ["03", "Educação Socioambiental"],
-  ["04", "Saberes Ancestrais"],
+  ["01", "Educação Popular", "Transmissão de saberes pautada pelo reconhecimento e valorização de quem veio antes."],
+  ["02", "Saúde Coletiva", "Mutirão de saúde visual, acesso ao tratamento terapêutico com cannabis, espaço de acolhimento coletivo."],
+  ["03", "Educação Socioambiental", "Valorização da agroecologia, práticas de reciclagem e fortalecimento da noção de pertencimento ao território."],
+  ["04", "Saberes Ancestrais", "Valorização e reconhecimento dos saberes tradicionais como tecnologias capazes de construir futuros de bem viver."],
   ["05", "Justiça e Direitos"],
-  ["06", "Cultura e Identidade"],
+  ["06", "Cultura e Identidade", "Promoção de pertencimento e reconhecimento ao valorizar a cultura local e o território."],
   [
     "07",
     "Soberania Alimentar",
     "Produção de xaropes, repelentes, produtos de limpeza e higiene pessoal, entre outros produtos agroecológicos.",
   ],
-  ["08", "Economia Criativa"],
-  ["09", "Lazer e Articulação Comunitária"],
-  ["10", "Pesquisa e Políticas Públicas"],
+  ["08", "Economia Criativa", "Impulsiona ofícios criativos como fonte de renda."],
+  ["09", "Lazer e Articulação Comunitária", "Promoção de lazer e bem-estar a partir da produção de eventos culturais, possibilitando acesso à cultura."],
+  ["10", "Pesquisas e Políticas Públicas", "Realização de pesquisas e gestão de políticas públicas culturais."],
 ];
 
 const actionPrograms = [
@@ -161,7 +161,7 @@ export default function QuemSomos() {
               O Instituto Terra Ancestral (ITA) é uma organização da sociedade civil que atua na difusão, articulação e fortalecimento das culturas afro-indígenas, promovendo o diálogo entre coletivos, grupos culturais, artistas, mestres da cultura popular e instituições parceiras em diferentes territórios da Região Metropolitana de Belo Horizonte e entorno.
             </p>
             <p>
-              Com sede em Pedro Leopoldo (MG), o ITA desenvolve ações orientadas pelos princípios da Cultura Viva, da valorização dos saberes ancestrais, da diversidade cultural e do intercâmbio dos agentes culturais locais, consolidando-se como um articulador regional em rede, contribuindo para o aumento do senso de pertencimento comunitário e a geração de renda.
+              O ITA - Instituto Terra Ancestral atua em outros territórios de Minas Gerais. Suas ações são orientadas pelos princípios da Cultura Viva, da valorização dos saberes ancestrais, da diversidade cultural e do intercâmbio dos agentes culturais locais, consolidando-se como um articulador regional em rede e contribuindo para o aumento do senso de pertencimento comunitário e a geração de renda.
             </p>
           </div>
         </div>
@@ -263,8 +263,8 @@ export default function QuemSomos() {
             {actionImpacts.map((impact) => <li key={impact}>{impact}</li>)}
           </ul>
           <p className="acting-closing">
-            Com sede em Pedro Leopoldo — MG, atuamos por uma sociedade mais
-            justa, solidária e sustentável.
+            O ITA - Instituto Terra Ancestral atua em outros territórios de
+            Minas Gerais.
           </p>
         </div>
       </section>

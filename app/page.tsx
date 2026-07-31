@@ -4,18 +4,18 @@ import { assetPath } from "./lib/asset-path";
 const highlights = [
   { value: "1.200", label: "pessoas diretamente impactadas" },
   { value: "324", label: "pessoas acolhidas/beneficiadas com as ações de saúde do ITA - Instituto Terra Ancestral", emphasis: "health", badge: "Saúde" },
-  { value: "473", label: "participações em oficinas e cursos gratuitos do ITA" },
-  { value: "643", label: "participações em eventos culturais e Feira ITA", emphasis: "fair", badge: "Feira ITA" },
+  { value: "473", label: "pessoas em oficinas e cursos gratuitos do ITA" },
+  { value: "643", label: "pessoas em eventos culturais e Feira ITA", emphasis: "fair", badge: "Feira ITA" },
 ];
 
 const featuredActions = [
   {
     index: "01",
-    eyebrow: "Cerâmica e patrimônio",
-    title: "Animais paleontológicos",
+    eyebrow: "Cerâmica",
+    title: "Cotidiano e patrimônio",
     text: "O barro dá forma à memória do território e aos animais que atravessam sua história paleontológica.",
     image: "/images/official/home-ceramica-paleontologica.jpg",
-    imageAlt: "Animais paleontológicos modelados em cerâmica durante formação do ITA",
+    imageAlt: "Peças de cerâmica produzidas durante formação do ITA",
     href: "/acoes/ceramica",
   },
   {
@@ -114,7 +114,7 @@ export default function Home() {
         </div>
         <div className="feature-copy">
           <p className="kicker reveal">Cultura viva</p>
-          <h2 className="reveal">Formação, produção e transformação de saberes.</h2>
+          <h2 className="reveal">Transmissão, produção e transformação de saberes.</h2>
           <p className="reveal">Oficinas, cursos, vivências e encontros construídos com quem guarda, pratica e reinventa os saberes de Minas Gerais.</p>
           <Link className="button button-dark reveal" href="/acoes">Ver todas as frentes</Link>
         </div>
@@ -124,7 +124,7 @@ export default function Home() {
         <div className="home-action-highlights-heading reveal">
           <p className="section-index">Formações em destaque</p>
           <h2>Saberes que ganham forma.</h2>
-          <p>Conheça quatro experiências que conectam território, criação, ancestralidade e autonomia.</p>
+          <p>Conheça as experiências que conectam território, criação, ancestralidade e autonomia.</p>
         </div>
         <div className="home-action-grid">
           {featuredActions.map((action) => (
@@ -143,6 +143,29 @@ export default function Home() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="home-testimonial-spotlight">
+        <div className="home-testimonial-image image-reveal">
+          <img
+            src={assetPath("/images/testimonials/natasha.webp")}
+            alt="Natasha, estudante do ITA, durante uma atividade de cerâmica"
+            loading="lazy"
+          />
+        </div>
+        <div className="home-testimonial-copy reveal">
+          <p className="kicker">Vozes do ITA</p>
+          <span className="home-testimonial-mark" aria-hidden="true">“</span>
+          <blockquote>
+            Aqui, eu posso ser Natasha 100%, sem me esconder, sem me omitir.
+          </blockquote>
+          <div>
+            <p><strong>Natasha</strong><span>Teatro Negro, Cerâmica e Economia Criativa</span></p>
+            <Link className="button button-light" href="/impacto/#depoimentos">
+              Conheça todos os depoimentos <span aria-hidden="true">↗</span>
+            </Link>
+          </div>
         </div>
       </section>
 

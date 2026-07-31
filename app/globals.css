@@ -355,6 +355,47 @@ h1, h2, h3, .display-copy, blockquote {
   padding-top: 15px;
   text-transform: uppercase;
 }
+.home-testimonial-spotlight {
+  background: var(--wine-dark);
+  color: var(--paper);
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  min-height: 720px;
+}
+.home-testimonial-image { min-height: 720px; overflow: hidden; }
+.home-testimonial-image img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center 24%;
+  width: 100%;
+}
+.home-testimonial-copy {
+  align-self: center;
+  padding: 80px clamp(34px, 7vw, 110px);
+  position: relative;
+}
+.home-testimonial-mark {
+  color: var(--pink);
+  display: block;
+  font-family: Georgia, serif;
+  font-size: clamp(110px, 12vw, 190px);
+  height: 90px;
+  line-height: .8;
+  margin-top: 40px;
+}
+.home-testimonial-copy blockquote {
+  color: var(--orange);
+  font-family: var(--display);
+  font-size: clamp(48px, 5.5vw, 84px);
+  line-height: .92;
+  margin: 20px 0 55px;
+  max-width: 900px;
+  text-transform: uppercase;
+}
+.home-testimonial-copy > div { align-items: end; border-top: 1px solid rgba(255,255,255,.28); display: flex; gap: 30px; justify-content: space-between; padding-top: 24px; }
+.home-testimonial-copy > div > p { display: grid; gap: 7px; margin: 0; }
+.home-testimonial-copy > div > p strong { font-size: 18px; text-transform: uppercase; }
+.home-testimonial-copy > div > p span { font-size: 9px; font-weight: 800; line-height: 1.4; max-width: 280px; text-transform: uppercase; }
 .home-impact { background: var(--orange); position: relative; }
 .impact-title { max-width: 760px; }
 .impact-list { align-items: stretch; border-top: 1px solid var(--ink); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 64px; }
@@ -981,13 +1022,28 @@ h1, h2, h3, .display-copy, blockquote {
   scroll-snap-align: start;
 }
 .testimonial-media { aspect-ratio: 16 / 10; flex: 0 0 auto; overflow: hidden; }
+.testimonial-media-contain {
+  background-color: var(--wine-dark);
+  background-position: center top;
+  background-size: cover;
+  position: relative;
+}
+.testimonial-media-contain::after {
+  background: rgba(53, 10, 19, .42);
+  content: "";
+  inset: 0;
+  position: absolute;
+}
 .testimonial-media img {
   height: 100%;
   object-fit: cover;
+  position: relative;
   transition: transform .55s cubic-bezier(.2,.7,.2,1);
   width: 100%;
+  z-index: 1;
 }
 .testimonial-card:hover .testimonial-media img { transform: scale(1.035); }
+.testimonial-card:hover .testimonial-media-contain img { transform: none; }
 .testimonial-copy { display: flex; flex: 1; flex-direction: column; min-height: 0; padding: 22px; }
 .testimonial-number { color: var(--red); font-size: 11px; font-weight: 900; letter-spacing: .12em; }
 .testimonial-copy blockquote {
@@ -1314,9 +1370,11 @@ h1, h2, h3, .display-copy, blockquote {
   .display-copy { font-size: 37px; }
   .home-intro-row, .two-columns { grid-template-columns: 1fr; }
   .circle-link { height: 130px; margin-top: 15px; width: 130px; }
-  .home-feature, .social-strip, .mission-block, .circle-spotlight, .territory-section, .visit-section, .incentive-panel, .bazar-section { grid-template-columns: 1fr; }
-  .feature-photo, .social-photo, .mission-photo, .circle-spotlight-image, .territory-image, .visit-image, .bazar-image { min-height: 390px; }
-  .feature-copy, .social-copy, .mission-text, .circle-spotlight-copy, .territory-copy, .visit-copy, .incentive-content, .bazar-copy { padding: 70px 20px; }
+  .home-feature, .home-testimonial-spotlight, .social-strip, .mission-block, .circle-spotlight, .territory-section, .visit-section, .incentive-panel, .bazar-section { grid-template-columns: 1fr; }
+  .feature-photo, .home-testimonial-image, .social-photo, .mission-photo, .circle-spotlight-image, .territory-image, .visit-image, .bazar-image { min-height: 480px; }
+  .feature-copy, .home-testimonial-copy, .social-copy, .mission-text, .circle-spotlight-copy, .territory-copy, .visit-copy, .incentive-content, .bazar-copy { padding: 70px 20px; }
+  .home-testimonial-copy blockquote { font-size: 50px; margin-bottom: 40px; }
+  .home-testimonial-copy > div { align-items: flex-start; flex-direction: column; }
   .feature-copy h2, .impact-title h2, .social-copy h2, .actions-page-heading h2, .numbers-heading h2, .territory-copy h2, .contact-lead h2, .visit-copy h2, .support-intro h2 { font-size: 53px; }
   .impact-list { grid-template-columns: 1fr; }
   .impact-list article, .impact-list article:not(:first-child) { border-bottom: 1px solid var(--ink); border-right: 0; min-height: 0; padding: 25px 0; }

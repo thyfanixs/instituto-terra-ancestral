@@ -27,7 +27,7 @@ export default function Apoie() {
       <PageHero
         index="04"
         eyebrow="Apoie"
-        title="Sua escolha"
+        title="Sua colaboração"
         accent="move territórios."
         description="Pessoas e organizações podem ajudar o ITA a ampliar o acesso à cultura, à formação e ao cuidado."
         image="/images/official/thayna-vini-feira-ita.jpg"

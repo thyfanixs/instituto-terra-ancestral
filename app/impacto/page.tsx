@@ -25,25 +25,25 @@ const institutionalPartnerships = [
   { territory: "Jequitibá", partners: ["Guarda de Massambique Nossa Senhora do Santíssimo Sacramento", "Guardas da Irmandade do Rosário de Jequitibá/MG"] },
   {
     territory: "Pedro Leopoldo",
-    partners: ["Festas de Congado e Folias de Reis e Guarda Congo Nossa Senhora do Rosário", "SEABRA — Coletivo de Empreendedores Negros", "Secretaria de Bem Estar e Cultura de Pedro Leopoldo", "Poesia a La Carte", "Grupo Ancês de Teatro Negro", "Ceramistas Maria Quem Dera"],
+    partners: ["Festas de Congado e Folias de Reis e Guarda Congo Nossa Senhora do Rosário", "CEABRA — Coletivo de Empreendedores Negros", "Secretaria de Bem Estar e Cultura de Pedro Leopoldo", "Poesia a La Carte", "Grupo Ancês de Teatro Negro", "Ceramistas Maria Quem Dera"],
   },
 ];
 
 const partnershipPhotos = [
-  { src: "/images/gallery/parcerias/01.jpg", caption: "Jequitibá · Guardas da Irmandade do Rosário" },
-  { src: "/images/gallery/parcerias/02.jpg", caption: "Sete Lagoas · Alcunha Negada" },
+  { src: "/images/gallery/parcerias/01.jpg", caption: "Jequitibá · Guardas da Irmandade do Rosário de Jequitibá" },
+  { src: "/images/gallery/parcerias/02.jpg", caption: "Sete Lagoas · Alcunha Negada — espaço gastronômico e cultural" },
   { src: "/images/gallery/parcerias/03.jpg", caption: "Confins · CERC" },
   { src: "/images/gallery/parcerias/04.jpg", caption: "Confins · CERC" },
   { src: "/images/gallery/parcerias/05.jpg", caption: "Confins · CERC" },
   { src: "/images/gallery/parcerias/06.jpg", caption: "Confins · CERC" },
-  { src: "/images/gallery/parcerias/07.jpg", caption: "Capim Branco · Eco das Artes" },
-  { src: "/images/gallery/parcerias/08.jpg", caption: "Capim Branco · Eco das Artes" },
-  { src: "/images/gallery/parcerias/09.jpg", caption: "Capim Branco · Eco das Artes" },
+  { src: "/images/gallery/parcerias/07.jpg", caption: "Capim Branco · Instituição Eco das Artes" },
+  { src: "/images/gallery/parcerias/08.jpg", caption: "Capim Branco · Instituição Eco das Artes" },
+  { src: "/images/gallery/parcerias/09.jpg", caption: "Capim Branco · Instituição Eco das Artes" },
   { src: "/images/gallery/parcerias/10.jpg", caption: "Matozinhos · Garagem Cultural" },
   { src: "/images/gallery/parcerias/11.jpg", caption: "Matozinhos · Garagem Cultural" },
-  { src: "/images/gallery/parcerias/12.jpg", caption: "Belo Horizonte · GESTO UFMG" },
-  { src: "/images/gallery/parcerias/13.jpg", caption: "Matozinhos · Quintal das Pretas" },
-  { src: "/images/gallery/parcerias/14.jpg", caption: "Belo Horizonte · QuinTao das Artes" },
+  { src: "/images/gallery/parcerias/12.jpg", caption: "Belo Horizonte · G.E.S.T.O UFMG — Grupo de Estudos do Simbólico e Técnico da Olaria" },
+  { src: "/images/gallery/parcerias/13.jpg", caption: "Matozinhos · Quintal das Pretas e Companhia Pé de Pano" },
+  { src: "/images/gallery/parcerias/14.jpg", caption: "Belo Horizonte · Associação QuinTao das Artes" },
   { src: "/images/gallery/parcerias/17.jpg", caption: "Matozinhos · Terreiro de Umbanda TUFF" },
 ];
 
@@ -82,6 +82,8 @@ const testimonials = [
     name: "Natasha",
     course: "Teatro Negro, Cerâmica e Economia Criativa",
     image: "/images/testimonials/natasha.webp",
+    imageFit: "contain" as const,
+    imagePosition: "center",
     quote: "É tudo muito organizado, com professoras qualificadas e atividades bem projetadas. O ITA é muito acolhedor. Aqui, eu posso ser Natasha 100%, sem me esconder, sem me omitir.",
   },
   {
@@ -114,8 +116,8 @@ export default function Impacto() {
         <div className="big-numbers">
           <article className="reveal"><strong>1.200</strong><span>pessoas diretamente impactadas</span></article>
           <article className="reveal"><strong>324</strong><span>pessoas acolhidas/beneficiadas com as ações de saúde do ITA - Instituto Terra Ancestral</span></article>
-          <article className="reveal"><strong>473</strong><span>participações em oficinas e cursos gratuitos do ITA</span></article>
-          <article className="reveal"><strong>643</strong><span>participações em eventos culturais e Feira ITA</span></article>
+          <article className="reveal"><strong>473</strong><span>pessoas em oficinas e cursos gratuitos do ITA</span></article>
+          <article className="reveal"><strong>643</strong><span>pessoas em eventos culturais e Feira ITA</span></article>
         </div>
         <p className="source-note">Fonte: portfólio institucional do Instituto Terra Ancestral.</p>
       </section>

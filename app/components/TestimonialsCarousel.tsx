@@ -7,6 +7,8 @@ type Testimonial = {
   name: string;
   course: string;
   image: string;
+  imageFit?: "cover" | "contain";
+  imagePosition?: string;
   quote: string;
 };
 
@@ -59,11 +61,18 @@ export default function TestimonialsCarousel({ testimonials }: TestimonialsCarou
       >
         {testimonials.map((testimonial, index) => (
           <article className="testimonial-card" key={testimonial.name}>
-            <div className="testimonial-media">
+            <div
+              className={`testimonial-media${testimonial.imageFit === "contain" ? " testimonial-media-contain" : ""}`}
+              style={testimonial.imageFit === "contain" ? { backgroundImage: `url(${assetPath(testimonial.image)})` } : undefined}
+            >
               <img
                 src={assetPath(testimonial.image)}
                 alt={`Retrato de ${testimonial.name}, estudante do ITA`}
                 loading="lazy"
+                style={{
+                  objectFit: testimonial.imageFit,
+                  objectPosition: testimonial.imagePosition,
+                }}
               />
             </div>
             <div className="testimonial-copy">

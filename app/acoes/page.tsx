@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import PageHero from "../components/PageHero";
 import { assetPath } from "../lib/asset-path";
 import Link from "next/link";
-import { actionSlug } from "./action-details";
 
 export const metadata: Metadata = {
   title: "Ações",
@@ -12,6 +11,7 @@ export const metadata: Metadata = {
 const courses = [
   {
     title: "Economia criativa",
+    slug: "economia-criativa",
     category: "Arte, negócio e propósito",
     image: "/images/official/economia-criativa.jpg",
     text: "Formação que integra território, identidades, comercialização e valorização do trabalho criativo.",
@@ -19,13 +19,15 @@ const courses = [
   },
   {
     title: "Agroecologia",
+    slug: "agroecologia",
     category: "Remédios da Terra",
-    image: "/images/gallery/agroecologia/10.jpg",
+    image: "/images/official/home-agroecologia.jpg",
     text: "Cultivo agroecológico, plantas medicinais, compostagem e diálogo entre saberes ancestrais e científicos.",
     meta: "2 turmas · 39 estudantes",
   },
   {
     title: "Bonecas ancestrais",
+    slug: "bonecas-ancestrais",
     category: "Memória e identidade",
     image: "/images/official/bonecas-ancestrais.jpg",
     text: "Bonecas de pano, Abayomi e figuras simbólicas como tecnologias ancestrais de cuidado e resistência.",
@@ -33,6 +35,7 @@ const courses = [
   },
   {
     title: "Biojoias e macramê",
+    slug: "biojoias-e-macrame",
     category: "Arte indígena",
     image: "/images/official/biojoias.jpg",
     text: "Criação com sementes, pedras, fibras naturais e técnicas que valorizam natureza e identidade cultural.",
@@ -40,6 +43,7 @@ const courses = [
   },
   {
     title: "Caderno artesanal",
+    slug: "caderno-artesanal",
     category: "Memória em papel",
     image: "/images/official/caderno-artesanal.jpg",
     text: "Encadernação manual, reaproveitamento de materiais e criação de lugares de expressão e registro da vida.",
@@ -47,6 +51,7 @@ const courses = [
   },
   {
     title: "Cerâmica",
+    slug: "ceramica",
     category: "Terra e patrimônio",
     image: "/images/official/ceramica.jpg",
     text: "O barro como matéria de criação, memória e pertencimento, articulando técnicas e identidade territorial.",
@@ -54,6 +59,7 @@ const courses = [
   },
   {
     title: "Cerveja artesanal",
+    slug: "cerveja-artesanal",
     category: "Saberes e experimentação",
     image: "/images/official/cerveja-artesanal.jpg",
     text: "Produção artesanal em diálogo com ingredientes, ervas e especiarias presentes em diferentes culturas.",
@@ -61,6 +67,7 @@ const courses = [
   },
   {
     title: "Costura criativa",
+    slug: "costura-criativa",
     category: "Tradições têxteis",
     image: "/images/official/curso-de-costura-criativa.jpeg",
     text: "Modelagem, costura e reaproveitamento de tecidos para peças autorais, festas e celebrações tradicionais.",
@@ -68,6 +75,7 @@ const courses = [
   },
   {
     title: "Culinária ancestral",
+    slug: "culinaria-ancestral",
     category: "Saberes e sabores",
     image: "/images/official/culinaria-ancestral.jpg",
     text: "Receitas e modos de preparo afro-indígenas que reafirmam a cozinha como lugar de cuidado e memória.",
@@ -75,6 +83,7 @@ const courses = [
   },
   {
     title: "Educação patrimonial e arte",
+    slug: "educacao-patrimonial-e-arte",
     category: "Patrimônio vivo",
     image: "/images/official/educacao-patrimonial-e-arte.jpeg",
     text: "Memórias individuais e coletivas transformadas em processos artísticos por meio do fazer manual.",
@@ -82,6 +91,7 @@ const courses = [
   },
   {
     title: "Grafite",
+    slug: "grafite",
     category: "Arte urbana",
     image: "/images/official/grafite.jpg",
     text: "Expressão e ocupação simbólica do território a partir do congado, das tradições negras e da fé.",
@@ -89,6 +99,7 @@ const courses = [
   },
   {
     title: "Marcenaria criativa",
+    slug: "marcenaria-criativa",
     category: "Ofícios tradicionais",
     image: "/images/official/marcenaria-criativa-card.jpeg",
     text: "Trabalho com madeira, sustentabilidade e criação de peças inspiradas nas referências do território.",
@@ -96,6 +107,7 @@ const courses = [
   },
   {
     title: "Teatro negro",
+    slug: "teatro-negro",
     category: "Corpo e identidade",
     image: "/images/official/teatro-negro.jpg",
     text: "Criação coletiva, oralidade e ancestralidade para fortalecer narrativas afro-brasileiras e protagonismo.",
@@ -105,7 +117,16 @@ const courses = [
 
 const culturalInitiatives = [
   {
+    title: "Ancestralidade e tradição",
+    slug: "ancestralidade-e-tradicao",
+    category: "Patrimônio cultural",
+    image: "/images/official/ancestralidade-e-tradicao.jpg",
+    text: "Salvaguarda e fortalecimento de Congados, Folias de Reis, Candombe, Festas de Terreiros e religiões de matriz africana.",
+    meta: "Memória, fé e pertencimento",
+  },
+  {
     title: "Armazém ITA",
+    slug: "armazem-ita",
     category: "Economia solidária",
     image: "/images/official/armazem-ita.jpg",
     text: "Espaço de exposição e comercialização das peças produzidas nos cursos, gerando recursos para novos insumos e ações.",
@@ -113,20 +134,15 @@ const culturalInitiatives = [
   },
   {
     title: "Feira ITA",
+    slug: "feira-ita",
     category: "Economia criativa",
     image: "/images/official/feira-ita.jpg",
     text: "Encontro de saberes, produtos artesanais, apresentações culturais e fortalecimento das redes locais.",
     meta: "2 edições · cerca de 400 participantes",
   },
   {
-    title: "Ancestralidade e tradição",
-    category: "Patrimônio cultural",
-    image: "/images/official/ancestralidade-e-tradicao.jpg",
-    text: "Salvaguarda e fortalecimento de Congados, Folias de Reis, Candombe, Festas de Terreiros e religiões de matriz africana.",
-    meta: "Memória, fé e pertencimento",
-  },
-  {
     title: "Cine Comunidade",
+    slug: "cine-comunidade",
     category: "Cinema e direitos humanos",
     image: "/images/portfolio/page-31-01.jpeg",
     text: "Sessões mensais de cinema acompanhadas de rodas de conversa, formação crítica e programação cultural.",
@@ -134,16 +150,18 @@ const culturalInitiatives = [
   },
   {
     title: "Rodas de conversa",
+    slug: "rodas-de-conversa",
     category: "Educação e participação",
     image: "/images/official/rodas-de-conversa.jpg",
     text: "Encontros entre mestres da tradição, pesquisadores, estudantes, artistas, lideranças e moradores.",
     meta: "8 encontros · 213 participantes",
   },
   {
-    title: "Eventos culturais",
+    title: "Apresentações artísticas",
+    slug: "eventos-culturais",
     category: "Cultura viva",
     image: "/images/official/congadar.jpg",
-    text: "Apresentações, feiras, vivências e experiências gastronômicas que celebram a diversidade cultural.",
+    text: "Shows, espetáculos teatrais, palhaçaria, performances artísticas, exposições artísticas, ensaio de blocos de carnaval e escola de samba.",
     meta: "643 participações em eventos culturais e Feira ITA",
   },
 ];
@@ -151,6 +169,7 @@ const culturalInitiatives = [
 const healthInitiatives = [
   {
     title: "Círculo Terapêutico",
+    slug: "circulo-terapeutico",
     category: "Saúde e bem viver",
     image: "/images/official/circulo-terapeutico.jpg",
     text: "Escuta, acolhimento e práticas coletivas de cuidado comunitário com acompanhamento profissional.",
@@ -158,6 +177,7 @@ const healthInitiatives = [
   },
   {
     title: "Mutirão de Saúde Visual",
+    slug: "mutirao-de-saude-visual",
     category: "Acesso à saúde",
     image: "/images/portfolio/page-28-01.jpeg",
     text: "Exames especializados, atendimento médico, prescrição e encaminhamento para óculos gratuitos.",
@@ -165,6 +185,7 @@ const healthInitiatives = [
   },
   {
     title: "Tratamento medicinal de cannabis",
+    slug: "tratamento-medicinal-de-cannabis",
     category: "Cuidado integral",
     image: "/images/official/flor-da-vida-ita.png",
     text: "Orientação e acesso responsável ao tratamento, em parceria com a Associação Flor da Vida.",
@@ -225,7 +246,7 @@ export default function Acoes() {
         </div>
         <div className="action-gallery">
           {courses.map((action, index) => (
-            <Link className={`gallery-card action-card-link reveal card-${index + 1}`} href={`/acoes/${actionSlug(action.title)}`} key={action.title}>
+            <Link className={`gallery-card action-card-link reveal card-${index + 1}`} href={`/acoes/${action.slug}`} key={action.title}>
               <div><img src={assetPath(action.image)} alt={`Registro da ação ${action.title}`} /></div>
               <p className="eyebrow">{action.category}</p>
               <h3>{action.title}</h3>
@@ -244,7 +265,7 @@ export default function Acoes() {
         </div>
         <div className="initiative-grid">
           {healthInitiatives.map((initiative) => (
-            <Link className="initiative-card action-card-link reveal" href={`/acoes/${actionSlug(initiative.title)}`} key={initiative.title}>
+            <Link className="initiative-card action-card-link reveal" href={`/acoes/${initiative.slug}`} key={initiative.title}>
               <div className="initiative-image">
                 <img src={assetPath(initiative.image)} alt={`Registro de ${initiative.title}`} />
               </div>
@@ -305,7 +326,7 @@ export default function Acoes() {
         </div>
         <div className="initiative-grid">
           {culturalInitiatives.map((initiative) => (
-            <Link className="initiative-card action-card-link reveal" href={`/acoes/${actionSlug(initiative.title)}`} key={initiative.title}>
+            <Link className="initiative-card action-card-link reveal" href={`/acoes/${initiative.slug}`} key={initiative.title}>
               <div className="initiative-image">
                 <img src={assetPath(initiative.image)} alt={`Registro de ${initiative.title}`} />
               </div>

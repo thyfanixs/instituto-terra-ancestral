@@ -45,7 +45,7 @@ export const actionDetails: ActionDetail[] = [
     slug: "agroecologia",
     title: "Agroecologia",
     category: "Remédios da Terra",
-    image: "/images/official/agroecologia.jpg",
+    image: "/images/official/home-agroecologia.jpg",
     summary: "Cultivo agroecológico, plantas medicinais, compostagem e diálogo entre saberes ancestrais e científicos.",
     description: [
       "O curso Remédios da Terra compreende a agroecologia como prática que integra cultivo, cuidado e espiritualidade, reconhecendo que plantas medicinais e alimentos carregam saberes ancestrais e uma dimensão sagrada.",
@@ -383,13 +383,13 @@ export const actionDetails: ActionDetail[] = [
   },
   {
     slug: "eventos-culturais",
-    title: "Eventos Culturais",
+    title: "Apresentações Artísticas",
     category: "Cultura viva",
     image: "/images/official/congadar.jpg",
-    summary: "Apresentações, feiras, vivências e experiências gastronômicas que celebram a diversidade cultural.",
+    summary: "Shows, espetáculos teatrais, palhaçaria, performances artísticas, exposições artísticas, ensaio de blocos de carnaval e escola de samba.",
     description: [
-      "Os eventos reúnem artistas, mestres da cultura popular, músicos, poetas, escritores, artesãos, pesquisadores e grupos tradicionais de diferentes territórios.",
-      "Apresentações, feiras, vivências e experiências gastronômicas afro-indígenas conectam tradição e contemporaneidade, fortalecem o pertencimento comunitário e reconhecem a diversidade como patrimônio vivo.",
+      "As apresentações reúnem artistas, mestres da cultura popular, músicos, poetas, escritores, artesãos, pesquisadores e grupos tradicionais de diferentes territórios.",
+      "Shows, espetáculos teatrais, palhaçaria, performances e exposições artísticas, ensaios de blocos de carnaval e escolas de samba conectam tradição e contemporaneidade, fortalecem o pertencimento comunitário e reconhecem a diversidade como patrimônio vivo.",
     ],
     meta: "643 participações em eventos culturais e Feira ITA",
     photos: gallery("eventos-culturais", 14),
@@ -398,6 +398,3 @@ export const actionDetails: ActionDetail[] = [
     },
   },
 ];
-
-export const actionSlug = (title: string) =>
-  actionDetails.find((action) => action.title === title)?.slug ?? "";

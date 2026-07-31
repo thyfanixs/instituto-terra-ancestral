@@ -8,12 +8,36 @@ export const metadata: Metadata = {
 
 const news = [
   {
+    source: "POR DENTRO DE TUDO",
+    date: "27 JUN 2026",
+    dateTime: "2026-06-27",
+    title: "MARÃIWÁ – Feira ITA reúne cultura, ancestralidade e empreendedorismo",
+    summary: "A imprensa local destaca a programação gratuita da Feira ITA, com apresentações artísticas, artesanato indígena, gastronomia afro-brasileira, exposições, cinema, roda de conversa e produções dos cursos do Instituto.",
+    href: "https://www.instagram.com/reel/DaF7XQ0Oabg/",
+  },
+  {
+    source: "POR DENTRO DE TUDO",
+    date: "26 JUN 2026",
+    dateTime: "2026-06-26",
+    title: "Pedro Leopoldo recebe a MARÃIWÁ – Feira ITA",
+    summary: "A notícia apresenta a Feira ITA como um encontro gratuito de arte, cultura, ancestralidade, economia criativa, gastronomia, cinema, sarau e formação comunitária.",
+    href: "https://www.instagram.com/reel/DaD3he0BXVC/",
+  },
+  {
     source: "O TEMPO",
     date: "25 SET 2025",
     dateTime: "2025-09-25",
     title: "Instituto inaugura sede com programação cultural",
     summary: "A reportagem apresenta a inauguração da sede do ITA na Grande BH e a programação cultural preparada para celebrar esse novo ciclo.",
     href: "https://www.otempo.com.br/entretenimento/2025/9/25/instituto-de-promove-ancestralidade-na-grande-bh-inaugura-sede-com-programacao-cultural",
+  },
+  {
+    source: "ITATIAIA",
+    date: "10 SET 2025",
+    dateTime: "2025-09-10",
+    title: "Entrevista do ITA no programa Rádio Vivo",
+    summary: "Participação do Instituto Terra Ancestral no Rádio Vivo, da Itatiaia, em uma conversa sobre sua atuação, seus projetos e o impacto construído nos territórios.",
+    href: "https://www.youtube.com/live/_1HxDAnnRPA?si=h-OHmxHDjzQ6mG0v&t=114",
   },
   {
     source: "O TEMPO",
